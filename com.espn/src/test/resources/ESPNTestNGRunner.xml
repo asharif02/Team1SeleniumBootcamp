@@ -9,4 +9,14 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://espn.com"/>
 
+    <test name="NBA - Navigation">
+        <classes>
+            <class name="test_app.smoke.navigation.TestNBANavigation"/>
+        </classes>
+    </test>
+
+
+
+
+
 </suite>

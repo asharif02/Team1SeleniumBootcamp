@@ -1,0 +1,9 @@
+Test Case #1: Navigate to Boston Celtics Page
+1.
+2.
+3.
+
+Test Case #2: Navigate to Brooklyn Nets Page
+1.
+2.
+3.
