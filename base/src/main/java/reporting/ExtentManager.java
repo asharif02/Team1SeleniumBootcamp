@@ -24,8 +24,8 @@ public class ExtentManager {
 
             extent = new ExtentReports(filePath, true);
             Reporter.log("Extent Report Directory\n" + filePath, true);
-            extent.addSystemInfo("Host Name", "Maximus").addSystemInfo("Environment","QA")
-                    .addSystemInfo("User Name", "Sami Sheikh");
+            extent.addSystemInfo("Host Name", "Netflix").addSystemInfo("Environment","QA")
+                    .addSystemInfo("User Name", "Abdi Sharif");
 
             extent.loadConfig(new File(System.getProperty("user.dir") + File.separator + "src" + File.separator
                     + "main" + File.separator + "resources" + File.separator + "config" + File.separator
