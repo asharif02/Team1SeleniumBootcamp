@@ -1,13 +1,13 @@
 package app.pom;
 
-import base.BasePage;
+import app.shared.SystemBar;
 import org.openqa.selenium.support.PageFactory;
 
-public class Homepage extends BasePage {
+public class NBAHomepage extends SystemBar {
 
 
 
-    public Homepage() {
+    public NBAHomepage() {
         PageFactory.initElements(driver, this);
     }
 }

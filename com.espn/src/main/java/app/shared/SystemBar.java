@@ -1,6 +1,6 @@
 package app.shared;
 
-import app.pom.Homepage;
+import app.pom.NBATeamPage;
 import base.BasePage;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -15,18 +15,8 @@ public class SystemBar extends BasePage {
     @FindBy(xpath = "//nav[@id='global-nav']//li[@class='sports menu-nba']")
     public WebElement nbaSportsMenu;
 
-//    @FindBy(xpath = "//li[@class='teams nba']//ul//li[@class='team']")
-//    @FindBy(xpath = "//*[@id=\"global-nav\"]/ul/li[2]/div/ul[2]")
-//    @FindBy(xpath = "//li[@class='teams nba']//li[@class='team']//span//span[2]")
-//    @FindBy(xpath = "//ul[@class='Nav__Dropdown__Group flex pa3 bg-clr-gray-09 flex-wrap is--3']")
     @FindBy(xpath = "//ul[@class='Nav__Dropdown__Group flex pa3 bg-clr-gray-09 flex-wrap is--3']//ul//li")
     public List<WebElement> NBATeams;
-
-    @FindBy(xpath = "//li[@class='teams nba']//a[@data-teamabbrev='BOS']")
-    public WebElement bostonCeltics;
-
-    @FindBy(xpath = "//li[@class='teams nba']//a[@data-teamabbrev='BKN']")
-    public WebElement brooklynNets;
 
     @FindBy(xpath = "//li[@class='Nav__Secondary__Menu__Item flex items-center n7 relative Nav__Secondary__Menu__Item--active']")
     public WebElement teamsDropDownList;
@@ -38,46 +28,8 @@ public class SystemBar extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void navigateByNBATeamName(String teamName) {
-        Homepage homepage = new Homepage();
-        homepage.hoverOverNBASportsMenu();
-        homepage.clickTeamsButton();
-        homepage.hoverOverNBATeamsDropDown();
-
-        List<WebElement> nbaTeams = NBATeams;
-        try {
-            for (WebElement teams : nbaTeams) {
-                if (teams.getAttribute("innerHTML").contains(teamName)) {
-                    teams.click();
-                }
-            }
-        } catch (StaleElementReferenceException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public void navigateByNBACityName(String cityName) {
-        Homepage homepage = new Homepage();
-        homepage.hoverOverNBASportsMenu();
-        homepage.clickTeamsButton();
-        homepage.hoverOverNBATeamsDropDown();
-
-        List<WebElement> nbaTeams = NBATeams;
-        try {
-            for (WebElement teams : nbaTeams) {
-                if (teams.getAttribute("innerHTML").contains(cityName)) {
-                    teams.click();
-                }
-            }
-        } catch (StaleElementReferenceException e) {
-            e.printStackTrace();
-        }
-
-    }
-
     public void selectRandomNBATeam() {
-        Homepage homepage = new Homepage();
+        NBATeamPage homepage = new NBATeamPage();
         homepage.hoverOverNBASportsMenu();
         homepage.clickTeamsButton();
         homepage.hoverOverNBATeamsDropDown();
@@ -92,29 +44,56 @@ public class SystemBar extends BasePage {
 
     }
 
-    public void clickTeamsButton() {
-        clickOnElement(teamsButton);
+    public void navigateByNBATeamName(String teamName) {
+        NBATeamPage homepage = new NBATeamPage();
+        homepage.hoverOverNBASportsMenu();
+        homepage.clickTeamsButton();
+        homepage.hoverOverNBATeamsDropDown();
+
+        List<WebElement> nbaTeams = NBATeams;
+
+        try {
+            for (WebElement teams : nbaTeams) {
+                if (teams.getAttribute("innerHTML").contains(teamName)) {
+                    teams.click();
+                }
+            }
+        } catch (StaleElementReferenceException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    public void hoverOverNBATeamsDropDown() {
-//        webDriverWait.until()
-        hoverOverElement(teamsDropDownList);
+    public void navigateByNBACityName(String cityName) {
+        NBATeamPage homepage = new NBATeamPage();
+        homepage.hoverOverNBASportsMenu();
+        homepage.clickTeamsButton();
+        homepage.hoverOverNBATeamsDropDown();
+
+        List<WebElement> nbaTeams = NBATeams;
+
+        try {
+            for (WebElement teams : nbaTeams) {
+                if (teams.getAttribute("innerHTML").contains(cityName)) {
+                    teams.click();
+                }
+            }
+        } catch (StaleElementReferenceException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void hoverOverNBASportsMenu() {
         hoverOverElement(nbaSportsMenu);
     }
 
-//    public void selectNBATeam() {
-//        clickOnElement(NBATeams);
-//    }
-
-    public void clickBostonCelticsTeam() {
-        clickOnElement(bostonCeltics);
+    public void clickTeamsButton() {
+        clickOnElement(teamsButton);
     }
 
-    public void clickBrooklynNetsTeam() {
-        clickOnElement(brooklynNets);
+    public void hoverOverNBATeamsDropDown() {
+        hoverOverElement(teamsDropDownList);
     }
 
 }

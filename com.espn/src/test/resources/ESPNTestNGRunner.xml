@@ -11,12 +11,9 @@
 
     <test name="NBA - Navigation">
         <classes>
-            <class name="test_app.smoke.navigation.TestNBANavigation"/>
+            <class name="test_app.smoke.TestNBATeams"/>
         </classes>
     </test>
-
-
-
 
 
 </suite>

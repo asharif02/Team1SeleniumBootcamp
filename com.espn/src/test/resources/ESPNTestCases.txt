@@ -1,9 +1,9 @@
-Test Case #1: Navigate to Boston Celtics Page
+Test Case #1: Navigate to Atlanta Hawks Page
 1.
 2.
 3.
 
-Test Case #2: Navigate to Brooklyn Nets Page
+Test Case #2: Navigate to Boston Celtics Page
 1.
 2.
 3.
