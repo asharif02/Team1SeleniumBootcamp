@@ -9,4 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://bmwusa.com"/>
 
+    <test name="BMW - Models">
+        <classes>
+            <class name="test_app.smoke.TestBMWModels"/>
+        </classes>
+    </test>
+
 </suite>

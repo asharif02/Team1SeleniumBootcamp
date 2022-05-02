@@ -17,6 +17,9 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//li[@data-child-filter='all models']//button")
     public WebElement allModelsButton;
 
+    @FindBy(xpath = "//div[@data-filter='all models']//*[contains(text(), 'All Models')]")
+    public WebElement allModelsHeadline;
+
     @FindBy(xpath = "//li[@data-child-filter='savs']//button")
     public WebElement savsButton;
 
@@ -60,6 +63,37 @@ public class Homepage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    public void navigateToBMWAllModels() {
+        Homepage homepage = new Homepage();
+        homepage.hoverOverModelsFlyoutButton();
+        homepage.clickModelsFlyoutButton();
+    }
+
+    public void navigateByBMWModelName(String modelName) {
+        navigateToBMWAllModels();
+        webDriverWait.until(ExpectedConditions.visibilityOf(allModelsHeadline));
+
+        List<WebElement> models = allBMWModels;
+
+        try {
+            for (WebElement model : models) {
+                if (model.getAttribute("innerHTML").contains(modelName)) {
+                    model.click();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            ModelPage modelPage = new ModelPage();
+            modelPage.waitForModelNameAnimation();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
     public void selectRandomBMWModel() {
         Homepage homepage = new Homepage();
         homepage.hoverOverModelsFlyoutButton();
@@ -88,7 +122,9 @@ public class Homepage extends BasePage {
     }
 
     public void selectRandomBMWSportsActivityVehicle() {
+        navigateToBMWSAVs();
         webDriverWait.until(ExpectedConditions.visibilityOf(savsHeadline));
+
         List<WebElement> savs = allSAVModels;
         int maxSAVs = savs.size();
 
@@ -112,7 +148,9 @@ public class Homepage extends BasePage {
     }
 
     public void selectRandomBMWSedan() {
+        navigateToBMWSedans();
         webDriverWait.until(ExpectedConditions.visibilityOf(sedansHeadline));
+
         List<WebElement> sedans = allSedanModels;
         int maxSedans = sedans.size();
 
@@ -136,7 +174,9 @@ public class Homepage extends BasePage {
     }
 
     public void selectRandomBMWCoupe() {
+        navigateToBMWCoupes();
         webDriverWait.until(ExpectedConditions.visibilityOf(coupesHeadline));
+
         List<WebElement> coupes = allCoupeModels;
         int maxCoupes = coupes.size();
 
@@ -160,7 +200,9 @@ public class Homepage extends BasePage {
     }
 
     public void selectRandomBMWConvertible() {
+        navigateToBMWConvertibles();
         webDriverWait.until(ExpectedConditions.visibilityOf(convertiblesHeadline));
+
         List<WebElement> convertibles = allConvertibleModels;
         int maxConvertibles = convertibles.size();
 
