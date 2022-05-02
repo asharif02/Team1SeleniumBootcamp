@@ -41,7 +41,6 @@ public class SystemBar extends BasePage {
         int randomTeam = random.nextInt(maxTeams);
 
         nbaTeams.get(randomTeam).click();
-
     }
 
     public void navigateByNBATeamName(String teamName) {
@@ -61,7 +60,6 @@ public class SystemBar extends BasePage {
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
-
     }
 
     public void navigateByNBACityName(String cityName) {
@@ -81,7 +79,6 @@ public class SystemBar extends BasePage {
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
-
     }
 
     public void hoverOverNBASportsMenu() {

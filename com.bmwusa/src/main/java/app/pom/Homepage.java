@@ -1,13 +1,206 @@
 package app.pom;
 
 import base.BasePage;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
+import java.util.Random;
 
 public class Homepage extends BasePage {
 
+    @FindBy(xpath = "//button[@name='Models Flyout']")
+    public WebElement modelsFlyoutButton;
 
+    @FindBy(xpath = "//li[@data-child-filter='all models']//button")
+    public WebElement allModelsButton;
+
+    @FindBy(xpath = "//li[@data-child-filter='savs']//button")
+    public WebElement savsButton;
+
+    @FindBy(xpath = "//*[contains(text(), 'Sports Activity Vehicles')]")
+    public WebElement savsHeadline;
+
+    @FindBy(xpath = "//li[@data-child-filter='sedans']//button")
+    public WebElement sedansButton;
+
+    @FindBy(xpath = "//*[contains(text(), 'Sedans & Gran Coupes')]")
+    public WebElement sedansHeadline;
+
+    @FindBy(xpath = "//li[@data-child-filter='coupes']//button")
+    public WebElement coupesButton;
+
+    @FindBy(xpath = "//div[@data-filter='coupes']//*[contains(text(), 'Coupes')]")
+    public WebElement coupesHeadline;
+
+    @FindBy(xpath = "//li[@data-child-filter='convertibles']//button")
+    public WebElement convertiblesButton;
+
+    @FindBy(xpath = "//div[@data-filter='convertibles']//*[contains(text(), 'Convertibles')]")
+    public WebElement convertiblesHeadline;
+
+    @FindBy(xpath = "//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']")
+    public List<WebElement> allBMWModels;
+
+    @FindBy(xpath = "//div[@data-filter='savs']//div[@class='globalnav-primary-vehicles__car']")
+    public List<WebElement> allSAVModels;
+
+    @FindBy(xpath = "//div[@data-filter='sedans']//div[@class='globalnav-primary-vehicles__car']")
+    public List<WebElement> allSedanModels;
+
+    @FindBy(xpath = "//div[@data-filter='coupes']//div[@class='globalnav-primary-vehicles__car']")
+    public List<WebElement> allCoupeModels;
+
+    @FindBy(xpath = "//div[@data-filter='convertibles']//div[@class='globalnav-primary-vehicles__car']")
+    public List<WebElement> allConvertibleModels;
 
     public Homepage() {
         PageFactory.initElements(driver, this);
+    }
+
+    public void selectRandomBMWModel() {
+        Homepage homepage = new Homepage();
+        homepage.hoverOverModelsFlyoutButton();
+        homepage.clickModelsFlyoutButton();
+
+        List<WebElement> models = allBMWModels;
+        int maxModels = models.size();
+
+        Random random = new Random();
+        int randomModel = random.nextInt(maxModels);
+        models.get(randomModel).click();
+
+        try {
+            ModelPage modelPage = new ModelPage();
+            modelPage.waitForModelNameAnimation();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void navigateToBMWSAVs() {
+        Homepage homepage = new Homepage();
+        homepage.hoverOverModelsFlyoutButton();
+        homepage.clickModelsFlyoutButton();
+        homepage.clickSAVsButton();
+    }
+
+    public void selectRandomBMWSportsActivityVehicle() {
+        webDriverWait.until(ExpectedConditions.visibilityOf(savsHeadline));
+        List<WebElement> savs = allSAVModels;
+        int maxSAVs = savs.size();
+
+        Random random = new Random();
+        int randomSAV = random.nextInt(maxSAVs);
+        savs.get(randomSAV).click();
+
+        try {
+            ModelPage modelPage = new ModelPage();
+            modelPage.waitForModelNameAnimation();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void navigateToBMWSedans() {
+        Homepage homepage = new Homepage();
+        homepage.hoverOverModelsFlyoutButton();
+        homepage.clickModelsFlyoutButton();
+        homepage.clickSedansButton();
+    }
+
+    public void selectRandomBMWSedan() {
+        webDriverWait.until(ExpectedConditions.visibilityOf(sedansHeadline));
+        List<WebElement> sedans = allSedanModels;
+        int maxSedans = sedans.size();
+
+        Random random = new Random();
+        int randomSedan = random.nextInt(maxSedans);
+        sedans.get(randomSedan).click();
+
+        try {
+            ModelPage modelPage = new ModelPage();
+            modelPage.waitForModelNameAnimation();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void navigateToBMWCoupes() {
+        Homepage homepage = new Homepage();
+        homepage.hoverOverModelsFlyoutButton();
+        homepage.clickModelsFlyoutButton();
+        homepage.clickCoupesButton();
+    }
+
+    public void selectRandomBMWCoupe() {
+        webDriverWait.until(ExpectedConditions.visibilityOf(coupesHeadline));
+        List<WebElement> coupes = allCoupeModels;
+        int maxCoupes = coupes.size();
+
+        Random random = new Random();
+        int randomCoupe = random.nextInt(maxCoupes);
+        coupes.get(randomCoupe).click();
+
+        try {
+            ModelPage modelPage = new ModelPage();
+            modelPage.waitForModelNameAnimation();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void navigateToBMWConvertibles() {
+        Homepage homepage = new Homepage();
+        homepage.hoverOverModelsFlyoutButton();
+        homepage.clickModelsFlyoutButton();
+        homepage.clickConvertiblesButton();
+    }
+
+    public void selectRandomBMWConvertible() {
+        webDriverWait.until(ExpectedConditions.visibilityOf(convertiblesHeadline));
+        List<WebElement> convertibles = allConvertibleModels;
+        int maxConvertibles = convertibles.size();
+
+        Random random = new Random();
+        int randomConvertible = random.nextInt(maxConvertibles);
+        convertibles.get(randomConvertible).click();
+
+        try {
+            ModelPage modelPage = new ModelPage();
+            modelPage.waitForModelNameAnimation();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void hoverOverModelsFlyoutButton() {
+        hoverOverElement(modelsFlyoutButton);
+    }
+
+    public void clickModelsFlyoutButton() {
+        clickOnElement(modelsFlyoutButton);
+    }
+
+    public void hoverOverSAVsButton() {
+        hoverOverElement(savsButton);
+    }
+
+    public void clickSAVsButton() {
+        clickOnElement(savsButton);
+    }
+
+    public void clickSedansButton() {
+        clickOnElement(sedansButton);
+    }
+
+    public void clickCoupesButton() {
+        clickOnElement(coupesButton);
+    }
+
+    public void clickConvertiblesButton() {
+        clickOnElement(convertiblesButton);
     }
 }

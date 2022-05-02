@@ -22,7 +22,7 @@ public class TestNBATeams extends BaseTest {
     @Test
     public void testNavigateByCityName() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
-        nbaTeamPage.navigateByNBACityName("Denver");
+        nbaTeamPage.navigateByNBACityName("New York");
     }
 
     // try to clean up assertions'
