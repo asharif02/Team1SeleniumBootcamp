@@ -1,6 +1,7 @@
 package app.pom;
 
 import base.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -45,6 +46,7 @@ public class Homepage extends BasePage {
     public WebElement convertiblesHeadline;
 
     @FindBy(xpath = "//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']")
+//    @FindBy(xpath = "//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']//div[text()= '%s']")
     public List<WebElement> allBMWModels;
 
     @FindBy(xpath = "//div[@data-filter='savs']//div[@class='globalnav-primary-vehicles__car']")
@@ -59,6 +61,12 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//div[@data-filter='convertibles']//div[@class='globalnav-primary-vehicles__car']")
     public List<WebElement> allConvertibleModels;
 
+    @FindBy(xpath = "//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']//img[@alt='A BMW i7 Electric Vehicle']")
+    public WebElement comingSooni7Option;
+
+    @FindBy(xpath = "//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']//div//span")
+    public WebElement mModelsButton;
+
     public Homepage() {
         PageFactory.initElements(driver, this);
     }
@@ -69,7 +77,30 @@ public class Homepage extends BasePage {
         homepage.clickModelsFlyoutButton();
     }
 
-    public void navigateByBMWModelName(String modelName) {
+    public void chooseBMWModel(String modelName) {
+        navigateToBMWAllModels();
+        webDriverWait.until(ExpectedConditions.visibilityOf(comingSooni7Option));
+
+        if(modelName == "m" || modelName == "M") {
+            clickOnElement(mModelsButton);
+        } else {
+            WebElement desiredModel = getClickableElement(By.xpath
+                    (String.format("//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']" +
+                            "//div[text()=\"%s\"]", modelName)));
+            clickOnElement(desiredModel);
+        }
+
+        try {
+            ModelPage modelPage = new ModelPage();
+            modelPage.waitForModelNameAnimation();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    // does not work, see method above
+    public void navigateToBMWModelByName(String modelName) {
         navigateToBMWAllModels();
         webDriverWait.until(ExpectedConditions.visibilityOf(allModelsHeadline));
 
@@ -77,7 +108,7 @@ public class Homepage extends BasePage {
 
         try {
             for (WebElement model : models) {
-                if (model.getAttribute("innerHTML").contains(modelName)) {
+                if (model.getAttribute("innerHTML").toLowerCase().contains(modelName)) {
                     model.click();
                 }
             }
@@ -92,7 +123,6 @@ public class Homepage extends BasePage {
             e.printStackTrace();
         }
     }
-
 
     public void selectRandomBMWModel() {
         Homepage homepage = new Homepage();
@@ -209,6 +239,19 @@ public class Homepage extends BasePage {
         Random random = new Random();
         int randomConvertible = random.nextInt(maxConvertibles);
         convertibles.get(randomConvertible).click();
+
+        try {
+            ModelPage modelPage = new ModelPage();
+            modelPage.waitForModelNameAnimation();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void navigateToMSeries() {
+        navigateToBMWAllModels();
+        webDriverWait.until(ExpectedConditions.visibilityOf(allModelsHeadline));
+        clickOnElement(mModelsButton);
 
         try {
             ModelPage modelPage = new ModelPage();
