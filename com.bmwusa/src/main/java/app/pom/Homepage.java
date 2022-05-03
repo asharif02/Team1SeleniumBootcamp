@@ -83,6 +83,22 @@ public class Homepage extends BasePage {
 
         if(modelName == "m" || modelName == "M") {
             clickOnElement(mModelsButton);
+        } else if (modelName.startsWith("x") || modelName.startsWith("X") || modelName.startsWith("z")
+                || modelName.startsWith("Z")) {
+            WebElement desiredModel = getClickableElement(By.xpath
+                    (String.format("//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']" +
+                            "//div[text()=\"%s\"]", modelName.toUpperCase())));
+            clickOnElement(desiredModel);
+        } else if (modelName.startsWith("i") || modelName.startsWith("I")) {
+            String i = "i";
+            String str = new String(modelName);
+            String lastLetter = String.valueOf(str.charAt(str.length()-1));
+            modelName = i + lastLetter.toUpperCase();
+
+            WebElement desiredModel = getClickableElement(By.xpath
+                    (String.format("//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']" +
+                            "//div[contains(text(), \"%s\")]", modelName)));
+            clickOnElement(desiredModel);
         } else {
             WebElement desiredModel = getClickableElement(By.xpath
                     (String.format("//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']" +

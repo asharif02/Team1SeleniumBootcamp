@@ -135,6 +135,12 @@ public class TestBMWModels extends BaseTest {
     }
 
     @Test
+    public void testNavigateToiX() {
+        Homepage homepage = new Homepage();
+        homepage.chooseBMWModel("ix");
+    }
+
+    @Test
     public void testNavigateToi4() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("i4");
