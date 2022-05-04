@@ -8,6 +8,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import listeners.DriverEventListener;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
@@ -295,6 +296,9 @@ public class BasePage {
         } else if (browser.equalsIgnoreCase("safari")) {
             WebDriverManager.safaridriver().setup();
             driver = new SafariDriver();
+        } else if (browser.equalsIgnoreCase("edge")) {
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
         }
 
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));

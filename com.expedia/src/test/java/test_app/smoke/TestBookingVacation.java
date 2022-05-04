@@ -41,10 +41,10 @@ public class TestBookingVacation extends BaseTest {
     }
 
     @Test
-    public void testTripToIndia() {
+    public void testTripToSouthAfrica() {
         // Navigation
         Homepage homepage = new Homepage();
-        homepage.selectRandomDestinationResultItem("India");
+        homepage.selectRandomDestinationResultItem("South Africa");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
         homepage.applyChanges();
