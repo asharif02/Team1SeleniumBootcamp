@@ -21,6 +21,9 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//ul[@data-stid='location-field-destination-results']//li[@class='uitk-typeahead-result-item has-subtext']")
     public List<WebElement> destinationResultItems;
 
+    @FindBy(xpath = "//ul[@data-stid='location-field-destination-results']//li[@class='uitk-typeahead-result-item has-subtext']")
+    public WebElement resultItems;
+
     @FindBy(xpath = "//div[@class='uitk-typeahead-result-title-label truncate']")
     public WebElement exploreTrendingDestinations;
 
@@ -60,6 +63,12 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//h2[@class='uitk-toolbar-title truncate']")
     public WebElement mapHeaderText;
 
+    @FindBy(xpath = "//h1")
+    public WebElement accessDenied;
+
+    @FindBy(xpath = "(//button[@class='uitk-date-picker-day selected edge'])[1]")
+    public WebElement firstSelectedDayButtonEdge;
+
     public Homepage() {
         PageFactory.initElements(driver, this);
     }
@@ -69,6 +78,7 @@ public class Homepage extends BasePage {
         sendKeysToElement(destinationInputField, destination);
 
         webDriverWait.until(ExpectedConditions.invisibilityOf(exploreTrendingDestinations));
+        webDriverWait.until(ExpectedConditions.visibilityOf(resultItems));
 
         List<WebElement> results = destinationResultItems;
         int maxResults = results.size();
@@ -83,7 +93,7 @@ public class Homepage extends BasePage {
         webDriverWait.until(ExpectedConditions.visibilityOf(datePickerMenu));
 
         try {
-            WebElement desiredCheckInDay = getClickableElement(By.xpath
+            WebElement desiredCheckInDay = getVisibleElement(By.xpath
                     (String.format("(//div[@data-stid='date-picker-month'])[1]//button[@data-day=\"%s\"]",
                             getCurrentDay())));
             clickOnElement(desiredCheckInDay);
@@ -94,9 +104,11 @@ public class Homepage extends BasePage {
     }
 
     public void selectCheckOutDateWithinTwoWeeks() {
+        webDriverWait.until(ExpectedConditions.visibilityOf(firstSelectedDayButtonEdge));
+
         ArrayList<WebElement> twoWeeks = new ArrayList<>();
 
-        int count = 0;
+        int count = 1;
         for(WebElement days : allAvailableTravelDays) {
             count++;
             if(count <= 14) {
@@ -120,7 +132,18 @@ public class Homepage extends BasePage {
         webDriverWait.until(ExpectedConditions.visibilityOf(viewInAMapButton));
         clickViewInAMapButton();
         webDriverWait.until(ExpectedConditions.visibilityOf(mapHeaderText));
+    }
 
+    public void dealWithAccessDenied() {
+        fluentWait.until(ExpectedConditions.visibilityOf(accessDenied));
+
+        if(driver.getTitle().contains("Access Denied")) {
+            driver.navigate().refresh();
+        }
+
+//        if (driver.findElement(By.xpath("//h1")) == accessDenied) {
+//            driver.navigate().refresh();
+//        }
 
     }
 

@@ -88,6 +88,7 @@ public class BasePage {
         }
     }
 
+
     @Parameters({"driverConfigEnabled"})
     @AfterMethod
     public void cleanUp(@Optional("true") String driverConfigEnabled) {

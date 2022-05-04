@@ -2,16 +2,29 @@ package test_app.smoke;
 
 import app.pom.Homepage;
 import base_test.BaseTest;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestBookingVacation extends BaseTest {
 
+//    @Test
+//    public void testBookCustomVacation() {
+//
+//        // TBD
+//
+//    }
+
+    // region Travel to Any Place in the World
     @Test
     public void testTripToNYC() {
         // Navigation
         Homepage homepage = new Homepage();
+
+
+        // Access Denied
+//        homepage.dealWithAccessDenied();
+
         homepage.selectRandomDestinationResultItem("NYC");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -28,6 +41,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToMexico() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Mexico");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -44,6 +58,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToSouthAfrica() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("South Africa");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -60,6 +75,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToIstabul() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Istanbul");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -76,6 +92,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToIndonesia() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Indonesia");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -92,6 +109,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToJapan() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Japan");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -108,6 +126,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToThailand() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Thailand");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -124,6 +143,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToRome() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Rome");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -140,6 +160,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToSpain() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Spain");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -156,6 +177,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToLondon() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("London");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -172,6 +194,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToTurkey() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Turkey");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -188,6 +211,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToItaly() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Italy");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -204,6 +228,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToPortugal() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Portugal");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -220,6 +245,7 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToHawaii() {
         // Navigation
         Homepage homepage = new Homepage();
+
         homepage.selectRandomDestinationResultItem("Hawaii");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -236,6 +262,9 @@ public class TestBookingVacation extends BaseTest {
     public void testTripToFrance() {
         // Navigation
         Homepage homepage = new Homepage();
+
+
+
         homepage.selectRandomDestinationResultItem("France");
         homepage.selectCurrentCheckInDate();
         homepage.selectCheckOutDateWithinTwoWeeks();
@@ -247,5 +276,6 @@ public class TestBookingVacation extends BaseTest {
 
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
+    //endregion
 
 }
