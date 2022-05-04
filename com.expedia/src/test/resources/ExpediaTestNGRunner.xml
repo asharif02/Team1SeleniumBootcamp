@@ -9,4 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://expedia.com"/>
 
+    <test name="Expedia - Book Any Vacation">
+        <classes>
+            <class name="test_app.smoke.TestBookingVacation"/>
+        </classes>
+    </test>
+
 </suite>

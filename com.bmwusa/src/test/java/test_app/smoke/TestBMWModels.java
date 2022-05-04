@@ -1,6 +1,7 @@
 package test_app.smoke;
 
 import app.pom.Homepage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import base_test.BaseTest;
 
@@ -9,7 +10,7 @@ public class TestBMWModels extends BaseTest {
     @Test
     public void navigateToAnyBMWModel() {
         Homepage homepage = new Homepage();
-        homepage.chooseBMWModel("m");
+        homepage.chooseBMWModel("x2");
     }
 
     // region Navigate to random BMW Model / Body Type
@@ -48,7 +49,29 @@ public class TestBMWModels extends BaseTest {
     public void testNavigateToX1() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("x1");
+
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(0));
+        String actualModel = String.valueOf(driver.getTitle().contains(expectedModel));
+        System.out.println(actualModel);
+        System.out.println(expectedModel);
+
+//        String test = excel.readStringList("bmwModels").get(0);
+//        System.out.println(test);
+
+//        System.out.println("Actual Result: " + actualModel);
+//        System.out.println("Expected Result: " + expectedModel);
+
+        Assert.assertEquals(actualModel, expectedModel, "Actual Model does not match Expected Model");
     }
+
+
+
+
+
+
+
+
+
 
     @Test
     public void testNavigateToX2() {

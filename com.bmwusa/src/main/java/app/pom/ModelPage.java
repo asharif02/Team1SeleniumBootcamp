@@ -11,7 +11,8 @@ public class ModelPage extends BasePage {
     @FindBy(xpath = "//a[@aria-label='Shop Inventory']//span[contains(text(), 'Shop Inventory')]")
     public WebElement shopInventoryButton;
 
-    @FindBy(xpath = "//div[@id='animation-container-4635cb6f-762b-4af0-96e7-7314af92630c']")
+//    @FindBy(xpath = "//div[@id='animation-container-4635cb6f-762b-4af0-96e7-7314af92630c']")
+    @FindBy(xpath = "(//div[@data-animation='fade'])[2]")
     public WebElement modelTextAnimation;
 
     public ModelPage() {
