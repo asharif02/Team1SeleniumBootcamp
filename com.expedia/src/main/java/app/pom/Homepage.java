@@ -2,6 +2,7 @@ package app.pom;
 
 import base.BasePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -74,6 +75,12 @@ public class Homepage extends BasePage {
     }
 
     public void selectRandomDestinationResultItem(String destination) {
+//        try {
+//            refreshPage();
+//        } catch (StaleElementReferenceException e) {
+//            e.printStackTrace();
+//        }
+
         clickGoingToLocationField();
         sendKeysToElement(destinationInputField, destination);
 
@@ -108,7 +115,7 @@ public class Homepage extends BasePage {
 
         ArrayList<WebElement> twoWeeks = new ArrayList<>();
 
-        int count = 1;
+        int count = 0;
         for(WebElement days : allAvailableTravelDays) {
             count++;
             if(count <= 14) {
@@ -122,7 +129,8 @@ public class Homepage extends BasePage {
 
         Random random = new Random();
         int randomDay = random.nextInt(maxVacation);
-        twoWeeks.get(randomDay).click();
+        safeClickOnElement(twoWeeks.get(randomDay));
+//        twoWeeks.get(randomDay).click();
 
     }
 
@@ -134,17 +142,14 @@ public class Homepage extends BasePage {
         webDriverWait.until(ExpectedConditions.visibilityOf(mapHeaderText));
     }
 
-    public void dealWithAccessDenied() {
+    public Homepage refreshPage() {
         fluentWait.until(ExpectedConditions.visibilityOf(accessDenied));
 
         if(driver.getTitle().contains("Access Denied")) {
             driver.navigate().refresh();
         }
 
-//        if (driver.findElement(By.xpath("//h1")) == accessDenied) {
-//            driver.navigate().refresh();
-//        }
-
+        return new Homepage();
     }
 
     public String getCurrentDay() {
@@ -165,7 +170,8 @@ public class Homepage extends BasePage {
     }
 
     public void clickGoingToLocationField() {
-        clickOnElement(destinationMenuField);
+//        clickOnElement(destinationMenuField);
+        destinationMenuField.click();
     }
 
     public void clickCheckInButton() {
