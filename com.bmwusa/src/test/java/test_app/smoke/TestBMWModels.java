@@ -10,7 +10,7 @@ public class TestBMWModels extends BaseTest {
     @Test
     public void navigateToAnyBMWModel() {
         Homepage homepage = new Homepage();
-        homepage.chooseBMWModel("x2");
+        homepage.chooseBMWModel("3");
     }
 
     // region Navigate to random BMW Model / Body Type

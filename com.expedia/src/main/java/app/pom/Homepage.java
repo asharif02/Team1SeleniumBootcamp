@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.Optional;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -80,6 +81,7 @@ public class Homepage extends BasePage {
 //        } catch (StaleElementReferenceException e) {
 //            e.printStackTrace();
 //        }
+//        refreshPage();
 
         clickGoingToLocationField();
         sendKeysToElement(destinationInputField, destination);
@@ -143,7 +145,11 @@ public class Homepage extends BasePage {
     }
 
     public Homepage refreshPage() {
-        fluentWait.until(ExpectedConditions.visibilityOf(accessDenied));
+        try {
+            webDriverWait.until(ExpectedConditions.visibilityOf(accessDenied));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         if(driver.getTitle().contains("Access Denied")) {
             driver.navigate().refresh();
