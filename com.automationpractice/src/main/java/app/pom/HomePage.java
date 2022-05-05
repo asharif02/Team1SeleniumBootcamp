@@ -24,13 +24,14 @@ public class HomePage extends BasePage {
 
     //Test #2
 
-    //@FindBy(xpath = "//a[@class='login']")
-    //public WebElement signInButton;
-    //@FindBy(xpath = "//div[@id='contact-link']")
+    @FindBy(xpath = "//a[@class='login']")
+    public WebElement signInButton1;
+
+    @FindBy(xpath = "//div[@id='contact-link']")
     public WebElement contactUsButton;
 
 
-    public void testContactUsButton(String item) {
+    public void setContactUsButton(String item) {
         sendKeysToElement(contactUsButton, item);
     }
     //Test case #2
@@ -38,6 +39,16 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//button[@class='btn btn-default button-search']")
     public WebElement searchButton;
 
-    public void testSearchButton(String item) { sendKeysToElement(searchButton,item);}
+    public void setSearchButton(String item) { sendKeysToElement(searchButton,item);}
+
+    //Test case #3
+
+    @FindBy(xpath = "//a[@class='login']")
+    public WebElement signInButton2;
+
+    public void setSignInButton2(String item){ sendKeysToElement(signInButton2,item);}
+
+
+
 }
 
