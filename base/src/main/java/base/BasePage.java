@@ -169,6 +169,19 @@ public class BasePage {
         actions.moveToElement(element).perform();
     }
 
+    public String getElementText(WebElement element) {
+        String text = "";
+        webDriverWait.until(ExpectedConditions.visibilityOf(element));
+
+        text = element.getText();
+
+        if (text.equals("")) {
+            text = element.getAttribute("innerHTML");
+        }
+
+        return text;
+    }
+
     public String getTrimmedElementText(WebElement element) {
         String text = "";
         webDriverWait.until(ExpectedConditions.visibilityOf(element));

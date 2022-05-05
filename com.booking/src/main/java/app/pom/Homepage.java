@@ -34,6 +34,6 @@ public class Homepage extends SystemBar {
     }
 
     public void scrollUntilFirstCarouselItemSubTitleIsVisible() {
-        jsScrollUntilElementVisible(dealsCampaignAd);
+        jsScrollUntilElementVisible(browseByPropertyTypeText);
     }
 }
