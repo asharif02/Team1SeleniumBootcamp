@@ -79,7 +79,7 @@ public class BasePage {
 
     @Parameters({"driverConfigEnabled", "browser", "url"})
     @BeforeMethod
-    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://bmwusa.com") String url) {
+    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://booking.com") String url) {
         if (Boolean.parseBoolean(driverConfigEnabled)) {
             driverInit(browser);
             driver.get(url);
@@ -280,6 +280,11 @@ public class BasePage {
         jsDriver.executeScript("arguments[0].setAttribute('" + attribute + "', '" + value + "')", driver.findElement(by));
 
         return driver.findElement(by);
+    }
+
+    public void jsScrollUntilElementVisible(WebElement element) {
+        JavascriptExecutor jsDriver = (JavascriptExecutor) driver;
+        jsDriver.executeScript("arguments[0].scrollIntoView();", element);
     }
 
     // endregion
