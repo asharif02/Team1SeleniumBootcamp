@@ -81,7 +81,7 @@ public class Homepage extends BasePage {
         navigateToBMWAllModels();
         webDriverWait.until(ExpectedConditions.visibilityOf(comingSooni7Option));
 
-        if(modelName == "m" || modelName == "M") {
+        if(modelName.contains("m") || modelName.contains("M")) {
             clickOnElement(mModelsButton);
         } else if (modelName.startsWith("x") || modelName.startsWith("X") || modelName.startsWith("z")
                 || modelName.startsWith("Z")) {
