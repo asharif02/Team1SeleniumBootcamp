@@ -43,7 +43,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/EbayTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/EbayTestNGRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

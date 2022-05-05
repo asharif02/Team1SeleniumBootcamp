@@ -43,7 +43,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/SoFiTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/SoFiTestNGRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

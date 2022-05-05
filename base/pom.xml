@@ -85,7 +85,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>${basedir}/src/test/reports</directory>
+                            <directory>${basedir}/src/testAutomationParactice/reports</directory>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
                     </filesets>

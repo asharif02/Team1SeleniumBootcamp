@@ -111,7 +111,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>${basedir}/src/test/reports</directory>
+                            <directory>${basedir}/src/testAutomationParactice/reports</directory>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
                     </filesets>
@@ -140,20 +140,20 @@
                     <testFailureIgnore>true</testFailureIgnore>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/ATTTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/AutomationPracticeTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/BankOfAmericaTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/BMWUSATestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/BookingTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/EbayTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/ESPNTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/ExpediaTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/MarketWatchTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/MBUSATestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/RedfinTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/SoFiTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/StreetEasyTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/VerizonTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/ATTTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/AutomationPracticeTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/BankOfAmericaTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/BMWUSATestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/BookingTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/EbayTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/ESPNTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/ExpediaTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/MarketWatchTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/MBUSATestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/RedfinTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/SoFiTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/StreetEasyTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/VerizonTestNGRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

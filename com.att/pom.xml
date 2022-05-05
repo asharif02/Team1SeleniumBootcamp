@@ -41,7 +41,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/ATTTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/ATTTestNGRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

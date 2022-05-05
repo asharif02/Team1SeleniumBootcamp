@@ -43,7 +43,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/MBUSATestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/testAutomationParactice-classes/MBUSATestNGRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

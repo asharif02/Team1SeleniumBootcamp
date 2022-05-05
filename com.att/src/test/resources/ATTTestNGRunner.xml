@@ -9,7 +9,7 @@
     <parameter name="browser" value="firefox"/>
     <parameter name="url" value="http://att.com"/>
 
-    <test name="test">
+    <test name="testAutomationParactice">
         <classes>
             <class name="testATT.TestTestClass"/>
         </classes>

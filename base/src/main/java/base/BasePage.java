@@ -78,7 +78,7 @@ public class BasePage {
 
     @Parameters({"driverConfigEnabled", "browser", "url"})
     @BeforeMethod
-    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://mbusa.com") String url) {
+    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://automationpractice.com") String url) {
         if (Boolean.parseBoolean(driverConfigEnabled)) {
             driverInit(browser);
             driver.get(url);
@@ -86,7 +86,8 @@ public class BasePage {
             driver.manage().window().maximize();
         }
     }
-
+//http://automationpractice.com
+    //http://mbusa.com
     @Parameters({"driverConfigEnabled"})
     @AfterMethod
     public void cleanUp(@Optional("true") String driverConfigEnabled) {

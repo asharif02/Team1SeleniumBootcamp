@@ -19,7 +19,7 @@
         <!-- report name - displayed at top-nav -->
         <reportName>Automation Report</reportName>
 
-        <!-- location of charts in the test view -->
+        <!-- location of charts in the testAutomationParactice view -->
         <!-- top, bottom -->
         <testViewChartLocation>top</testViewChartLocation>
 
