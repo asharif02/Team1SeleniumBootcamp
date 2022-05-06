@@ -1,4 +1,4 @@
-package app.pom;
+package automationpractice.pom;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;

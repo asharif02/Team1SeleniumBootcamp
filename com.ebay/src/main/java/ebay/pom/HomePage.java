@@ -1,4 +1,4 @@
-package app.pom;
+package ebay.pom;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;
@@ -11,6 +11,12 @@ public class HomePage extends BasePage{
 
    @FindBy (xpath = "//a[@href='https://www.ebay.com/deals']")
    public WebElement ebayDailyDealsButton;
+
+    //Test case# 2
+
+
+
+
 
 
 

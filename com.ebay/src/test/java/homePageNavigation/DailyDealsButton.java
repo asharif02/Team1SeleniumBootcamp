@@ -1,14 +1,13 @@
 package homePageNavigation;
 
-import app.pom.HomePage;
+import ebay.pom.HomePage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import base.BasePage;
 import org.testng.annotations.Test;
-import test_base.TestBasePage;
 import org.openqa.selenium.Keys;
 
-public class DailyDealsButton extends TestBasePage {
+public class DailyDealsButton extends BasePage {
 
     @Test
 
@@ -26,4 +25,3 @@ public class DailyDealsButton extends TestBasePage {
 
     }
 }
-//(//a[@href='https://www.ebay.com/deals'])[2]

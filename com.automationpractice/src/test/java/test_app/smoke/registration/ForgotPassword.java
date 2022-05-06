@@ -1,13 +1,12 @@
 package test_app.smoke.registration;
 
-import app.pom.HomePage;
+import automationpractice.pom.HomePage;
 import org.testng.Assert;
 import base.BasePage;
 import org.testng.annotations.Test;
-import test_base.TestBasePage;
 import org.openqa.selenium.Keys;
 
-public class ForgotPassword extends TestBasePage{
+public class ForgotPassword extends BasePage{
 
     @Test
 
