@@ -23,8 +23,11 @@ public class ListingPage extends SystemBar {
         PageFactory.initElements(driver, this);
     }
 
+
+
     public void waitForFirstHomeCard() {
         webDriverWait.until(ExpectedConditions.visibilityOf(firstHomeCardContainer));
+
     }
 
     public void getListingLocation(String location) {

@@ -95,9 +95,9 @@ public class TestSearchForListing extends BaseTest {
     }
 
     @Test
-    public void testFindHomeInSacramento() {
+    public void testFindHomeInSanFrancisco() {
         Homepage homepage = new Homepage();
-        homepage.navigateToAnyUSHomeListing("sacramento");
+        homepage.navigateToAnyUSHomeListing("san francisco");
         ListingPage listingPage = new ListingPage();
         listingPage.waitForFirstHomeCard();
 
@@ -108,9 +108,9 @@ public class TestSearchForListing extends BaseTest {
     }
 
     @Test
-    public void testFindHomeInSanFrancisco() {
+    public void testFindHomeInSacramento() {
         Homepage homepage = new Homepage();
-        homepage.navigateToAnyUSHomeListing("san francisco");
+        homepage.navigateToAnyUSHomeListing("sacramento");
         ListingPage listingPage = new ListingPage();
         listingPage.waitForFirstHomeCard();
 
