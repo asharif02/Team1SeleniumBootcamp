@@ -9,12 +9,12 @@ import org.testng.annotations.Test;
 
 public class TestSearchForListing extends BaseTest {
 
-//    @Test
-//    public void testFindHomeAnywhereInTheUS() throws InterruptedException {
-//        Homepage homepage = new Homepage();
-//        homepage.navigateToAnyUSHomeListing("kansas");
-//        Thread.sleep(3000);
-//    }
+    @Test
+    public void testFindHomeAnywhereInTheUS() throws InterruptedException {
+        Homepage homepage = new Homepage();
+        homepage.navigateToAnyUSHomeListing("kansas");
+        Thread.sleep(5000);
+    }
 
     @Test
     public void testFindHomeInAustin() {
