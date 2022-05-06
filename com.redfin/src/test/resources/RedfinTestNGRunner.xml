@@ -9,4 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://redfin.com"/>
 
+    <test name="Redfin - Search US Listings">
+        <classes>
+            <class name="test_app.smoke.TestSearchForListing"/>
+        </classes>
+    </test>
+
 </suite>
