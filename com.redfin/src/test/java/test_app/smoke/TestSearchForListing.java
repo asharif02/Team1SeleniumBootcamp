@@ -3,17 +3,17 @@ package test_app.smoke;
 import app.pom.Homepage;
 import app.pom.ListingPage;
 import base_test.BaseTest;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestSearchForListing extends BaseTest {
 
     @Test
-    public void testFindHomeAnywhereInTheUS() throws InterruptedException {
+    public void testFindHomeAnywhereInTheUS() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("kansas");
-        Thread.sleep(5000);
+        ListingPage listingPage = new ListingPage();
+        listingPage.closeMapFlyOutButton();
     }
 
     @Test
@@ -21,7 +21,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("austin");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.clickMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(0);
@@ -34,7 +34,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("tampa");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(1);
@@ -47,7 +47,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("new york");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(2);
@@ -60,7 +60,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("mclean");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(3);
@@ -73,7 +73,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("minneapolis");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(4);
@@ -86,7 +86,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("cincinnati");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(5);
@@ -99,7 +99,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("san francisco");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(6);
@@ -112,7 +112,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("sacramento");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(7);
@@ -125,7 +125,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("nashville");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(8);
@@ -138,7 +138,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("atlanta");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(9);
@@ -151,7 +151,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("boston");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(10);
@@ -164,7 +164,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("portland");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(11);
@@ -177,7 +177,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("houston");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(12);
@@ -190,7 +190,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("dallas");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(13);
@@ -203,7 +203,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("seattle");
         ListingPage listingPage = new ListingPage();
-        listingPage.waitForFirstHomeCard();
+        listingPage.closeMapFlyOutButton();
 
         String actualLocation = listingPage.locationTagText.getText();
         String expectedLocation = excel.readStringList("usaCities").get(14);

@@ -1,7 +1,6 @@
 package app.pom;
 
 import app.shared.SystemBar;
-import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,18 +18,35 @@ public class ListingPage extends SystemBar {
     @FindBy(xpath = "//div[@id='MapHomeCard_0']")
     public WebElement firstHomeCardContainer;
 
+    @FindBy(xpath = "//div[@title='Show map']//div[@role='button']")
+    public WebElement mapFlyOutButton;
+
     public ListingPage() {
         PageFactory.initElements(driver, this);
     }
 
+    public void closeMapFlyOutButton() {
+        waitForFirstHomeCard();
+        webDriverWait.until(ExpectedConditions.visibilityOf(mapFlyOutButton));
 
+        boolean mapFlyOutButton = driver.findElement(By.xpath("//div[@title='Show map']//div[@role='button']")).isDisplayed();
+
+        if (mapFlyOutButton) {
+            clickMapFlyOutButton();
+        }
+
+        webDriverWait.until(ExpectedConditions.visibilityOf(firstHomeCardContainer));
+    }
 
     public void waitForFirstHomeCard() {
         webDriverWait.until(ExpectedConditions.visibilityOf(firstHomeCardContainer));
-
     }
 
     public void getListingLocation(String location) {
         driver.findElement(By.xpath(String.format("//form[@class='SearchBoxForm']//div[contains(text(), '%s')]", location)));
+    }
+
+    public void clickMapFlyOutButton() {
+        clickOnElement(mapFlyOutButton);
     }
 }
