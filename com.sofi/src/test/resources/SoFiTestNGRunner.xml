@@ -9,4 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://sofi.com"/>
 
+    <test name="Sofi - [...]">
+        <classes>
+            <class name="test_app.smoke"/>
+        </classes>
+    </test>
+
 </suite>

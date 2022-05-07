@@ -10,13 +10,13 @@ import base_test.BaseTest;
 public class TestAccessories extends BaseTest {
 
     @Test
-    public void testPhoneCasesLink() {
+    public void testFindLowestPhoneCase() {
         Homepage homepage = new Homepage();
         homepage.clickAccessoriesLink();
         AccessoriesPage ap = new AccessoriesPage();
         ap.clickPhoneAccessoriesColumnCategory("cases");
         PhoneCases phoneCases = new PhoneCases();
-        phoneCases.findCheapestPrice();
+        phoneCases.findLowestPrice();
     }
 
     @Test
