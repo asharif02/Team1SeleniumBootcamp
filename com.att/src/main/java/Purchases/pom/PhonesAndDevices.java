@@ -10,9 +10,11 @@ public class PhonesAndDevices extends SystemBar {
     @FindBy(xpath = "")
     public WebElement phonesAndDevicesLink;
 
-    public void phonesAndDevicesLink() {
+    public boolean phonesAndDevicesLink() {
         clickOnElement(phonesAndDevicesLink);
+        return false;
     }
+
 
     public PhonesAndDevices(){
         PageFactory.initElements(driver, this);

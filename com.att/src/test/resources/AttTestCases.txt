@@ -7,7 +7,11 @@ TEST CASE 2: as a user, I should be able to search for products
 3. inout search term "
 
 
-TEST CASE 3:
+TEST CASE 3: as a user, I should be able to navigate to phones and devices page
+1. Navigate to att.com
+2. Click in the search field
+3. inout search term "
+
 
 TEST CASE 4:
 

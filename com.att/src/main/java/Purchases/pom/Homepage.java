@@ -7,8 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Homepage extends SystemBar {
 
+    @FindBy(xpath = "//*[@id='z1-globe']")
+    WebElement attLogo;
+
     @FindBy(xpath = "//li[@id='HEADBAND01']")
     WebElement phonesAndDevicesButton;
+
+    @FindBy(xpath = "//a[@aria-controls='Categories-tab-3']")
+    public WebElement smartwatchesButton;
 
     public Homepage(){
         PageFactory.initElements(driver, this);
@@ -17,5 +23,13 @@ public class Homepage extends SystemBar {
     public PhonesAndDevices clickPhonesAndDevicesButton(){
     clickOnElement(phonesAndDevicesButton);
     return new PhonesAndDevices();
+    }
+    public Smartwatches clickSmartwatchesButton(){
+        clickOnElement(smartwatchesButton);
+        return new Smartwatches();
+    }
+    public Homepage clickAttLogo(){
+        clickOnElement(attLogo);
+        return new Homepage();
     }
 }
