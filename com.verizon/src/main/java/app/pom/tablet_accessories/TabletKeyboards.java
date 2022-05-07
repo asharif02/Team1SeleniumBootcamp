@@ -49,6 +49,7 @@ public class TabletKeyboards extends SystemBar {
                 cheapestElement = element;
             }
         }
+        cheapestElement.click();
     }
 
     public TabletKeyboards() {

@@ -49,6 +49,7 @@ public class TabletCases extends SystemBar {
                 cheapestElement = element;
             }
         }
+        cheapestElement.click();
     }
 
     public TabletCases() {

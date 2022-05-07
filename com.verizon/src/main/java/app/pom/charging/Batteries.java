@@ -1,4 +1,4 @@
-package app.pom.tablet_accessories;
+package app.pom.charging;
 
 import app.shared.SystemBar;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class TabletMagSafe extends SystemBar {
+public class Batteries extends SystemBar {
 
     @FindBy(xpath = "//div[@class='Tile__Pricing-sc-71g958-10 fClbGb blur']/p")
     public List<WebElement> prices;
@@ -33,27 +33,28 @@ public class TabletMagSafe extends SystemBar {
         cheapestElement.click();
     }
 
-    public void findHighestPrice() {
+    public void findHighestPrice(){
         double max = Double.MIN_VALUE;
         WebElement cheapestElement = null;
 
-        for (WebElement element : prices) {
+        for(WebElement element : prices){
 
             StringBuilder sb = new StringBuilder(element.getText());
             sb.deleteCharAt(0);
             String price = sb.toString();
             System.out.println(price);
             double doublePrice = Double.parseDouble(price);
-            if (doublePrice > max) {
+            if(doublePrice > max){
                 max = doublePrice;
                 cheapestElement = element;
             }
         }
+
+        System.out.println("THIS IS THE MAXIMUM FOUND! " + max);
         cheapestElement.click();
     }
 
-    public TabletMagSafe() {
+    public Batteries() {
         PageFactory.initElements(driver, this);
     }
 }
-

@@ -4,6 +4,7 @@ import app.pom.AccessoriesPage;
 import app.pom.Homepage;
 import app.pom.phone_accessories.PhoneCases;
 import app.pom.tablet_accessories.TabletCases;
+import app.pom.tablet_accessories.TabletKeyboards;
 import app.pom.tablet_accessories.TabletMagSafe;
 import app.pom.tablet_accessories.TabletScreenProtectors;
 import base_test.BaseTest;
@@ -11,12 +12,13 @@ import org.testng.annotations.Test;
 
 public class TestTabletAccessories extends BaseTest {
 
+    // region Verizon Tablet Accessories
     @Test
     public void testFindLowestTabletCase() {
         Homepage homepage = new Homepage();
         homepage.clickAccessoriesLink();
         AccessoriesPage ap = new AccessoriesPage();
-        ap.clickPhoneAccessoriesColumnCategory("cases");
+        ap.clickTabletAccessoriesColumnCategory("cases");
         TabletCases tabletCases = new TabletCases();
         tabletCases.findLowestPrice();
     }
@@ -26,7 +28,7 @@ public class TestTabletAccessories extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.clickAccessoriesLink();
         AccessoriesPage ap = new AccessoriesPage();
-        ap.clickPhoneAccessoriesColumnCategory("cases");
+        ap.clickTabletAccessoriesColumnCategory("cases");
         TabletCases tabletCases = new TabletCases();
         tabletCases.findHighestPrice();
     }
@@ -36,7 +38,7 @@ public class TestTabletAccessories extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.clickAccessoriesLink();
         AccessoriesPage ap = new AccessoriesPage();
-        ap.clickPhoneAccessoriesColumnCategory("screen protectors");
+        ap.clickTabletAccessoriesColumnCategory("screen protectors");
         TabletScreenProtectors tsp = new TabletScreenProtectors();
         tsp.findLowestPrice();
     }
@@ -46,7 +48,7 @@ public class TestTabletAccessories extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.clickAccessoriesLink();
         AccessoriesPage ap = new AccessoriesPage();
-        ap.clickPhoneAccessoriesColumnCategory("screen protectors");
+        ap.clickTabletAccessoriesColumnCategory("screen protectors");
         TabletScreenProtectors tsp = new TabletScreenProtectors();
         tsp.findHighestPrice();
     }
@@ -56,7 +58,7 @@ public class TestTabletAccessories extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.clickAccessoriesLink();
         AccessoriesPage ap = new AccessoriesPage();
-        ap.clickPhoneAccessoriesColumnCategory("magsafe");
+        ap.clickTabletAccessoriesColumnCategory("magsafe");
         TabletMagSafe tmf = new TabletMagSafe();
         tmf.findLowestPrice();
     }
@@ -66,10 +68,30 @@ public class TestTabletAccessories extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.clickAccessoriesLink();
         AccessoriesPage ap = new AccessoriesPage();
-        ap.clickPhoneAccessoriesColumnCategory("magsafe");
+        ap.clickTabletAccessoriesColumnCategory("magsafe");
         TabletMagSafe tmf = new TabletMagSafe();
         tmf.findHighestPrice();
     }
 
+    @Test
+    public void testFindLowestTabletKeyboard() {
+        Homepage homepage = new Homepage();
+        homepage.clickAccessoriesLink();
+        AccessoriesPage ap = new AccessoriesPage();
+        ap.clickTabletAccessoriesColumnCategory("keyboard");
+        TabletKeyboards tabletKeyboards = new TabletKeyboards();
+        tabletKeyboards.findLowestPrice();
+    }
+
+    @Test
+    public void testFindHighestTabletKeyboard() {
+        Homepage homepage = new Homepage();
+        homepage.clickAccessoriesLink();
+        AccessoriesPage ap = new AccessoriesPage();
+        ap.clickTabletAccessoriesColumnCategory("keyboards");
+        TabletKeyboards tabletKeyboards = new TabletKeyboards();
+        tabletKeyboards.findHighestPrice();
+    }
+    // endregion
 
 }

@@ -49,6 +49,7 @@ public class TabletScreenProtectors extends SystemBar {
                 cheapestElement = element;
             }
         }
+        cheapestElement.click();
     }
 
     public TabletScreenProtectors() {
