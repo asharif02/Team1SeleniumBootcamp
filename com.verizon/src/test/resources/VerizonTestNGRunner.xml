@@ -9,4 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://verizon.com"/>
 
+    <test name="Verizon - Accessories">
+        <classes>
+            <class name="test_app.smoke.TestAccessories"/>
+        </classes>
+    </test>
+
 </suite>
