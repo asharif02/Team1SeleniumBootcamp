@@ -22,8 +22,6 @@ public class AccessoriesPage extends SystemBar {
         }
     }
 
-
-
     public AccessoriesPage(){
         PageFactory.initElements(driver, this);
     }

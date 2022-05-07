@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class PhoneCases extends SystemBar {
+public class MagSafe extends SystemBar {
 
     @FindBy(xpath = "//div[@class='Tile__Pricing-sc-71g958-10 fClbGb blur']/p")
     public List<WebElement> prices;
@@ -49,12 +49,10 @@ public class PhoneCases extends SystemBar {
                 cheapestElement = element;
             }
         }
-
         cheapestElement.click();
     }
 
-    public PhoneCases(){
+    public MagSafe() {
         PageFactory.initElements(driver, this);
     }
-
 }

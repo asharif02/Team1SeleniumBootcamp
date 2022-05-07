@@ -11,7 +11,7 @@
 
     <test name="Verizon - Accessories">
         <classes>
-            <class name="test_app.smoke.TestAccessories"/>
+            <class name="test_app.smoke.TestPhoneAccessories"/>
         </classes>
     </test>
 
