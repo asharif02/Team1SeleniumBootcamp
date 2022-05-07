@@ -15,7 +15,8 @@ public class Homepage extends SystemBar {
     public WebElement videoTitle;
 
 //    @FindBy(xpath = "//button[@class='ytp-large-play-button ytp-button']")
-    @FindBy(xpath = "//div[@id='movie_player']//button[@aria-label='Play']")
+//    @FindBy(xpath = "//div[@id='movie_player']//button[@aria-label='Play']")
+    @FindBy(xpath = "//button[@aria-label='Play']")
     public WebElement playButton;
 
     @FindBy(xpath = "//*[text()='A one-stop shop for your finances.']")
@@ -27,7 +28,8 @@ public class Homepage extends SystemBar {
     @FindBy(xpath = "//div[@id='movie_player']//div[@class='html5-video-container']")
     public WebElement videoContainer;
 
-    @FindBy(xpath = "//iframe[@src='https://www.youtube.com/embed/T6nDrDecra4']")
+//    @FindBy(xpath = "//iframe[@src='https://www.youtube.com/embed/T6nDrDecra4']")
+    @FindBy(xpath = "//iframe[contains(@src,'https://www.youtube.com')]")
     public WebElement videoIFrame;
 
     public Homepage() {
@@ -36,7 +38,10 @@ public class Homepage extends SystemBar {
 
     public void playWithSoFiVideo() throws InterruptedException {
         scrollToTextNextToMoviePlayer();
+        Thread.sleep(2500);
+        switchToIFrame();
         clickPlayButton();
+        Thread.sleep(15_000);
     }
 
     public void jsClickVideoPlayButton(WebElement element) {
@@ -44,7 +49,7 @@ public class Homepage extends SystemBar {
     }
 
     public void clickPlayButton() {
-        safeClickOnElement(playButton);
+        clickOnElement(playButton);
     }
 
     public void scrollToVideoTitle() {
