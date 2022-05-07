@@ -9,4 +9,28 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://marketwatch.com"/>
 
+    <test name="MarketWatch - Asia Market">
+        <classes>
+            <class name="test_app.TestAsiaMarketPage"/>
+        </classes>
+    </test>
+
+    <test name="MarketWatch - Europe Market">
+        <classes>
+            <class name="test_app.TestEuropeMarketPage"/>
+        </classes>
+    </test>
+
+    <test name="MarketWatch - FX Market">
+        <classes>
+            <class name="test_app.TestFXMarketPage"/>
+        </classes>
+    </test>
+
+    <test name="MarketWatch - United States Market">
+        <classes>
+            <class name="test_app.TestUnitedStatesMarketPage"/>
+        </classes>
+    </test>
+
 </suite>
