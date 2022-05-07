@@ -29,13 +29,13 @@ public class TestAccessories extends BaseTest {
         caseBundles.findLowestPrice();
     }
 
-//    @Test
-//    public void testFindHighestPhoneCaseBundle() {
-//        Homepage homepage = new Homepage();
-//        homepage.clickAccessoriesLink();
-//        AccessoriesPage ap = new AccessoriesPage();
-//        ap.clickPhoneAccessoriesColumnCategory("case bundles");
-//        CaseBundles caseBundles = new CaseBundles();
-//        caseBundles.findHighestPrice();
-//    }
+    @Test
+    public void testFindHighestPhoneCaseBundle() {
+        Homepage homepage = new Homepage();
+        homepage.clickAccessoriesLink();
+        AccessoriesPage ap = new AccessoriesPage();
+        ap.clickPhoneAccessoriesColumnCategory("case bundles");
+        CaseBundles caseBundles = new CaseBundles();
+        caseBundles.findHighestPrice();
+    }
 }

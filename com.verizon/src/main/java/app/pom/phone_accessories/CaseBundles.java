@@ -33,26 +33,26 @@ public class CaseBundles extends SystemBar {
         cheapestElement.click();
     }
 
-//    public void findHighestPrice(){
-//        double min = Double.MAX_VALUE;
-//        WebElement cheapestElement = null;
-//
-//        for(WebElement element : prices){
-//
-//            StringBuilder sb = new StringBuilder(element.getText());
-//            sb.deleteCharAt(0);
-//            String price = sb.toString();
-//            System.out.println(price);
-//            double doublePrice = Double.parseDouble(price);
-//            if(doublePrice > min){
-//                min = doublePrice;
-//                cheapestElement = element;
-//            }
-//        }
-//
-//        System.out.println("THIS IS THE MAXIMUM FOUND! " + min);
-//        cheapestElement.click();
-//    }
+    public void findHighestPrice(){
+        double max = Double.MIN_VALUE;
+        WebElement cheapestElement = null;
+
+        for(WebElement element : prices){
+
+            StringBuilder sb = new StringBuilder(element.getText());
+            sb.deleteCharAt(0);
+            String price = sb.toString();
+            System.out.println(price);
+            double doublePrice = Double.parseDouble(price);
+            if(doublePrice > max){
+                max = doublePrice;
+                cheapestElement = element;
+            }
+        }
+
+        System.out.println("THIS IS THE MAXIMUM FOUND! " + max);
+        cheapestElement.click();
+    }
 
     public CaseBundles() {
         PageFactory.initElements(driver, this);
