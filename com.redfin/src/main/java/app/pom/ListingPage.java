@@ -2,6 +2,7 @@ package app.pom;
 
 import app.shared.SystemBar;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -26,16 +27,19 @@ public class ListingPage extends SystemBar {
     }
 
     public void closeMapFlyOutButton() {
-        waitForFirstHomeCard();
-        webDriverWait.until(ExpectedConditions.visibilityOf(mapFlyOutButton));
+//        webDriverWait.until(ExpectedConditions.visibilityOf(mapFlyOutButton));
 
         boolean mapFlyOutButton = driver.findElement(By.xpath("//div[@title='Show map']//div[@role='button']")).isDisplayed();
 
-        if (mapFlyOutButton) {
-            clickMapFlyOutButton();
+        try {
+            if (mapFlyOutButton) {
+                clickMapFlyOutButton();
+            }
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
         }
 
-        webDriverWait.until(ExpectedConditions.visibilityOf(firstHomeCardContainer));
+//        webDriverWait.until(ExpectedConditions.visibilityOf(firstHomeCardContainer));
     }
 
     public void waitForFirstHomeCard() {

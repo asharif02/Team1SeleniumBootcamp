@@ -13,6 +13,7 @@ public class TestSearchForListing extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("kansas");
         ListingPage listingPage = new ListingPage();
+        listingPage.waitForFirstHomeCard();
         listingPage.closeMapFlyOutButton();
     }
 
