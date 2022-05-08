@@ -1,6 +1,7 @@
 TEST CASE 1: As a user, I should be able to navigate to ATT home page
 1. Navigate to att.com
 2. Assert either the ATT logo is present or not
+
 TEST CASE 2: as a user, I should be able to search for products
 1. Navigate to att.com
 2. Click in the search field
