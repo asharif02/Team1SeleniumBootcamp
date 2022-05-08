@@ -1,6 +1,7 @@
 package app.pom;
 
 import app.shared.SystemBar;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -32,16 +33,23 @@ public class Homepage extends SystemBar {
     @FindBy(xpath = "//iframe[contains(@src,'https://www.youtube.com')]")
     public WebElement videoIFrame;
 
+    @FindBy(xpath = "//div[@class='ytp-progress-bar-container']//div[@aria-valuenow='%s']")
+    public WebElement ytProgressBar;
+
     public Homepage() {
         PageFactory.initElements(driver, this);
     }
 
-    public void playWithSoFiVideo() throws InterruptedException {
+    public void playSoFiVideo() {
         scrollToTextNextToMoviePlayer();
-        Thread.sleep(2500);
+        fluentWait.until(ExpectedConditions.visibilityOf(videoIFrame));
         switchToIFrame();
         clickPlayButton();
-        Thread.sleep(15_000);
+    }
+
+    public void playVideoForSpecificAmountOfSeconds(String seconds) {
+        fluentWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(
+                String.format("//div[@class='ytp-progress-bar-container']//div[@aria-valuenow=\"%s\"]", seconds))));
     }
 
     public void jsClickVideoPlayButton(WebElement element) {
