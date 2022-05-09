@@ -25,6 +25,9 @@ public class Homepage extends SystemBar {
     @FindBy(xpath = "//input[@id='z1-searchfield']")
     public WebElement searchInputField;
 
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement searchButton;
+
     public Homepage(){
         PageFactory.initElements(driver, this);
     }
@@ -45,7 +48,13 @@ public class Homepage extends SystemBar {
     public void clickAttMenuDropdown(){
         clickOnElement(attMenuDropdown);
     }
+
     public void clickSearchInputField(){
         clickOnElement(searchInputField);
+    }
+
+    public SearchResults clickSearchButton(){
+        clickOnElement(searchButton);
+        return new SearchResults();
     }
 }

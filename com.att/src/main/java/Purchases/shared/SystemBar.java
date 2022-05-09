@@ -29,5 +29,4 @@ public class SystemBar extends BasePage {
     public SystemBar(){
         PageFactory.initElements(driver, this);
     }
-
 }

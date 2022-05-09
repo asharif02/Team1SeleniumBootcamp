@@ -15,7 +15,6 @@ public class PhonesAndDevices extends SystemBar {
         return false;
     }
 
-
     public PhonesAndDevices(){
         PageFactory.initElements(driver, this);
     }
