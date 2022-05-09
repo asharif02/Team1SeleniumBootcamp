@@ -25,7 +25,6 @@ public class TestNBATeams extends BaseTest {
         nbaTeamPage.navigateByNBACityName("New York");
     }
 
-    // try to clean up assertions'
     // region 30 NBA Teams
     @Test
     public void testNavigateToAtlantaHawks() {

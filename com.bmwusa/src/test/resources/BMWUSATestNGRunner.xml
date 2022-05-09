@@ -15,10 +15,10 @@
         </classes>
     </test>
 
-    <test name="BMW - Build Your Own">
-        <classes>
-            <class name="test_app.smoke.build_your_own.TestBuildYourOwn"/>
-        </classes>
-    </test>
+<!--    <test name="BMW - Build Your Own">-->
+<!--        <classes>-->
+<!--            <class name="test_app.smoke.build_your_own.TestBuildYourOwn"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>

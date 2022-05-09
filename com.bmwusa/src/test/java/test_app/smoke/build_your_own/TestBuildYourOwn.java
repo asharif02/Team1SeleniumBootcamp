@@ -9,22 +9,29 @@ import org.testng.annotations.Test;
 public class TestBuildYourOwn extends BaseTest {
 
     @Test
+    public void testBuildRandomCustomVehicle() throws InterruptedException {
+        Homepage homepage = new Homepage();
+        homepage.navigateToBuildYourOwnPage();
+
+        BuildYourOwn byo = new BuildYourOwn();
+        byo.selectARandomModelSeries();
+
+        DesignPage design = new DesignPage();
+        design.selectRandomDesignButton();
+        Thread.sleep(5000);
+
+    }
+
+    // disregard, this is incomplete
+    @Test
     public void testBuildMSeries() throws InterruptedException {
         Homepage homepage = new Homepage();
         homepage.navigateToBuildYourOwnPage();
         BuildYourOwn byo = new BuildYourOwn();
         byo.selectMSeries();
         DesignPage designPage = new DesignPage();
-        Thread.sleep(2500);
-
-    }
-
-    @Test
-    public void testBuildCustomVehicle() {
-        Homepage homepage = new Homepage();
-        homepage.navigateToBuildYourOwnPage();
-        BuildYourOwn byo = new BuildYourOwn();
-        byo.selectARandomModelSeries();
+        designPage.buildMSeries();
+//        Thread.sleep(2500);
 
     }
 }

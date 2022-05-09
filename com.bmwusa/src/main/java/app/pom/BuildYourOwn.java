@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
+import java.util.Random;
 
 public class BuildYourOwn extends BasePage {
 
@@ -25,15 +26,26 @@ public class BuildYourOwn extends BasePage {
     @FindBy(xpath = "//a[@title='M3 Sedan']")
     public WebElement m3SelectButton;
 
-    public void selectARandomModelSeries() {
-        webDriverWait.until(ExpectedConditions.elementToBeClickable(selectASeriesButton));
-        clickSelectASeriesButton();
+    @FindBy(xpath = "//a[@class='cta-button theme-core byo-core-type series-tile__select cta-1']")
+    public List<WebElement> seriesList;
+
+    public DesignPage selectARandomModelSeries() {
+        webDriverWait.until(ExpectedConditions.visibilityOf(selectASeriesButton));
+
+        List<WebElement> series = seriesList;
+        int maxSeries = series.size();
+
+        Random random = new Random();
+        int randomSeries = random.nextInt(maxSeries);
+        series.get(randomSeries).click();
+
+        return new DesignPage();
     }
 
     public DesignPage selectMSeries() {
         clickBMWMSeriesButton();
         webDriverWait.until(ExpectedConditions.visibilityOf(m3SedanImage));
-        webDriverWait.until(ExpectedConditions.elementToBeClickable(m3SelectButton));
+        webDriverWait.until(ExpectedConditions.visibilityOf(m3SelectButton));
         clickSelectM3Button();
 
         return new DesignPage();
