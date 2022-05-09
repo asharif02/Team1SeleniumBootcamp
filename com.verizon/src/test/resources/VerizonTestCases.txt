@@ -1,0 +1,45 @@
+Test Case #1: Testing signing in using wrong credentials
+1- Navigate to URL
+2- click sign-in in button
+3- entering the wrong email and password
+
+Test Case #2:Test viewing stores for a specific zipcode
+1- Navigate to Url
+2- click 'store' button
+3- enter zipcode i.e '22033'
+
+Testcase #3:Test Viewing stores in Wyoming
+1- Navigate to URl
+2- CLick 'Store' button
+3- Select 'Wyoming' form the list of states and click the 'ViewStore' button
+
+TC #4: Test the Google smartohones functionality
+1- Navigate to URL
+2- Click on 'Google' button
+
+TC #5: Test 5g Home Internet functionality
+1- Navigate to URL
+2- Click the Amazon button and then click on 5G Internet button
+
+Tc#6: Test adding Motorola phone to wishlist
+1- Navigate to URL
+2- Click 'Motorola' button
+3- CLick 'Add to Wishlist'
+
+TC#7: Test Watching Phone Video
+1- Navigate to URL
+2- CLick on 'Motorola' button
+3- Click 'watch Video' and the click anywhere on the Video to play
+
+TC#8: Test Help me Choose devices functionality
+1- Navigate to URL
+2- click on Device button
+3- Click on 'Help Me Choose' button
+
+TC#9: Test selecting Apple Phones
+1- Navigate to URL
+2- CLick on devices Button and then click on Apple Devices Button
+
+TC#10: Test 'Chat With Us' Functionality
+1- Navigate to URL
+2- click on the Device button and then click on CHat with Us button to chat.

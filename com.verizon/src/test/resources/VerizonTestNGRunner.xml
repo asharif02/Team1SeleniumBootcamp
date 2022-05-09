@@ -9,4 +9,29 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://verizon.com"/>
 
+    <test name="devices_page">
+        <classes>
+            <class name="test_app.devices_page.TestDevices"/>
+        </classes>
+    </test>
+    
+    <test name="smoke - LocatingStores">
+        <classes>
+            <class name="test_app.smoke.TestLocatingStores"/>
+        </classes>
+    </test>
+
+    <test name="smoke - Sign In">
+        <classes>
+            <class name="test_app.smoke.TestSignIn"/>
+        </classes>
+    </test>
+
+    <test name="smoke - Device Brands">
+        <classes>
+            <class name="test_app.smoke.testTopDeviceBrands"/>
+        </classes>
+    </test>
+
+
 </suite>

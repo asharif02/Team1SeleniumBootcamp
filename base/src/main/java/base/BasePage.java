@@ -78,7 +78,7 @@ public class BasePage {
 
     @Parameters({"driverConfigEnabled", "browser", "url"})
     @BeforeMethod
-    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://mbusa.com") String url) {
+    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://verizon.com") String url) {
         if (Boolean.parseBoolean(driverConfigEnabled)) {
             driverInit(browser);
             driver.get(url);
@@ -211,7 +211,7 @@ public class BasePage {
         select.selectByValue(value);
     }
 
-    public boolean isElementVisible(WebElement element) {
+    public boolean isElementVisible(WebElement element, String s) {
         try {
             fluentWait.until(ExpectedConditions.visibilityOf(element));
         } catch (TimeoutException e) {
