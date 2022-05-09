@@ -6,10 +6,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +23,49 @@ public class ExcelData {
     public ExcelData(String filePath) {
         this.filePath = filePath;
     }
+
+    public static void main(String[] args) throws IOException {
+        File src = new File(System.getProperty("user.dir") + File.separator + "src" + File.separator
+                + "test" + File.separator + "resources" + File.separator + "test_data.xlsx");
+
+        FileInputStream fis = new FileInputStream(src);
+        XSSFWorkbook wb = new XSSFWorkbook(fis);
+
+
+        Sheet sheet1 = wb.getSheetAt(0);
+        String data0 = sheet1.getRow(0).getCell(0).getStringCellValue();
+        String data1 = sheet1.getRow(0).getCell(0).getStringCellValue();
+        System.out.println(data0 + data1);
+
+    }
+
+    public List<String> readMultipleColumns(String sheetName) {
+        List<String> data;
+        File file = new File(this.filePath);
+
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            workbook = new XSSFWorkbook(fis);
+        } catch (IOException e) {
+            System.out.println("Unable to load file - Check file path, or if the file actually exists in file path directory");
+            e.printStackTrace();
+        }
+
+        sheet = workbook.getSheet(sheetName);
+        numberOfRows = sheet.getLastRowNum();
+
+        data = new ArrayList<>();
+
+        for (int i = 1; i <= numberOfRows; i++) {
+            row = sheet.getRow(i);
+            cell = row.getCell(0);
+            String cellData = getCellValue(cell);
+            data.add(i-1, cellData);
+        }
+        return data;
+    }
+
+
 
     // region Readers
     /**

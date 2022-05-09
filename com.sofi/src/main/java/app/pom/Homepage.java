@@ -2,10 +2,15 @@ package app.pom;
 
 import app.shared.SystemBar;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
 
 public class Homepage extends SystemBar {
 
@@ -26,34 +31,46 @@ public class Homepage extends SystemBar {
     @FindBy(xpath = "//a[@class='ytp-impression-link']")
     public WebElement watchOnYouTubeLink;
 
-    @FindBy(xpath = "//div[@id='movie_player']//div[@class='html5-video-container']")
+//    @FindBy(xpath = "//div[@id='movie_player']//div[@class='html5-video-container']")
+    @FindBy(xpath = "//div[@id='ytp-caption-window-container']")
     public WebElement videoContainer;
 
 //    @FindBy(xpath = "//iframe[@src='https://www.youtube.com/embed/T6nDrDecra4']")
     @FindBy(xpath = "//iframe[contains(@src,'https://www.youtube.com')]")
-    public WebElement videoIFrame;
+    public WebElement sofiVideoIFrameOnHomepage;
 
-    @FindBy(xpath = "//div[@class='ytp-progress-bar-container']//div[@aria-valuenow='%s']")
+//    @FindBy(xpath = "//div[@class='ytp-progress-bar-container']//div[@aria-valuenow='%s']")
+    @FindBy(xpath = "//div[@class='ytp-progress-bar']")
     public WebElement ytProgressBar;
+
+    @FindBy(xpath = "//div[@class='ytp-progress-bar-container']//@aria-valuenow")
+    public List<WebElement> valueOfProgressBar;
 
     public Homepage() {
         PageFactory.initElements(driver, this);
     }
 
-    public void playSoFiVideo() {
+    public void playSoFiVideoOnHomepage() {
         scrollToTextNextToMoviePlayer();
-        fluentWait.until(ExpectedConditions.visibilityOf(videoIFrame));
-        switchToIFrame();
+        fluentWait.until(ExpectedConditions.visibilityOf(sofiVideoIFrameOnHomepage));
+        switchToVideoIFrameOnSoFiHomepage();
         clickPlayButton();
     }
 
     public void playVideoForSpecificAmountOfSeconds(String seconds) {
         fluentWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(
                 String.format("//div[@class='ytp-progress-bar-container']//div[@aria-valuenow=\"%s\"]", seconds))));
+
+//        fluentWait.until(ExpectedConditions.invisibilityOfAllElements(valueOfProgressBar));
+
     }
 
-    public void jsClickVideoPlayButton(WebElement element) {
-        jsDriver.executeScript("document.getElementById('movie_player').play()");
+    public void scrollToTextNextToMoviePlayer() {
+        jsScrollUntilElementVisible(aOneStopShopForYourFinancesText);
+    }
+
+    public void switchToVideoIFrameOnSoFiHomepage() {
+        switchToFrameByElement(sofiVideoIFrameOnHomepage);
     }
 
     public void clickPlayButton() {
@@ -68,11 +85,13 @@ public class Homepage extends SystemBar {
         hoverOverElement(moviePlayer);
     }
 
-    public void scrollToTextNextToMoviePlayer() {
-        jsScrollUntilElementVisible(aOneStopShopForYourFinancesText);
+    public void hoverOverVideoContainer() {
+        Actions ac = new Actions(driver);
+        ac.moveToElement(videoContainer, 50, 0);
+//        hoverOverElement(videoContainer,);
     }
 
-    public void switchToIFrame() {
-        switchToFrameByElement(videoIFrame);
+    public void jsClickVideoPlayButton(WebElement element) {
+        jsDriver.executeScript("document.getElementById('movie_player').play()");
     }
 }
