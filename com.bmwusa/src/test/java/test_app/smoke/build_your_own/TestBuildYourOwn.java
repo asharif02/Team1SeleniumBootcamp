@@ -2,6 +2,7 @@ package test_app.smoke.build_your_own;
 
 import app.pom.BuildYourOwn;
 import app.pom.DesignPage;
+import app.pom.DesignStudio;
 import app.pom.Homepage;
 import base_test.BaseTest;
 import org.testng.annotations.Test;
@@ -18,6 +19,9 @@ public class TestBuildYourOwn extends BaseTest {
 
         DesignPage design = new DesignPage();
         design.selectRandomDesignButton();
+
+        DesignStudio studio = new DesignStudio();
+        studio.selectRandomDesignOptions();
         Thread.sleep(5000);
 
     }

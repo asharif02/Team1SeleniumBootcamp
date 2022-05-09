@@ -27,7 +27,7 @@ public class DesignPage extends BasePage {
         webDriverWait.until(ExpectedConditions.elementToBeClickable(hoverDesignButton));
     }
 
-    public void selectRandomDesignButton() {
+    public DesignStudio selectRandomDesignButton() {
         waitForElement();
         List<WebElement> button = designButton;
         int maxButton = button.size();
@@ -36,6 +36,8 @@ public class DesignPage extends BasePage {
         int randomButton = random.nextInt(maxButton);
         hoverOverDesignButton();
         button.get(randomButton).click();
+
+        return new DesignStudio();
 
     }
 
