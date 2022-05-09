@@ -7,7 +7,7 @@ import pom.HomePage;
 public class testShopByCategory extends BasePage {
 
     @Test
-    public void testAvailableShopByCategoryMenu(WebElement shopByCategoryDropdownMenu){
+    public void testVerifyShopByCategoryMenu(WebElement shopByCategoryDropdownMenu){
         HomePage homePage = new HomePage();
         homePage.clickShopByCategoryDropDownButton();
 

@@ -9,14 +9,18 @@ import pom.ToysPage;
 
 public class SystemBar extends BasePage {
 
-//    @FindBy(xpath = "//button[@id='gh-shop-a']")
-//    public WebElement shopByCategoryDropdownButton;
+    @FindBy(xpath = "//button[@id='gh-shop-a']")
+    public WebElement shopByCategoryDropdownButton;
 
     @FindBy(xpath = "//input[@type='text']")
     public WebElement searchBarInputField;
 
     @FindBy(xpath = "//li[@data-hover-track='p2481888.m1384.l6435']")
     public WebElement toysButton;
+
+    public void shopByCategoryDropdown(){
+        clickOnElement(shopByCategoryDropdownButton);
+    }
 
     public ToysPage clickToysButton(){
         return new ToysPage();
