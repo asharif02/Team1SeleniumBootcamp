@@ -1,3 +1,11 @@
+Test Case #1: As a user, I should be able to navigate to a random NBA Team's page
+1. Navigate to espn.com URL
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click random NBA Team revealed to the user
+6. Validate that User navigated to a random NBA Team page
+
 Test Case #1: Navigate to Atlanta Hawks Page
 1.
 2.

@@ -3,7 +3,7 @@ package test_app.smoke;
 import app.pom.NBATeamPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import test_base.BaseTest;
+import base_test.BaseTest;
 
 public class TestNBATeams extends BaseTest {
 

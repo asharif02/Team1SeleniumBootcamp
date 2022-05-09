@@ -1,4 +1,4 @@
-package test_base;
+package base_test;
 
 import base.BasePage;
 import utils.Database;
