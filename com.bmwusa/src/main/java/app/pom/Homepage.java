@@ -67,6 +67,9 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//div[@data-filter='all models']//div[@class='globalnav-primary-vehicles__car']//div//span")
     public WebElement mModelsButton;
 
+    @FindBy(xpath = "//*[text()='Build Your Own']")
+    public WebElement buildYourOwnButton;
+
     public Homepage() {
         PageFactory.initElements(driver, this);
     }
@@ -115,7 +118,7 @@ public class Homepage extends BasePage {
 
     }
 
-    // does not work, see method above
+    // this method does not work, see method above
     public void navigateToBMWModelByName(String modelName) {
         navigateToBMWAllModels();
         webDriverWait.until(ExpectedConditions.visibilityOf(allModelsHeadline));
@@ -275,6 +278,21 @@ public class Homepage extends BasePage {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public BuildYourOwn navigateToBuildYourOwnPage() {
+        hoverOverBuildYourOwnButton();
+        clickBuildYourOwnButton();
+
+        return new BuildYourOwn();
+    }
+
+    public void hoverOverBuildYourOwnButton() {
+        hoverOverElement(buildYourOwnButton);
+    }
+
+    public void clickBuildYourOwnButton() {
+        clickOnElement(buildYourOwnButton);
     }
 
     public void hoverOverModelsFlyoutButton() {

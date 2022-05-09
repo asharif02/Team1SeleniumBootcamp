@@ -11,7 +11,13 @@
 
     <test name="BMW - Models">
         <classes>
-            <class name="test_app.smoke.TestBMWModels"/>
+            <class name="test_app.smoke.models.TestBMWModels"/>
+        </classes>
+    </test>
+
+    <test name="BMW - Build Your Own">
+        <classes>
+            <class name="test_app.smoke.build_your_own.TestBuildYourOwn"/>
         </classes>
     </test>
 

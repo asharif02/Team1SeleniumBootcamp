@@ -1,4 +1,4 @@
-package test_app.smoke;
+package test_app.smoke.models;
 
 import app.pom.Homepage;
 import org.testng.Assert;
