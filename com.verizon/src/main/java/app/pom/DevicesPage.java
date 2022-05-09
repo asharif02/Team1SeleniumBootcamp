@@ -30,7 +30,7 @@ public class DevicesPage extends SystemBar {
     }
 
     public void clickTheChatWithUsButton(){
-        webDriverWait.until(ExpectedConditions.elementToBeClickable(clickChatButton));
+//        webDriverWait.until(ExpectedConditions.elementToBeClickable(clickChatButton));
     }
 
 }

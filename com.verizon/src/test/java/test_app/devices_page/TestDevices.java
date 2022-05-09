@@ -5,6 +5,8 @@ import base_test.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class TestDevices extends BaseTest {
 
 
@@ -12,10 +14,12 @@ public class TestDevices extends BaseTest {
     public void testChatWIthUs(){
         DevicesPage devicesPage = new DevicesPage();
         devicesPage.clickDeviceButton.click();
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(4000));
         devicesPage.clickTheChatWithUsButton();
 
         //Assert
+            String URL = driver.getCurrentUrl();
+            Assert.assertEquals(URL, "https://www.verizon.com/smartphones/" );
 
     }
 
