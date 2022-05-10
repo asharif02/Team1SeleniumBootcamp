@@ -153,12 +153,14 @@ public class TestBMWModels extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("2");
 
-        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(7));
+        String expectedModel = excel.readStringList("bmwModels").get(7).toString();
+        String newModel = String.valueOf(Integer.parseInt(expectedModel));
+        System.out.println(newModel);
+        System.out.println(expectedModel);
         String actualModel = String.valueOf(driver.getTitle());
         System.out.println(actualModel);
-        System.out.println(expectedModel);
 
-        Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
+        Assert.assertTrue(actualModel.contains(newModel), "Actual Model does not match Expected Model");
     }
 
     @Test
