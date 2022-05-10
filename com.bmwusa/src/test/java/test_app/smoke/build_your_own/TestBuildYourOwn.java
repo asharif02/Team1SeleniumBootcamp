@@ -5,12 +5,13 @@ import app.pom.DesignPage;
 import app.pom.DesignStudio;
 import app.pom.Homepage;
 import base_test.BaseTest;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 public class TestBuildYourOwn extends BaseTest {
 
     @Test
-    public void testBuildRandomCustomVehicle() throws InterruptedException {
+    public void testBuildRandomCustomVehicle() {
         Homepage homepage = new Homepage();
         homepage.navigateToBuildYourOwnPage();
 
@@ -21,21 +22,8 @@ public class TestBuildYourOwn extends BaseTest {
         design.selectRandomDesignButton();
 
         DesignStudio studio = new DesignStudio();
-        studio.selectRandomDesignOptions();
-        Thread.sleep(5000);
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(studio.colorButton));
 
     }
 
-    // disregard, this is incomplete
-    @Test
-    public void testBuildMSeries() throws InterruptedException {
-        Homepage homepage = new Homepage();
-        homepage.navigateToBuildYourOwnPage();
-        BuildYourOwn byo = new BuildYourOwn();
-        byo.selectMSeries();
-        DesignPage designPage = new DesignPage();
-        designPage.buildMSeries();
-//        Thread.sleep(2500);
-
-    }
 }
