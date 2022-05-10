@@ -1,9 +1,150 @@
-Test Case #1: [summary]
-1. steps...
-2.
-3.
+Test Case #1: Test DOW Rates
+Navigate to URL
+Close pop-up
+Select 'US Market'
+Hover over DOW
+Select DOW.
 
-Test Case #2:
-1.
-2.
-3.
+Test Case #2: Test S&P 500 Rates
+Navigate to URL
+Close pop-up
+Select 'US Market'
+Hover over S&P 500
+Select S&P 500.
+
+Test Case #3: Test Nasdaq Rates
+Navigate to URL
+Close pop-up
+Select 'US Market'
+Hover over Nasdaq
+Select Nasdaq.
+
+Test Case #4: Test Global DOW Rates
+Navigate to URL
+Close pop-up
+Select 'US Market'
+Hover over Global DOW
+Select Global DOW.
+
+Test Case #5: Test Gold Rates
+Navigate to URL
+Close pop-up
+Select 'US Market'
+Hover over Gold
+Select Gold.
+
+Test Case #6: Test Oil Rates
+Navigate to URL
+Close pop-up
+Select 'US Market'
+Hover over Oil
+Select Oil.
+
+Test Case #7: Test FTSE 100 Rates
+Navigate to URL
+Close pop-up
+Select 'Europe Market'
+Hover over FTSE 100
+Select FTSE 100.
+
+Test Case #8: Test DAX Rates
+Navigate to URL
+Close pop-up
+Select 'Europe Market'
+Select DAX.
+
+Test Case #9: Test CAC 40 Rates
+Navigate to URL
+Close pop-up
+Select 'Europe Market'
+Select CAC 40.
+
+Test Case #10: Test FTSE MIB Rates
+Navigate to URL
+Close pop-up
+Select 'Europe Market'
+Select FTSE MIB.
+
+Test Case #11: Test IBEX 35 Rates
+Navigate to URL
+Close pop-up
+Select 'Europe Market'
+Select IBEX 35.
+
+Test Case #12: Test Stoxx 600 Rates
+Navigate to URL
+Close pop-up
+Select 'Europe Market'
+Select Stoxx 600.
+
+Test Case #13: Test Asia Dow Rates
+Navigate to URL
+Close pop-up
+Select 'Asia Market'
+Select Asia Dow.
+
+Test Case #14: Test Nikkei 225 Rates
+Navigate to URL
+Close pop-up
+Select 'Asia Market'
+Select Nikkei 225.
+
+Test Case #15: Test Hang Seng Rates
+Navigate to URL
+Close pop-up
+Select 'Asia Market'
+Select Hang Seng.
+
+Test Case #16: Test Shanghai Rates
+Navigate to URL
+Close pop-up
+Select 'Asia Market'
+Select Shanghai.
+
+Test Case #17: Test Sensex Rates
+Navigate to URL
+Close pop-up
+Select 'Asia Market'
+Select Sensex.
+
+Test Case #18: Test Singapore Rates
+Navigate to URL
+Close pop-up
+Select 'Asia Market'
+Select Singapore.
+
+Test Case #19: Test Euro Rates
+Navigate to URL
+Close pop-up
+Select 'FX Market'
+Select Euro.
+
+Test Case #20: Test Yen Rates
+Navigate to URL
+Close pop-up
+Select 'FX Market'
+Select Yen.
+
+Test Case #21: Test Pound Rates
+Navigate to URL
+Close pop-up
+Select 'FX Market'
+Select Pound.
+
+Test Case #22: Test Australia$ Rates
+Navigate to URL
+Close pop-up
+Select 'FX Market'
+Select Australia$.
+
+Test Case #23: Test XY Index Rates
+Navigate to URL
+Close pop-up
+Select 'FX Market'
+Select XY Index.
+
+Test Case #24: Test WSJ $ Idx Rates
+Navigate to URL
+Close pop-up
+Select 'FX Market'
+Select WSJ $ Idx.
