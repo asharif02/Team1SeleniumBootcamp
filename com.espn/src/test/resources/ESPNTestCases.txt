@@ -1,17 +1,230 @@
-Test Case #1: As a user, I should be able to navigate to a random NBA Team's page
-1. Navigate to espn.com URL
+Test Case #1: Navigate to random NBA team
+1. Navigate to espn.com
 2. Hover over NBA Sports Menu
 3. Click 'Teams' button
 4. Hover over NBA 'Teams' drop down menu
 5. Click random NBA Team revealed to the user
-6. Validate that User navigated to a random NBA Team page
 
-Test Case #1: Navigate to Atlanta Hawks Page
-1.
-2.
-3.
+Test Case #2: Navigate to random NBA team by Team Name
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click NBA Team by Team Name given by the user
 
-Test Case #2: Navigate to Boston Celtics Page
-1.
-2.
-3.
+Test Case #3: Navigate to random NBA team by City Name
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click NBA Team by City Name given by the user
+
+Test Case #4: Navigate to Atlanta Hawks
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Atlanta Hawks team
+
+Test Case #5: Navigate to Boston Celtics
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Boston Celtics team
+
+Test Case #6: Navigate to Brooklyn Nets
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Brooklyn Nets team
+
+Test Case #7: Navigate to Charlotte Hornets
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Charlotte Hornets team
+
+Test Case #8: Navigate to Chicago Bulls
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Chicago Bulls team
+
+Test Case #9: Navigate to Cleveland Cavaliers
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Cleveland Cavaliers team
+
+Test Case #10: Navigate to Dallas Mavericks
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Dallas Mavericks team
+
+Test Case #11: Navigate to Denver Nuggets
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Denver Nuggets team
+
+Test Case #12: Navigate to Detroit Pistons
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Detroit Pistons team
+
+Test Case #13: Navigate to Golden State Warriors
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Golden State Warriors team
+
+Test Case #14: Navigate to Houston Rockets
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Houston Rockets team
+
+Test Case #15: Navigate to Indiana Pacers
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Indiana Pacers team
+
+Test Case #16: Navigate to LA Clippers
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click LA Clippers team
+
+Test Case #17: Navigate to Los Angeles Lakers
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Los Angeles Lakers team
+
+Test Case #18: Navigate to Memphis Grizzlies
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Memphis Grizzlies team
+
+Test Case #19: Navigate to Miami Heat
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Miami Heat team
+
+Test Case #20: Navigate to Milwaukee Bucks
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Milwaukee Bucks team
+
+Test Case #21: Navigate to Minnesota Timberwolves
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Minnesota Timberwolves team
+
+Test Case #22: Navigate to New Orleans Pelicans
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click New Orleans Pelicans team
+
+Test Case #23: Navigate to New York Knicks
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click New York Knicks team
+
+Test Case #24: Navigate to Oklahoma City Thunder
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Oklahoma City Thunder team
+
+Test Case #25: Navigate to Orlando Magic
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Orlando Magic team
+
+Test Case #26: Navigate to Philadelphia 76ers
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Philadelphia 76ers team
+
+Test Case #27: Navigate to Phoenix Suns
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Phoenix Suns team
+
+Test Case #28: Navigate to Portland Trail Blazers
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Portland Trail Blazers team
+
+Test Case #29: Navigate to Sacramento Kings
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Sacramento Kings team
+
+Test Case #30: Navigate to San Antonio Spurs
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click San Antonio Spurs team
+
+Test Case #31: Navigate to Toronto Raptors
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Toronto Raptors team
+
+Test Case #32: Navigate to Utah Jazz
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Utah Jazz team
+
+Test Case #33: Navigate to Washington Wizards
+1. Navigate to espn.com
+2. Hover over NBA Sports Menu
+3. Click 'Teams' button
+4. Hover over NBA 'Teams' drop down menu
+5. Click Washington Wizards team

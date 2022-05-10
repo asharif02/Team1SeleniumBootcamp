@@ -1,6 +1,7 @@
 package test_app.smoke;
 
 import app.pom.NBATeamPage;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import base_test.BaseTest;
@@ -11,18 +12,33 @@ public class TestNBATeams extends BaseTest {
     public void testNavigateToRandomNBATeam() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.selectRandomNBATeam();
+
+        String expectedResult = excel.readStringList("nbaPage").get(0);
+        String actualResult = driver.findElement(By.xpath("//li[@class='Nav__Primary__Menu__Item flex items-center relative Nav__Primary__Menu__Item--active']//span")).getText();
+
+        Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
     @Test
     public void testNavigateByTeamName() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Bulls");
+
+        String expectedResult = excel.readStringList("nbaPage").get(0);
+        String actualResult = driver.findElement(By.xpath("//li[@class='Nav__Primary__Menu__Item flex items-center relative Nav__Primary__Menu__Item--active']//span")).getText();
+
+        Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
     @Test
     public void testNavigateByCityName() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBACityName("New York");
+
+        String expectedResult = excel.readStringList("nbaPage").get(0);
+        String actualResult = driver.findElement(By.xpath("//li[@class='Nav__Primary__Menu__Item flex items-center relative Nav__Primary__Menu__Item--active']//span")).getText();
+
+        Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
     // region 30 NBA Teams
