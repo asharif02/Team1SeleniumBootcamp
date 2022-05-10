@@ -33,23 +33,25 @@ public class ScreenProtectors extends SystemBar {
         cheapestElement.click();
     }
 
-    public void findHighestPrice() {
+    public void findHighestPrice(){
         double max = Double.MIN_VALUE;
-        WebElement cheapestElement = null;
+        WebElement highestElement = null;
 
-        for (WebElement element : prices) {
+        for(WebElement element : prices){
 
             StringBuilder sb = new StringBuilder(element.getText());
             sb.deleteCharAt(0);
             String price = sb.toString();
             System.out.println(price);
             double doublePrice = Double.parseDouble(price);
-            if (doublePrice > max) {
+            if(doublePrice > max){
                 max = doublePrice;
-                cheapestElement = element;
+                highestElement = element;
             }
         }
-        cheapestElement.click();
+
+        System.out.println("THIS IS THE MAXIMUM FOUND! " + max);
+        highestElement.click();
     }
 
     public ScreenProtectors() {

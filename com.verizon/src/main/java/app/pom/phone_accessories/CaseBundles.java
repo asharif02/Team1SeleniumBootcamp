@@ -35,7 +35,7 @@ public class CaseBundles extends SystemBar {
 
     public void findHighestPrice(){
         double max = Double.MIN_VALUE;
-        WebElement cheapestElement = null;
+        WebElement highestElement = null;
 
         for(WebElement element : prices){
 
@@ -46,12 +46,12 @@ public class CaseBundles extends SystemBar {
             double doublePrice = Double.parseDouble(price);
             if(doublePrice > max){
                 max = doublePrice;
-                cheapestElement = element;
+                highestElement = element;
             }
         }
 
         System.out.println("THIS IS THE MAXIMUM FOUND! " + max);
-        cheapestElement.click();
+        highestElement.click();
     }
 
     public CaseBundles() {
