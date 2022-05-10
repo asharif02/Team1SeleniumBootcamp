@@ -9,4 +9,34 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://automationpractice.com"/>
 
+    <test name="Smoke - End_To_End">
+        <classes>
+            <class name="test_app.smoke.end_to_end.TestEndToEnd"/>
+        </classes>
+    </test>
+
+    <test name="Smoke - Transactions">
+        <classes>
+            <class name="test_app.smoke.transactions.TestAddingItemsToCart"/>
+        </classes>
+    </test>
+
+    <test name="System - Authentication">
+        <classes>
+            <class name="test_app.system.Authentication"/>
+        </classes>
+    </test>
+
+    <test name="ContactUs">
+        <classes>
+            <class name="pom.TestContactUs"/>
+        </classes>
+    </test>
+
+    <test name="DataProvider">
+        <classes>
+            <class name="data_providers.DataProviders"/>
+        </classes>
+    </test>
+
 </suite>

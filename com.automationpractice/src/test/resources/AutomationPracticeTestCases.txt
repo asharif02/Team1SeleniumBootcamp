@@ -1,0 +1,247 @@
+Test Case #1: Add 2 ‘Faded Short Sleeve T-shirts’ size S to cart using the + icon.
+Navigate to URL
+Click ‘T-Shirt’ option
+Click ‘Faded Short Sleeve T-shirts’ option
+Increase quantity from 1 to 2 by clicking the + icon
+Click ‘Add to cart’
+
+Test Case #2: Add 2 ‘Faded Short Sleeve T-shirts’ size S to cart using the quantity field.
+Navigate to URL
+Click ‘T-Shirt’ option
+Click ‘Faded Short Sleeve T-shirts’ option
+Increase quantity from 1 to 2 by entering 2 in ‘Quantity’
+Click ‘Add to cart’
+
+Test Case #3: Add a blue ‘Faded Short Sleeve T-shirts’ size S to cart.
+Navigate to URL
+Click ‘T-Shirt’ option
+Click ‘Faded Short Sleeve T-shirts’ option
+Click the blue option
+Click ‘Add to cart’
+
+Test Case #4: Contact customer service.
+Navigate to URL
+Click ‘Contact us’ button
+Select from the dropdown option ‘Subject Heading’ ‘Customer Service’
+Enter a valid email address in the email address field
+Enter in customer service-related concern in the ‘Message’ box
+Click the ‘Send’ button.
+
+Test Case #5: Contact webmaster.
+Navigate to URL
+Click ‘Contact us’ button
+Select from the dropdown option ‘Subject Heading’ ‘Webmaster’
+Enter a valid email address in the email address field
+Enter in customer service-related concern in the ‘Message’ box
+Click the ‘Send’ button.
+
+Test Case #6: Register for newsletter.
+Navigate to URL
+Enter valid email address into the ‘Enter your e-mail’ section located at the bottom of the page.
+Press the submit button
+
+Test Case #7: E2E: Register for an account > add an item to my cart and check out > verify order my reviewing ‘Order History and Details’.
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click ‘Women’ button
+Click ‘Faded Short Sleeve T-shirts’ option
+Increase quantity from 1 to 2 by entering 2 in ‘Quantity’
+Click ‘Add to cart’
+Click ‘Proceed to checkout’
+Click ‘Proceed to checkout’
+Click ‘Proceed to checkout’
+Check box to agree to T&C’s then click proceed to checkout
+Click ‘Pay by bank wire’ option
+Click ‘I confirm order’
+Click ‘Back to orders’
+Click on relevant ref number
+
+Test Case #8: E2E: View Wishlist
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click 'myWishlist'
+
+Test Case #9: E2E: View My Personal Information
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click 'My Personal Information'
+
+Test Case #10: E2E: View Address
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click 'My Addresses'
+
+Test Case #11: E2E: View Credit Slips
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click 'My Credit Slips'
+
+Test Case #12: E2E: View Items that are the color black.
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click ‘Women’ option
+In the catalog field under the ‘Color’ section select ‘black’
+
+Test Case #13: E2E: View Items that are size small.
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click ‘Women’ option
+In the catalog field under the ‘Size’ section select ‘S’
+
+Test Case #14: E2E: View Items that are style casual.
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click ‘Women’ option
+In the catalog field under the ‘Styles’ section select ‘Casual’
+
+Test Case #15: E2E: View Items that are composed of cotton.
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click ‘Women’ option
+In the catalog field under the ‘Compositions’ section select ‘cotton’
+
+Test Case #16: E2E: View Items that are condition new.
+Navigate to URL
+Click ‘Sign In’ button
+Under ‘Create Account’ section, enter valid email address in ‘Email address’ field
+Click ‘Create an Account’ button
+Enter first name in ‘First name’ field, under Personal Information section
+Enter last name in Last name’ field, under Personal Information section
+Enter desired valid password in ‘Password’ field
+Select DOB Day, month and year from ‘Date of Birth’ combo boxes, respectively
+Click checkbox for ‘Sign up for our newsletter’
+Click checkbox for ‘Receive special offers from our partners’
+Enter street address in ‘Address’ field
+Enter city in ‘City’ field
+Select state from ‘State’ combo box
+Enter zip code in ‘Zip/Postal Code’ field
+Enter phone number in ‘Mobile phone’ field
+Click ‘Register’ button
+Click ‘Women’ option
+In the catalog field under the ‘Condition’ section select ‘New’
