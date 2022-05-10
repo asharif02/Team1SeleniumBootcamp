@@ -1,0 +1,11 @@
+Tc#1: Test log In functionality
+1- Navigate to URL
+2- CLick Log in button and enter your email address
+3- ?
+
+TC#2: Test Search Houses in an Area functionality
+1- Navigate to URL
+2- Click on the search bar
+3- Enter your desired city name and click search
+
+TC3#:
