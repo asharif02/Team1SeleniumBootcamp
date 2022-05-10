@@ -6,6 +6,8 @@ import app.pom.phone_accessories.CaseBundles;
 import app.pom.phone_accessories.MagSafe;
 import app.pom.phone_accessories.PhoneCases;
 import app.pom.phone_accessories.ScreenProtectors;
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import base_test.BaseTest;
 
@@ -20,6 +22,13 @@ public class TestPhoneAccessories extends BaseTest {
         ap.clickPhoneAccessoriesColumnCategory("cases");
         PhoneCases phoneCases = new PhoneCases();
         phoneCases.findLowestPrice();
+
+        String expectedProduct = excel.readStringList("Verizon").get(0).toLowerCase();
+        System.out.println(expectedProduct);
+        String actualProduct = driver.findElement(By.xpath("//div[@data-testid='accessorypriceid']//p")).getText().toLowerCase();
+        System.out.println(actualProduct);
+
+        Assert.assertTrue(actualProduct.contains(expectedProduct));
     }
 
     @Test
@@ -30,6 +39,13 @@ public class TestPhoneAccessories extends BaseTest {
         ap.clickPhoneAccessoriesColumnCategory("cases");
         PhoneCases phoneCases = new PhoneCases();
         phoneCases.findHighestPrice();
+
+        String expectedProduct = excel.readStringList("Verizon").get(1).toLowerCase();
+        System.out.println(expectedProduct);
+        String actualProduct = driver.findElement(By.xpath("//div[@data-testid='accessorypriceid']//p")).getText().toLowerCase();
+        System.out.println(actualProduct);
+
+        Assert.assertTrue(actualProduct.contains(expectedProduct));
     }
 
     @Test
@@ -40,6 +56,13 @@ public class TestPhoneAccessories extends BaseTest {
         ap.clickPhoneAccessoriesColumnCategory("case bundles");
         CaseBundles caseBundles = new CaseBundles();
         caseBundles.findLowestPrice();
+
+        String expectedProduct = excel.readStringList("Verizon").get(0).toLowerCase();
+        System.out.println(expectedProduct);
+        String actualProduct = driver.getTitle().toLowerCase();
+        System.out.println(actualProduct);
+
+        Assert.assertTrue(actualProduct.contains(expectedProduct));
     }
 
     @Test

@@ -21,6 +21,9 @@ public class TestChargingAccessories extends BaseTest {
         ap.clickChargingAccessoriesColumnCategory("charger");
         Chargers chargers = new Chargers();
         chargers.findLowestPrice();
+
+        String expectedProduct;
+        String actualProduct;
     }
 
     @Test
