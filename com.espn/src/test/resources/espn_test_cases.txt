@@ -1,0 +1,4 @@
+dynamic xpath:
+//input[text()='{price}']
+price 10 usd -- API
+String price = api response
