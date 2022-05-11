@@ -20,39 +20,29 @@ public class TestBMWModels extends BaseTest {
     public void testNavigateToRandomBMWModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWModel();
-
-        // figure out how to assert with random data
     }
 
     @Test
     public void testNavigateToRandomSedanModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWSedan();
-
-        // figure out how to assert with random data
     }
 
     @Test
     public void testNavigateToRandomCoupeModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWCoupe();
-
-        // figure out how to assert with random data
     }
 
     @Test
     public void testNavigateToRandomConvertibleModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWConvertible();
-
-        // figure out how to assert with random data
     }
 
     @Test void testNavigateToRandomSAVModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWSportsActivityVehicle();
-
-        // figure out how to assert with random data
     }
     // endregion
 
@@ -153,14 +143,12 @@ public class TestBMWModels extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("2");
 
-        String expectedModel = excel.readStringList("bmwModels").get(7).toString();
-        String newModel = String.valueOf(Integer.parseInt(expectedModel));
-        System.out.println(newModel);
-        System.out.println(expectedModel);
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(7).charAt(0));
         String actualModel = String.valueOf(driver.getTitle());
         System.out.println(actualModel);
+        System.out.println(expectedModel);
 
-        Assert.assertTrue(actualModel.contains(newModel), "Actual Model does not match Expected Model");
+        Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
     @Test
@@ -168,7 +156,7 @@ public class TestBMWModels extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("3");
 
-        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(8));
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(8).charAt(0));
         String actualModel = String.valueOf(driver.getTitle());
         System.out.println(actualModel);
         System.out.println(expectedModel);
@@ -181,7 +169,7 @@ public class TestBMWModels extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("4");
 
-        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(9));
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(9).charAt(0));
         String actualModel = String.valueOf(driver.getTitle());
         System.out.println(actualModel);
         System.out.println(expectedModel);
@@ -194,7 +182,7 @@ public class TestBMWModels extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("5");
 
-        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(10));
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(10).charAt(0));
         String actualModel = String.valueOf(driver.getTitle());
         System.out.println(actualModel);
         System.out.println(expectedModel);
@@ -207,7 +195,7 @@ public class TestBMWModels extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("7");
 
-        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(11));
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(11).charAt(0));
         String actualModel = String.valueOf(driver.getTitle());
         System.out.println(actualModel);
         System.out.println(expectedModel);
@@ -220,7 +208,7 @@ public class TestBMWModels extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("8");
 
-        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(12));
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(12).charAt(0));
         String actualModel = String.valueOf(driver.getTitle());
         System.out.println(actualModel);
         System.out.println(expectedModel);
