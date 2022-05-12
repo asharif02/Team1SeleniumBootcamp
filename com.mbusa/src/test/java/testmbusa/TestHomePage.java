@@ -30,12 +30,13 @@ public class TestHomePage extends BasePage {
     @Test
     public void testSwitchToIframe() throws InterruptedException {
         HomePage homePage = new HomePage();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
         homePage.clickVehiclesButton();
         //driver.switchTo().frame(0);
         Vehicles vehicles = new Vehicles();
         vehicles.clickElectricButton();
         vehicles.clickEqsSedanButton();
+
         String expectedText = excel.readStringList("Sheet1").get(0);
         String actualText = driver.findElement(By.xpath("//*[@id=\"content\"]/div/section[2]/section/div[1]/h2")).getText();
         Assert.assertTrue(actualText.contains(expectedText));
@@ -45,7 +46,8 @@ public class TestHomePage extends BasePage {
     public void testSearchProducts(){
         HomePage homepage = new HomePage();
         homepage.clickSearchButton();
-        //homepage.clickSearchInputField();
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
+        homepage.clickSearchInputField();
         //String searchTerm = "Future Vehicles";
         homepage.sendKeysToElement(homepage.searchInputField, "Future Vehicles");
         homepage.clickInnerSearchButton();
