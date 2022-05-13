@@ -1,2 +1,9 @@
-package app.shared;public class SystemBar {
+package app.shared;
+
+import base.BasePage;
+import org.openqa.selenium.support.PageFactory;
+
+public class SystemBar extends BasePage {
+
+    public SystemBar() {PageFactory.initElements(driver,this);}
 }

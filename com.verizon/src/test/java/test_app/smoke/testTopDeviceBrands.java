@@ -2,6 +2,7 @@ package test_app.smoke;
 
 import app.pom.Homepage;
 import base_test.BaseTest;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -32,8 +33,9 @@ public class testTopDeviceBrands extends BaseTest {
         homepage.clickOnMotorolaButton.click();
         homepage.navigatingToBuyingMotorolaEdgePhone();
 
-        String ExpectedText = "Motorola edge+ 5G UW";
-        Assert.assertEquals(ExpectedText,"Motorola edge+ 5G UW");
+        String ExpectedText = excel.readStringList("Sheet1").get(0);
+        String ActualText = driver.findElement(By.xpath("//*[@id=\"page\"]/div/div[4]/div/div[2]/div[1]/h1")).getText();
+        Assert.assertTrue(ActualText.contains(ExpectedText));
     }
 
     @Test

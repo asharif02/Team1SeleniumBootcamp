@@ -4,6 +4,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import config.BaseConfig;
+import config.Config;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import listeners.DriverEventListener;
 import org.openqa.selenium.*;
@@ -45,6 +46,7 @@ public class BasePage {
     public static ExtentReports extent;
     public static JavascriptExecutor jsDriver;
 
+
     // region Hooks
     @BeforeSuite(alwaysRun = true)
     public void reportSetup(ITestContext context) {
@@ -78,7 +80,7 @@ public class BasePage {
 
     @Parameters({"driverConfigEnabled", "browser", "url"})
     @BeforeMethod
-    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://verizon.com") String url) {
+    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://automationpractice.com") String url) {
         if (Boolean.parseBoolean(driverConfigEnabled)) {
             driverInit(browser);
             driver.get(url);
@@ -211,7 +213,7 @@ public class BasePage {
         select.selectByValue(value);
     }
 
-    public boolean isElementVisible(WebElement element, String s) {
+    public boolean isElementVisible(WebElement element) {
         try {
             fluentWait.until(ExpectedConditions.visibilityOf(element));
         } catch (TimeoutException e) {

@@ -9,4 +9,65 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://automationpractice.com"/>
 
+    <!--    //1-->
+    <test name="SmokeLogin">
+        <classes>
+            <class name="test_app.smoke.TestLogin"/>
+        </classes>
+    </test>
+    <!--    //2-->
+    <test name="DeleteAddress">
+        <classes>
+            <class name="test_app.smoke.TestDeleteAddress"/>
+        </classes>
+    </test>
+    <!--    //3-->
+    <test name="SearchBar">
+        <classes>
+            <class name="test_app.Search.TestSearchBar"/>
+        </classes>
+    </test>
+    <!--    //4-->
+    <test name="AddToCart">
+        <classes>
+            <class name="test_app.smoke.TestAddToCart"/>
+        </classes>
+    </test>
+    <!--    //5-->
+    <test name="NewWishlist">
+        <classes>
+            <class name="test_app.smoke.testReviewMyCreditSlip"/>
+        </classes>
+    </test>
+    <!--    //6-->
+    <test name="Newsletter">
+        <classes>
+            <class name="test_app.smoke.TestSubscribeNewsletter"/>
+        </classes>
+    </test>
+    <!--    //7-->
+    <test name="ListView">
+        <classes>
+            <class name="test_app.smoke.TestSearchedItemsListView"/>
+        </classes>
+    </test>
+    <!--    //8-->
+    <test name="AddingQuantity">
+        <classes>
+            <class name="test_app.smoke.TestAddingItemQuantity"/>
+        </classes>
+    </test>
+    <!--    //9-->
+    <test name="ItemSizeAndColor">
+        <classes>
+            <class name="test_app.smoke.TestSelectItemSizeAndColor"/>
+        </classes>
+    </test>
+    <!--    //10-->
+    <test name="ReviewWriting">
+        <classes>
+            <class name="test_app.smoke.TestNavigatingToItemMoreOptions"/>
+        </classes>
+    </test>
+
 </suite>

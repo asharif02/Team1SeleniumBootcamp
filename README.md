@@ -62,7 +62,7 @@
   - https://www.expedia.com/
 
 - Telecommunications
-  - https://www.verizon.com/
+  - https://www.verizon.com/--------
   - https://www.att.com/
 
 - Automotive
@@ -70,7 +70,7 @@
   - https://www.mbusa.com/
 
 - Real Estate
-  - https://www.redfin.com/
+  - https://www.redfin.com/---------
   - https://www.realtor.com/
 
 - E-Commerce

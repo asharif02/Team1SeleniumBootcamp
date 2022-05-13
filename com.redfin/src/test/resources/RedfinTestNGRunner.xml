@@ -9,4 +9,28 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://redfin.com"/>
 
+    <test name="smoke - Cities">
+        <classes>
+            <class name="test_app.smoke.TestHomeSearchInCities"/>
+        </classes>
+    </test>
+
+    <test name="smoke - Rentals">
+        <classes>
+            <class name="test_app.smoke.TestSearchRentals"/>
+        </classes>
+    </test>
+
+    <test name="smoke - Login">
+        <classes>
+            <class name="test_app.smoke.TestLogIn"/>
+        </classes>
+    </test>
+
+    <test name="news_search">
+        <classes>
+            <class name="test_app.news_search.TestNewsSearch"/>
+        </classes>
+    </test>
+
 </suite>
