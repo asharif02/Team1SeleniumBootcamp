@@ -49,6 +49,33 @@ public class HomePage extends SystemBar {
     @FindBy (xpath = "//*[@id=\"skip-to-h1\"]")
     public  WebElement creditCardHeading;
 
+    @FindBy (xpath = "//*[@id=\"Edge_GetStarted_2017mOAA2RS\"]")
+    public WebElement merrillInvestingButton;
+
+    @FindBy (xpath = "//*[@id=\"ctl00_ctl00_siteContent_MainContent_SimpleContentControl1_ctl00_ecmsWPRECMSContentCtrl1\"]/div[2]/div[3]/h2")
+    public WebElement merillInvestingAssert;
+
+    @FindBy (xpath = "//*[@id=\"AutoLoans_GetStarted_2017mOAA2RS\"]")
+    public WebElement getAutoLoansLink;
+
+    @FindBy (xpath = "//*[@id=\"CheckingSavings_GetStarted_2017mOAA2RS\"]")
+    public WebElement checkingAndSavingsLink;
+
+    @FindBy (xpath = "//*[@id=\"masthead\"]/div/div[1]/div/h1")
+    public WebElement checkingAndSavingsAssert;
+
+    @FindBy (xpath = "//*[@id=\"Footer_Privacy\"]")
+    public WebElement privacyLink;
+
+    @FindBy (xpath = "//*[@id=\"reviewOnlinePrivacyNotice\"]")
+    public WebElement privacyAssert;
+
+    @FindBy (xpath = "//*[@id=\"Footer_Security\"]")
+    public WebElement securityPageLink;
+
+    @FindBy (xpath = "//*[@id=\"topPriorityModule\"]/div[1]/div/h2")
+    public WebElement securityPriorityAssert;
+
 
 
     public HomePage() {

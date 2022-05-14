@@ -5,12 +5,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pom.HomePage;
 
-import java.time.Duration;
-
 public class TestBOA_Links extends BaseTest {
 
     @Test
-    public void testCheckingLink(){
+    public void testCheckingLink() {
         HomePage homePage = new HomePage();
         homePage.clickCheckingButton();
 
@@ -21,7 +19,7 @@ public class TestBOA_Links extends BaseTest {
     }
 
     @Test
-    public void testSavingsLink(){
+    public void testSavingsLink() {
         HomePage homePage = new HomePage();
         homePage.clickSavingsButton();
 
@@ -32,7 +30,7 @@ public class TestBOA_Links extends BaseTest {
     }
 
     @Test
-    public void testCreditCardsLink(){
+    public void testCreditCardsLink() {
         HomePage homePage = new HomePage();
         homePage.clickCreditCardsButton();
 
@@ -43,7 +41,7 @@ public class TestBOA_Links extends BaseTest {
     }
 
     @Test
-    public void testHomeLoansLink(){
+    public void testHomeLoansLink() {
         HomePage homePage = new HomePage();
         homePage.clickHomeLoansButton();
 
@@ -54,7 +52,7 @@ public class TestBOA_Links extends BaseTest {
     }
 
     @Test
-    public void testAutoLoansLink(){
+    public void testAutoLoansLink() {
         HomePage homePage = new HomePage();
         homePage.clickAutoLoansButton();
 
@@ -65,7 +63,7 @@ public class TestBOA_Links extends BaseTest {
     }
 
     @Test
-    public void testInvestingLink(){
+    public void testInvestingLink() {
         HomePage homePage = new HomePage();
         homePage.clickInvestingButton();
 
@@ -76,7 +74,7 @@ public class TestBOA_Links extends BaseTest {
     }
 
     @Test
-    public void testBetterMoneyHabitsLink(){
+    public void testBetterMoneyHabitsLink() {
         HomePage homePage = new HomePage();
         homePage.clickBetterMoneyHabitsButton();
 
@@ -87,18 +85,18 @@ public class TestBOA_Links extends BaseTest {
     }
 
     @Test
-    public void testNavigatingToBOAHelpMenu(){
+    public void testNavigatingToBOAHelpMenu() {
         HomePage homePage = new HomePage();
         homePage.clickOnHelpButton();
 
 
         String ExpectedText = "Select Your State";
-        Assert.assertEquals(ExpectedText,"Select Your State");
+        Assert.assertEquals(ExpectedText, "Select Your State");
 
     }
 
     @Test
-    public void testFindAtmLocations(){
+    public void testFindAtmLocations() {
         HomePage homePage = new HomePage();
         homePage.findClosestAtmButton.click();
 
@@ -110,7 +108,7 @@ public class TestBOA_Links extends BaseTest {
     }
 
     @Test
-    public void testOpenAnAccount(){
+    public void testOpenAnAccount() {
         HomePage homePage = new HomePage();
         homePage.openingAnAccount();
 
@@ -130,6 +128,66 @@ public class TestBOA_Links extends BaseTest {
 
         String actualLocation = homePage.creditCardHeading.getText();
         String expectedLocation = excel.readStringList("BOA_sheet").get(9);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+
+    }
+
+    @Test
+    public void testNavigatingToMerrillInvesting() {
+        HomePage homePage = new HomePage();
+        homePage.openingAnAccount();
+        homePage.merrillInvestingButton.click();
+
+        String actualLocation = homePage.merillInvestingAssert.getText();
+        String expectedLocation = excel.readStringList("BOA_sheet").get(10);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+
+    }
+
+    @Test
+    public void testNavigatingToAutoLoans() {
+        HomePage homePage = new HomePage();
+        homePage.openingAnAccount();
+        homePage.getAutoLoansLink.click();
+
+        String ExpectedText = "Please tell us where you bank so we can give you accurate rate and fee information for your location.";
+        Assert.assertEquals(ExpectedText, "Please tell us where you bank so we can give you accurate rate and fee information for your location.");
+    }
+
+    @Test
+    public void testNavigatingToCheckingAndSavings() {
+        HomePage homePage = new HomePage();
+        homePage.openingAnAccount();
+        homePage.checkingAndSavingsLink.click();
+
+        String ExpectedText = "Expect more from your\n" + "checking account";
+        Assert.assertEquals(ExpectedText, "Expect more from your\n" + "checking account");
+    }
+
+    @Test
+    public void testNavigatingToPrivacyLink() {
+        HomePage homePage = new HomePage();
+        homePage.openingAnAccount();
+        homePage.privacyLink.click();
+        driver.navigate().to("https://www.bankofamerica.com/security-center/privacy-overview/");
+
+        String actualLocation = homePage.privacyAssert.getText();
+        String expectedLocation = excel.readStringList("BOA_sheet").get(11);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testNavigatingToSecurityLink() {
+        HomePage homePage = new HomePage();
+        homePage.openingAnAccount();
+        homePage.securityPageLink.click();
+        driver.navigate().to("https://www.bankofamerica.com/security-center/overview/");
+
+        String actualLocation = homePage.securityPriorityAssert.getText();
+        String expectedLocation = excel.readStringList("BOA_sheet").get(12);
 
         Assert.assertTrue(actualLocation.contains(expectedLocation));
 
