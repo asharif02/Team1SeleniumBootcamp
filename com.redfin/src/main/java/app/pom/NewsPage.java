@@ -27,9 +27,6 @@ public class NewsPage extends SystemBar {
     @FindBy (xpath = "//a[@href='https://www.redfin.com/news/housing-market-news/']")
     public WebElement housingMarketButton;
 
-    @FindBy (xpath = "//*[@id=\"post-80\"]/div/div/div/div/section/div/div/div/div/div/div[4]/div/div/div/article[1]/div[2]/div[2]/h2/a")
-    public WebElement housingMarketUpdateLink;
-
     @FindBy (xpath = "//a[@href='https://www.redfin.com/news/housing-market-news/page/139/']")
     public WebElement newsLinkPage139;
 

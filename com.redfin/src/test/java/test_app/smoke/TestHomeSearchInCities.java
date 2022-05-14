@@ -283,4 +283,136 @@ public class TestHomeSearchInCities extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
+    @Test
+    public void testHomeResultsInDestin() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Destin");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(30);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testHomeResultsInFortLauderdale() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Fort Lauderdale");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(31);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+
+    @Test
+    public void testHomeResultsInJacksonville() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Jacksonville");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(32);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testHomeResultsInFortMyers() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Fort Myers");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(33);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testHomeResultsInCharleston() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Charleston");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(34);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testHomeResultsInMyrtleBeach() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Myrtle Beach");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(35);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testHomeResultsInAsheville() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Asheville");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(36);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testHomeResultsInDurham() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Durham");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(37);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testHomeResultsInRaleigh() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Raleigh");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(38);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testHomeResultsInCharlotte() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Charlotte");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(39);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
+
+    @Test
+    public void testHomeResultsInLouisville() {
+        Homepage homepage = new Homepage();
+        homepage.searchHomesInCities("Louisville");
+        homepage.waitForSearchResultContainer();
+
+        String actualLocation = homepage.tag_TextPlaceHolder.getText();
+        String expectedLocation = excel.readStringList("Redfin").get(40);
+
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+    }
 }

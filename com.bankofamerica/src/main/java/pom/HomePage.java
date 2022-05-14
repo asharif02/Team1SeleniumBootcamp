@@ -77,7 +77,6 @@ public class HomePage extends SystemBar {
     public WebElement securityPriorityAssert;
 
 
-
     public HomePage() {
         PageFactory.initElements(driver, this);
     }
