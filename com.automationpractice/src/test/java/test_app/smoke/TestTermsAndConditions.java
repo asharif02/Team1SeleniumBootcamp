@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class TestDeleteAddress extends BaseTest {
+public class TestTermsAndConditions extends BaseTest {
 
     @Test
     public void testDeleteAddress()  {

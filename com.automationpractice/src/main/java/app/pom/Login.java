@@ -63,13 +63,13 @@ public class Login extends SystemBar {
     @FindBy(id = "email_create")
     public WebElement newEmailAddressInputField;
 
-    public MyAccount login(String emailAddress, String password) {
-        inputRegisteredEmailAddress(emailAddress);
-        inputPassword(password);
-        clickSignInButton();
-
-        return new MyAccount();
-    }
+//    public MyAccount login(String emailAddress, String password) {
+//        inputRegisteredEmailAddress(emailAddress);
+//        inputPassword(password);
+//        clickSignInButton();
+//
+//        return new MyAccount();
+//    }
 
 
     public void inputNewEmailAddress(String emailAddress) {

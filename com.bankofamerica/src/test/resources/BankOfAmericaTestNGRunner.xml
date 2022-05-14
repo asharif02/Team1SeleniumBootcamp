@@ -9,4 +9,16 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://bankofamerica.com"/>
 
+    <test name="smoke - Links">
+        <classes>
+            <class name="test_app.smoke.TestBOA_Links"/>
+        </classes>
+    </test>
+
+<!--    <test name="smoke - Rentals">-->
+<!--        <classes>-->
+<!--            <class name="test_app.smoke.TestSearchRentals"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
 </suite>

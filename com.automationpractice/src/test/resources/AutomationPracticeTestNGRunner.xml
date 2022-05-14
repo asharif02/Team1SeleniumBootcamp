@@ -18,7 +18,7 @@
     <!--    //2-->
     <test name="DeleteAddress">
         <classes>
-            <class name="test_app.smoke.TestDeleteAddress"/>
+            <class name="test_app.smoke.TestTermsAndConditions"/>
         </classes>
     </test>
     <!--    //3-->
