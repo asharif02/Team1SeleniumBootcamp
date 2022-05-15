@@ -50,7 +50,7 @@
   
 ## DOMAINS:
 - Digital Media
-  - https://www.espn.com/
+  - https://www.espn.com/*
   - https://www.marketwatch.com/
 
 - Banking/Finance

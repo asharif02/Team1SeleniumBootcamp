@@ -15,4 +15,10 @@
         </classes>
     </test>
 
+    <test name="smoke - Links">
+        <classes>
+            <class name="test_app.smoke.TestLinks"/>
+        </classes>
+    </test>
+
 </suite>
