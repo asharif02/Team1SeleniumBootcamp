@@ -54,7 +54,7 @@
   - https://www.marketwatch.com/
 
 - Banking/Finance
-  - https://www.bankofamerica.com/ Done*--
+  - https://www.bankofamerica.com/ Done*---
   - https://www.sofi.com/
 
 - Travel
@@ -62,7 +62,7 @@
   - https://www.expedia.com/
 
 - Telecommunications
-  - https://www.verizon.com/ Done*--
+  - https://www.verizon.com/ Done*---
   - https://www.att.com/
 
 - Automotive
@@ -70,11 +70,11 @@
   - https://www.mbusa.com/
 
 - Real Estate
-  - https://www.redfin.com/ Done*--
+  - https://www.redfin.com/ Done*---
   - https://www.realtor.com/
 
 - E-Commerce
-  - http://automationpractice.com/ Done*--
+  - http://automationpractice.com/ Done*---
   - https://www.ebay.com/
 
 
