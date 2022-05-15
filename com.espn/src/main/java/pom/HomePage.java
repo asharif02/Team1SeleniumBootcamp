@@ -63,10 +63,30 @@ public class HomePage extends SystemBar {
 
     @FindBy (xpath = "//img[@title='Arsenal']")
     public WebElement arsenal;
+
+    @FindBy (xpath = "//img[@title='West Ham United']")
+    public WebElement westHamUnited;
+
+    @FindBy (xpath = "//img[@title='Everton']")
+    public WebElement fcEverton;
+
+    @FindBy (xpath = "//img[@title='Crystal Palace']")
+    public WebElement crystalPalace;
 //EndRegion
 
     @FindBy(xpath = "//h1[@class='ClubhouseHeader__Name ttu flex items-start n2']")
     public WebElement teamPage;
+
+    @FindBy (xpath = "//span[normalize-space()='Listen']")
+    public WebElement listenRadioButton;
+
+    @FindBy (xpath = "//span[@class='link-text'][normalize-space()='Watch']")
+    public WebElement watchEspn;
+
+    @FindBy (xpath = "//span[normalize-space()='WATCH']")
+    public WebElement watchAssert;
+
+
 
 
     public void clickSoccerTab(){clickOnElement(soccerButton);}

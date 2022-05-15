@@ -214,4 +214,44 @@ public class TestSoccerTeams extends BaseTest {
 
     }
 
+    @Test
+    public void testNavigatingToWestHamUnited()  {
+        HomePage homePage = new HomePage();
+        homePage.clickSoccerTab();
+        homePage.clickTeamsButton();
+        homePage.westHamUnited.click();
+
+        Assert.assertTrue(isElementVisible(homePage.teamPage));
+        Assert.assertEquals(getElementText(homePage.teamPage), excel.readStringList("EspnSheet").get(16));
+
+
+    }
+
+    @Test
+    public void testNavigatingToEverton()  {
+        HomePage homePage = new HomePage();
+        homePage.clickSoccerTab();
+        homePage.clickTeamsButton();
+        homePage.fcEverton.click();
+
+        Assert.assertTrue(isElementVisible(homePage.teamPage));
+        Assert.assertEquals(getElementText(homePage.teamPage), excel.readStringList("EspnSheet").get(17));
+
+
+    }
+
+
+    @Test
+    public void testNavigatingToCrystalPalace()  {
+        HomePage homePage = new HomePage();
+        homePage.clickSoccerTab();
+        homePage.clickTeamsButton();
+        homePage.crystalPalace.click();
+
+        Assert.assertTrue(isElementVisible(homePage.teamPage));
+        Assert.assertEquals(getElementText(homePage.teamPage), excel.readStringList("EspnSheet").get(18));
+
+
+    }
+
 }
