@@ -1,9 +1,101 @@
-Test Case #1:
-1.
-2.
-3.
+Test Case #1: Test Mercedes-AMG Engine View.
+Navigate to URL
+Select 'Vehicles'
+Select 'Mercedes-AMG'
+Select '3' in the media player.
 
-Test Case #2:
-1.
-2.
-3.
+Test Case #2: Test Mercedes-AMG Performance View.
+Navigate to URL
+Select 'Vehicles'
+Select 'Mercedes-AMG'
+Select '4' in the media player.
+
+Test Case #3: Test Mercedes-AMG Design View.
+Navigate to URL
+Select 'Vehicles'
+Select 'Mercedes-AMG'
+Select '5' in the media player.
+
+Test Case #4: Test One Compare Vehicles.
+Navigate to URL
+Select 'Shopping'
+Select 'Compare Vehicles'
+Check vehicle to compare.
+
+Test Case #5: Test Two Compare Vehicles.
+Navigate to URL
+Select 'Shopping'
+Select 'Compare Vehicles'
+Check vehicles to compare.
+
+Test Case #6: Test Three Compare Vehicles.
+Navigate to URL
+Select 'Shopping'
+Select 'Compare Vehicles'
+Check vehicles to compare.
+
+Test Case #7: Test View New Inventory.
+Navigate to URL
+Select 'Inventory'
+Select 'New Inventory'
+Enter zipcode and press enter
+
+Test Case #8: Test View CPO Inventory.
+Navigate to URL
+Select 'Inventory'
+Select 'CPO Inventory'
+Enter zipcode and press enter
+
+Test Case #9: Test Discover SUV Lineup
+Navigate to URL
+Select 'Inventory'
+Select 'Discover the Lineup'
+Select 'SUVs'
+
+Test Case #10: Test Discover Sedans & Wagons Lineup
+Navigate to URL
+Select 'Inventory'
+Select 'Discover the Lineup'
+Select 'Sedans & Wagons'
+
+Test Case #11: Test Discover Coupes Lineup
+Navigate to URL
+Select 'Inventory'
+Select 'Discover the Lineup'
+Select 'Coupes'
+
+Test Case #12: Test Discover Convertibles & Roadsters Lineup
+Navigate to URL
+Select 'Inventory'
+Select 'Discover the Lineup'
+Select 'Convertibles & Roadsters'
+
+Test Case #13: Test Discover Electric Lineup
+Navigate to URL
+Select 'Inventory'
+Select 'Discover the Lineup'
+Select 'Electric'
+
+Test Case #14: Test View Certification Benefit
+Navigate to URL
+Select 'Inventory'
+Select 'See the Benefits'
+Select 'Certification'
+
+Test Case #15: Test View Warranty Benefit
+Navigate to URL
+Select 'Inventory'
+Select 'See the Benefits'
+Select 'Warranty'
+
+Test Case #16: Test View Build Your Own Benefit
+Navigate to URL
+Select 'Inventory'
+Select 'See the Benefits'
+Select 'Build Your Own'
+
+Test Case #17: Test View Special Offers Benefit
+Navigate to URL
+Select 'Inventory'
+Select 'See the Benefits'
+Select 'Special Offers & More'
