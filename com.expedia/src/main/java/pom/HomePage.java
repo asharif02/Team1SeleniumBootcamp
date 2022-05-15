@@ -61,8 +61,24 @@ public class HomePage extends SystemBar {
     @FindBy (xpath = "//*[@id=\"global-sites-links\"]/li[18]/a")
     public WebElement indianExpediaButton;
 
-    @FindBy (xpath = "//*[@id=\"app-layer-base\"]/div[1]/div/div/p/span[1]")
-    public WebElement welcomeToIndianExpedia;
+    @FindBy (xpath = "//div[normalize-space()='Trips']")
+    public WebElement tripsTabButton;
+
+    @FindBy (xpath = "//h1[@class='uitk-heading-3']")
+    public WebElement tripsTabLocation;
+
+    @FindBy (xpath = "//a[normalize-space()='Cancel your flight']")
+    public WebElement cancelYourFlight;
+
+    @FindBy (xpath = "//a[normalize-space()='Jobs']")
+    public WebElement jobsLink;
+
+    @FindBy (xpath = "//a[normalize-space()='Newsroom']")
+    public WebElement newsRoomLink;
+
+    @FindBy (xpath = "//a[normalize-space()='Advertising']")
+    public WebElement advertisingLink;
+
 
 
 
