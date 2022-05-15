@@ -1,4 +1,4 @@
-Test Case #1: [summary]
-1.
-2.
-3.
+Test Case #1: As a user, I should be able to play an embedded video located on SoFi's homepage
+1. Scroll to video located on Sofi homepage
+2. Click play button
+3. Video should end after the amount of seconds the User specifies
