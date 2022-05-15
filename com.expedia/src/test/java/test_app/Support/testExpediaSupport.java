@@ -64,4 +64,38 @@ public class testExpediaSupport extends BaseTest {
         String ExpectedText = "Earn & Redeem";
         Assert.assertEquals(ExpectedText,"Earn & Redeem");
     }
+
+    @Test
+    public void testCruiseTopics(){
+        HomePage homePage = new HomePage();
+        homePage.clickExpediaSupportLink.click();
+        homePage.cruiseQuestions.click();
+
+        String actualLocation = homePage.cruiseDropdown.getText();
+        String expectedLocation = excel.readStringList("ExpediaSheet").get(5);
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+
+    }
+
+    @Test
+    public void testTravelAlerts(){
+        HomePage homePage = new HomePage();
+        homePage.clickExpediaSupportLink.click();
+        homePage.travelAlerts.click();
+
+        String actualLocation = homePage.currentAlertsDropDown.getText();
+        String expectedLocation = excel.readStringList("ExpediaSheet").get(7);
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+
+    }
+
+    @Test
+    public void testIndianExpedia(){
+        HomePage homePage = new HomePage();
+        homePage.clickExpediaSupportLink.click();
+        homePage.indianExpediaButton.click();
+
+        String ExpectedText = "Welcome to Expedia.co.in.";
+        Assert.assertEquals(ExpectedText,"Welcome to Expedia.co.in.");
+    }
 }

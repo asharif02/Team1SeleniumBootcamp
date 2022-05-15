@@ -46,6 +46,24 @@ public class HomePage extends SystemBar {
     @FindBy (xpath = "//*[@id=\"result-toggle-404\"]/ul/li[2]/a")
     public WebElement earnAndRewardsAssert;
 
+    @FindBy (xpath = "//*[@id=\"result-402\"]/article/div[1]")
+    public WebElement cruiseQuestions;
+
+    @FindBy (xpath = "//*[@id=\"result-toggle-402\"]/ul/li[1]/a")
+    public WebElement cruiseDropdown;
+
+    @FindBy (xpath = "//*[@id=\"result-398\"]/article/div[1]")
+    public WebElement travelAlerts;
+
+    @FindBy (xpath = "//*[@id=\"result-toggle-398\"]/ul/li/a")
+    public WebElement currentAlertsDropDown;
+
+    @FindBy (xpath = "//*[@id=\"global-sites-links\"]/li[18]/a")
+    public WebElement indianExpediaButton;
+
+    @FindBy (xpath = "//*[@id=\"app-layer-base\"]/div[1]/div/div/p/span[1]")
+    public WebElement welcomeToIndianExpedia;
+
 
 
 
