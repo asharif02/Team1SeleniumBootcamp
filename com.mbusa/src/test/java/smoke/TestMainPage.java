@@ -8,7 +8,7 @@ import pom.HomePage;
 public class TestMainPage extends BaseTest {
 
     @Test
-    public void navigatingToVehiclesDropDown(){
+    public void navigatingToVehiclesDropDown() {
         HomePage homePage = new HomePage();
         homePage.clickVehiclesTab();
 
@@ -17,7 +17,7 @@ public class TestMainPage extends BaseTest {
     }
 
     @Test
-    public void navigatingToShoppingMenu(){
+    public void navigatingToShoppingMenu() {
         HomePage homePage = new HomePage();
         homePage.clickShoppingTab();
 
@@ -26,7 +26,7 @@ public class TestMainPage extends BaseTest {
     }
 
     @Test
-    public void navigatingToInventoryTabLink(){
+    public void navigatingToInventoryTabLink() {
         HomePage homePage = new HomePage();
         homePage.clickInventoryTab();
 
@@ -35,7 +35,7 @@ public class TestMainPage extends BaseTest {
     }
 
     @Test
-    public void navigatingToExploreEQS(){
+    public void navigatingToExploreEQS() {
         HomePage homePage = new HomePage();
         homePage.exploreEQS.click();
 
@@ -52,7 +52,49 @@ public class TestMainPage extends BaseTest {
 
         Assert.assertTrue(isElementVisible(homePage.findNewInventoryText));
         Assert.assertEquals(getElementText(homePage.findNewInventoryText), excel.readStringList("MBusaSheet").get(4));
+    }
 
+    @Test
+    public void navigatingToSuvSection() {
+        HomePage homePage = new HomePage();
+        homePage.exploreEQS.click();
+        homePage.viewInventory.click();
+        driver.navigate().to("https://www.mbusa.com/en/inventory");
+        homePage.suvSection.click();
+
+        Assert.assertTrue(isElementVisible(homePage.mbSuvTest));
+        Assert.assertEquals(getElementText(homePage.mbSuvTest), excel.readStringList("MBusaSheet").get(5));
 
     }
+
+    @Test
+    public void navigatingToAboutUs() {
+        HomePage homePage = new HomePage();
+        homePage.aboutUs.click();
+
+        Assert.assertTrue(isElementVisible(homePage.quickFactsText));
+        Assert.assertEquals(getElementText(homePage.quickFactsText), excel.readStringList("MBusaSheet").get(6));
+    }
+
+    @Test
+    public void navigatingToAMGWebsite() {
+        HomePage homePage = new HomePage();
+        homePage.linkToAMG.click();
+
+        String ExpectedText = "Inventory";
+        Assert.assertEquals(ExpectedText, "Inventory");
+
+    }
+
+    @Test
+    public void navigatingToBlueTecUpdate() {
+        HomePage homePage = new HomePage();
+        homePage.blueTecUpdate.click();
+        driver.navigate().to("https://bluetecupdate.mbusa.com/home");
+
+        Assert.assertTrue(isElementVisible(homePage.blueTecUpdateText));
+        Assert.assertEquals(getElementText(homePage.blueTecUpdateText), excel.readStringList("MBusaSheet").get(7));
+    }
+
+
 }

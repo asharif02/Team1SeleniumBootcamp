@@ -28,6 +28,29 @@ public class HomePage extends SystemBar {
     @FindBy (xpath = "//h1[@class='dealer-selector__title']")
     public WebElement findNewInventoryText;
 
+    @FindBy (xpath = "//a[normalize-space()='SUVs']")
+    public WebElement suvSection;
+
+    @FindBy (xpath = "//h1[@class='title-hero__title']")
+    public WebElement mbSuvTest;
+
+    @FindBy (xpath = "//a[normalize-space()='About Us']")
+    public WebElement aboutUs;
+
+    @FindBy (xpath = "//h2[normalize-space()='Quick Facts']")
+    public WebElement quickFactsText;
+
+    @FindBy (xpath = "//a[@title='AMG']")
+    public WebElement linkToAMG;
+
+    @FindBy (xpath = "//a[normalize-space()='Bluetec Update']")
+    public WebElement blueTecUpdate;
+
+    @FindBy (xpath = "//h2[@class='title__content title__spacing--both title__']")
+    public WebElement blueTecUpdateText;
+
+
+
 
     public void clickVehiclesTab(){clickOnElement(vehiclesTab);}
 
