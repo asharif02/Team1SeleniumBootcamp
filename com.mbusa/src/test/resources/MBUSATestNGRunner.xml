@@ -9,8 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://mbusa.com"/>
 
-    <test name="test">
+    <test name="smoke - MainPage">
+        <classes>
+            <class name="smoke.TestMainPage"/>
+        </classes>
     </test>
-
 
 </suite>

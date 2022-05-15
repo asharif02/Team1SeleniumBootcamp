@@ -96,5 +96,35 @@ public class TestMainPage extends BaseTest {
         Assert.assertEquals(getElementText(homePage.blueTecUpdateText), excel.readStringList("MBusaSheet").get(7));
     }
 
+    @Test
+    public void navigatingToScheduleService() {
+        HomePage homePage = new HomePage();
+        homePage.scheduleService.click();
+
+        String ExpectedText = "Inventory";
+        Assert.assertEquals(ExpectedText, "Inventory");
+
+    }
+
+    @Test
+    public void navigatingToApplyForFinancing() {
+        HomePage homePage = new HomePage();
+        homePage.applyForFinancing.click();
+
+
+        Assert.assertTrue(isElementVisible(homePage.financingTextLoc));
+        Assert.assertEquals(getElementText(homePage.financingTextLoc), excel.readStringList("MBusaSheet").get(8));
+    }
+
+    @Test
+    public void navigatingToElectricVehicles() {
+        HomePage homePage = new HomePage();
+        homePage.electricMB.click();
+
+        String ExpectedText = "Electric";
+        Assert.assertEquals(ExpectedText, "Electric");
+
+    }
+
 
 }

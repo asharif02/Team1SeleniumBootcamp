@@ -49,6 +49,21 @@ public class HomePage extends SystemBar {
     @FindBy (xpath = "//h2[@class='title__content title__spacing--both title__']")
     public WebElement blueTecUpdateText;
 
+    @FindBy (xpath = "//ul[@class='column-link-list__link-container footer-container__item-content']//a[normalize-space()='Schedule Service']")
+    public WebElement scheduleService;
+
+    @FindBy (xpath = "//ul[@class='column-link-list__link-container footer-container__item-content']//a[normalize-space()='Apply for Financing']")
+    public WebElement applyForFinancing;
+
+    @FindBy (xpath = "//h1[@class='credit-application-header__title credit-application-header__title--primary']")
+    public WebElement financingTextLoc;
+
+    @FindBy (xpath = "//a[normalize-space()='Electric']")
+    public WebElement electricMB;
+
+    @FindBy (xpath = "//a[@title='AMG']")
+    public WebElement electricTextLocation;
+
 
 
 
