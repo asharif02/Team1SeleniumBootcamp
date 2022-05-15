@@ -33,9 +33,7 @@ public class TestPersonal extends BasePage{
         String actualText = String.valueOf(driver.findElement(By.xpath("//*[text()='Take charge of your account, at home or on the go']")));
         Assert.assertTrue(actualText.contains(expectedText));
 
-//        String expectedText = excel.readStringList("Sheet1").get(0);
-//        String actualText = driver.findElement(By.xpath("//*[@id=\"content\"]/div/section[2]/section/div[1]/h2")).getText();
-//        Assert.assertTrue(actualText.contains(expectedText));
+
     }
     @Test
     public void testVerifyScheduleAnAppointment(){
@@ -43,6 +41,10 @@ public class TestPersonal extends BasePage{
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
         //homepage.clickScheduleAnAppointmentLink();
         homepage.clickSecurityAndHelpLink();
+
+        String expectedText = excel.readStringList("Sheet1").get(0);
+        String actualText = driver.findElement(By.xpath("")).getText();
+        Assert.assertTrue(actualText.contains(expectedText));
     }
 
 }

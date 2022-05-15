@@ -28,8 +28,8 @@ public class testBabyToys extends BasePage {
         homePage.clickHelpAndContactButton();
 
         String expectedTitle = "How can we help you today?";
-//        String actualTitle = driver.getTitle();
-//        Assert.assertEquals(actualTitle, expectedTitle);
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(actualTitle, expectedTitle);
 
         String actualMessage = String.valueOf(driver.findElement(By.xpath("//h1[@class='h2']")));
         System.out.println("Actual Promo Message: " + actualMessage);

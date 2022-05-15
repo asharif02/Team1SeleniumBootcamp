@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pom.HomePage;
 
@@ -22,13 +23,13 @@ public class TestHomePage extends BasePage {
         String s = (String) j.executeScript(("return document.body.innerHTML;"));
         System.out.println("Get HTML of page: " + s);
 
-//        WebElement signUpLink = driver.findElement(By.id("//*[@id=\"did-ui-view\"]/div/section/section/form/section/div[4]/a"));
-//        String signUp = signUpLink.getAttribute("innerHTML");
-//        System.out.println("HTML code of element: " + signUp);
+        WebElement signUpLink = driver.findElement(By.id("//*[@id=\"did-ui-view\"]/div/section/section/form/section/div[4]/a"));
+        String signUp = signUpLink.getAttribute("innerHTML");
+        System.out.println("HTML code of element: " + signUp);
 
-//        String expectedText = excel.readStringList("Sheet1").get(1);
-//        String actualText = driver.findElement(By.xpath("//main[1]/div[8]/section[1]/div[2]/section[1]/h3[1]")).getText();
-//        Assert.assertTrue(actualText.contains(expectedText));
+        String expectedText = excel.readStringList("Sheet1").get(1);
+        String actualText = driver.findElement(By.xpath("//main[1]/div[8]/section[1]/div[2]/section[1]/h3[1]")).getText();
+        Assert.assertTrue(actualText.contains(expectedText));
     }
 
     @Test
@@ -59,22 +60,21 @@ public class TestHomePage extends BasePage {
 //        driver.switchTo().frame("unidFrame"));
 //        int total = driver.findElement(By.xpath("html/body/a/img")).getSize();
 //        System.out.println(total);
-//        driver.switchTo().defaultContent();
+        driver.switchTo().defaultContent();
     }
 
     @Test
     public void testPlayLiveVideoPlayButton(){
         HomePage homePage = new HomePage();
         homePage.clickLiveVideoPlayButton();
-        //driver.switchTo().frame("unidFrame");
-        //driver.findElement(By.xpath("//*[@src='https://a.espncdn.com/espn360/images/affiliates/svg/HULU/HULU-CLR-NEG.svg']")).click();
+        driver.switchTo().frame("unidFrame");
+        driver.findElement(By.xpath("//*[@src='https://a.espncdn.com/espn360/images/affiliates/svg/HULU/HULU-CLR-NEG.svg']")).click();
 
-        //driver.get("https://www.espn.com/watch/player/_/id/a5b4f88c-66c5-4f61-8f40-344a352af8a9");
+        driver.get("https://www.espn.com/watch/player/_/id/a5b4f88c-66c5-4f61-8f40-344a352af8a9");
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
-        //homePage.clickHuluButton();
+        homePage.clickHuluButton();
         //driver.switchTo().frame();
-        //System.out.println("***We're switched to the iframe***");
-        //driver.findElement(By.xpath()).click();
+        System.out.println("***We're switched to the iframe***");
     }
 
 }

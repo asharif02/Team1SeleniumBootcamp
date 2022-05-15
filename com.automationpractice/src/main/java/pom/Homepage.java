@@ -7,7 +7,7 @@ import shared.SystemBar;
 
 public class Homepage extends SystemBar {
 
-    @FindBy(xpath = "//*[@href=\"http://automationpractice.com/index.php?controller=order\"]/b")
+    @FindBy(xpath = "//*[@href='http://automationpractice.com/index.php?controller=order']/b")
     public WebElement cartButton;
 
     @FindBy(xpath = "//*[@title='Log in to your customer account']")
@@ -22,6 +22,9 @@ public class Homepage extends SystemBar {
     @FindBy(id = "//button[@id='SubmitLogin']")
     public WebElement submitLogInButton;
 
+    @FindBy(id = "id='contact-link'")
+    public WebElement contactUsButton;
+
     public void clickSignInButton(){
         safeClickOnElement(signInButton);
     }
@@ -35,21 +38,13 @@ public class Homepage extends SystemBar {
         safeClickOnElement(submitLogInButton);
         return new MyAccount();
     }
-
-
-
-
-
-
-
-
-
-
-
     public void clickCartButton(){
         safeClickOnElement(cartButton);
     }
-
+    public ContactUsPage clickContactUsButton(){
+        clickOnElement(contactUsButton);
+        return new ContactUsPage();
+    }
     public Homepage(){
         PageFactory.initElements(driver, this);
     }
