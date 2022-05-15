@@ -95,7 +95,8 @@ public class HomePage extends SystemBar {
 
     public void clickLiverpool(){clickOnElement(Liverpool);}
 
-    public HomePage() {
+    public HomePage()
+    {
         PageFactory.initElements(driver, this);
     }
 
