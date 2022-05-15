@@ -15,10 +15,5 @@
         </classes>
     </test>
 
-<!--    <test name="smoke - Rentals">-->
-<!--        <classes>-->
-<!--            <class name="test_app.smoke.TestSearchRentals"/>-->
-<!--        </classes>-->
-<!--    </test>-->
 
 </suite>

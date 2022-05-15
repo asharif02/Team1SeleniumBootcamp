@@ -9,4 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://espn.com"/>
 
+    <test name="smoke - Links">
+        <classes>
+            <class name="test_app.smoke.TestSoccerTeams"/>
+        </classes>
+    </test>
+
 </suite>
