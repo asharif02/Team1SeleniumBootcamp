@@ -1,9 +1,89 @@
-Test Case #1:
-1.
-2.
-3.
+Test Case #1: Searching for vacations to NYC.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
 
-Test Case #2:
-1.
-2.
-3.
+Test Case #2: Searching for vacations to Mexico.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #3: Searching for vacations to South Africa.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #4: Searching for vacations to Istanbul.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #5: Searching for vacations to Japan.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #6: Searching for vacations to Thailand.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #7: Searching for vacations to Rome.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #8: Searching for vacations to Spain.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #9 Searching for vacations to London.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #10: Searching for vacations to Turkey.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #11 Searching for vacations to Italy.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #12 Searching for vacations to Portugal.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #13 Searching for vacations to Morocco.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #14 Searching for vacations to France.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
+
+Test Case #15 Searching for vacations to Indonesia.
+Navigate to URL
+Select destination
+Select dates
+Apply search criteria to obtain results
