@@ -9,4 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://booking.com"/>
 
+    <test name="Test Booking Page">
+        <classes>
+            <class name="TestBookingPage"/>
+        </classes>
+    </test>
+
 </suite>
