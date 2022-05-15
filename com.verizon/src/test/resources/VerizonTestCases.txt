@@ -1,5 +1,99 @@
-Test Cases #1: summary
-1. clicj
-2. jhj
-3.
+Test Case #1: Test Business Smartphones All Brands
+Navigate to URL
+Select 'Business'
+Select 'Shop'
+Select 'All'
 
+Test Case #2: Test Business Smartphones Apple Brands
+Navigate to URL
+Select 'Business'
+Select 'Shop'
+Select 'Apple'
+
+Test Case #3: Test Business Smartphones Samsung Brands
+Navigate to URL
+Select 'Business'
+Select 'Shop'
+Select 'Samsung'
+
+Test Case #4: Test Business Smartphones Motorola Brands
+Navigate to URL
+Select 'Business'
+Select 'Shop'
+Select 'Motorola'
+
+Test Case #5: Test Business Smartphones Google Brands
+Navigate to URL
+Select 'Business'
+Select 'Shop'
+Select 'Google'
+
+Test Case #6: Test Search For Phone Cases
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'Cases' under phone section
+
+Test Case #7: Test Search For Phone Screen Protectors
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'Screen Protectors' under phone section
+
+Test Case #8: Test Search For Tablet Cases
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'Cases' under tablet section
+
+Test Case #9: Test Search For Phone Cases with MagSafe
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'MagSafe' under phone section
+
+Test Case #10: Test Search For Tablet Screen Protectors
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'Screen Protectors' under tablet section
+
+Test Case #11: Test Search For Tablet Cases with MagSafe
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'MagSafe' under tablet section
+
+Test Case #12: Test Search For Tablet Keyboards
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'Keyboards' under tablet section
+
+Test Case #13: Test Search For Tablet Verizon Cases
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'Verizon Cases' under tablet section
+
+Test Case #14: Test Search For Phone Verizon Cases
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'Verizon Cases' under phone section
+
+Test Case #15: Test Search For Phone Case Bundles
+Navigate to URL
+Select 'Shop'
+Select 'Accessories'
+Select 'Shop All Accessories'
+Select 'Case Bundles' under phone section

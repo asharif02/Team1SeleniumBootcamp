@@ -1,18 +1,18 @@
-package app.pom.charging;
+package pom;
 
-import app.shared.SystemBar;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import shared.Homepage;
 
 import java.util.List;
 
-public class AdaptersCables extends SystemBar {
+public class TabletAccessories extends Homepage {
 
     @FindBy(xpath = "//div[@class='Tile__Pricing-sc-71g958-10 fClbGb blur']/p")
     public List<WebElement> prices;
 
-    public void findLowestPrice(){
+    public void findCheapestPrice(){
         double min = Double.MAX_VALUE;
         WebElement cheapestElement = null;
 
@@ -33,28 +33,8 @@ public class AdaptersCables extends SystemBar {
         cheapestElement.click();
     }
 
-    public void findHighestPrice(){
-        double max = Double.MIN_VALUE;
-        WebElement highestElement = null;
-
-        for(WebElement element : prices){
-
-            StringBuilder sb = new StringBuilder(element.getText());
-            sb.deleteCharAt(0);
-            String price = sb.toString();
-            System.out.println(price);
-            double doublePrice = Double.parseDouble(price);
-            if(doublePrice > max){
-                max = doublePrice;
-                highestElement = element;
-            }
-        }
-
-        System.out.println("THIS IS THE MAXIMUM FOUND! " + max);
-        highestElement.click();
-    }
-
-    public AdaptersCables() {
+    public TabletAccessories(){
         PageFactory.initElements(driver, this);
     }
+
 }

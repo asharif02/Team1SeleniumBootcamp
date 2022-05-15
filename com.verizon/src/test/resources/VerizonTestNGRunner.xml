@@ -9,9 +9,15 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://verizon.com"/>
 
-    <test name="Verizon - Accessories">
+    <test name="Business Page - Shop">
         <classes>
-            <class name="test_app.smoke.TestPhoneAccessories"/>
+            <class name="business_page.TestBusinessShopPage"/>
+        </classes>
+    </test>
+
+    <test name="Accessories Page - Phone and Tablet">
+        <classes>
+            <class name="accessories_page.TestAccessories"/>
         </classes>
     </test>
 
