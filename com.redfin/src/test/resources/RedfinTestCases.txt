@@ -1,6 +1,74 @@
-Test Case #1: [summary]
-1.
-2.
-3.
+Test Case #1: Find Homes In Austin.
+Navigate to URL.
+Enter 'Austin' in search bar
+Press Enter
 
-Test Case #2: [summary]
+Test Case #2: Find Homes In Tampa.
+Navigate to URL.
+Enter 'Tampa' in search bar
+Press Enter
+
+Test Case #3: Find Homes In New York.
+Navigate to URL.
+Enter 'New York' in search bar
+Press Enter
+
+Test Case #4: Find Homes In McLean.
+Navigate to URL.
+Enter 'McLean' in search bar
+Press Enter
+
+Test Case #5: Find Homes In Minneapolis.
+Navigate to URL.
+Enter 'Minneapolis' in search bar
+Press Enter
+
+Test Case #6: Find Homes In Cincinnati.
+Navigate to URL.
+Enter 'Cincinnati' in search bar
+Press Enter
+
+Test Case #7: Find Homes In San Francisco.
+Navigate to URL.
+Enter 'San Francisco' in search bar
+Press Enter
+
+Test Case #8: Find Homes In Sacramento.
+Navigate to URL.
+Enter 'Sacramento' in search bar
+Press Enter
+
+Test Case #9: Find Homes In Nashville.
+Navigate to URL.
+Enter 'Nashville' in search bar
+Press Enter
+
+Test Case #10: Find Homes In Atlanta.
+Navigate to URL.
+Enter 'Atlanta' in search bar
+Press Enter
+
+Test Case #11: Find Homes In Boston.
+Navigate to URL.
+Enter 'Boston' in search bar
+Press Enter
+
+Test Case #12: Find Homes In Portland.
+Navigate to URL.
+Enter 'Portland' in search bar
+Press Enter
+
+Test Case #13: Find Homes In Houston.
+Navigate to URL.
+Enter 'Houston' in search bar
+Press Enter
+
+Test Case #14: Find Homes In Dallas.
+Navigate to URL.
+Enter 'Dallas' in search bar
+Press Enter
+
+Test Case #15: Find Homes In Seattle.
+Navigate to URL.
+Enter 'Seattle' in search bar
+Press Enter
