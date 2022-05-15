@@ -1,10 +1,89 @@
-Test Case #1:
-1.
-2.
-3.
+Test Case #1: Navigate to Model X1.
+Navigate to URL
+Select "Models"
+Select "X1"
 
-Test Case #2:
-1.
-2.
-3.
+Test Case #2: Navigate to Model X2.
+Navigate to URL
+Select "Models"
+Select "X2"
 
+Test Case #3: Navigate to Model X3.
+Navigate to URL
+Select "Models"
+Select "X3"
+
+Test Case #4: Navigate to Model X4.
+Navigate to URL
+Select "Models"
+Select "X4"
+
+Test Case #5: Navigate to Model X5.
+Navigate to URL
+Select "Models"
+Select "X5"
+
+Test Case #6: Navigate to Model X6.
+Navigate to URL
+Select "Models"
+Select "X6"
+
+Test Case #7: Navigate to Model X7.
+Navigate to URL
+Select "Models"
+Select "X7"
+
+Test Case #8: Navigate to Model 2Series.
+Navigate to URL
+Select "Models"
+Select "2"
+
+Test Case #9: Navigate to Model 3Series.
+Navigate to URL
+Select "Models"
+Select "3"
+
+Test Case #10: Navigate to Model 4Series.
+Navigate to URL
+Select "Models"
+Select "4"
+
+Test Case #11: Navigate to Model 5Series.
+Navigate to URL
+Select "Models"
+Select "5"
+
+Test Case #12: Navigate to Model 7Series.
+Navigate to URL
+Select "Models"
+Select "7"
+
+Test Case #13: Navigate to Model 8Series.
+Navigate to URL
+Select "Models"
+Select "8"
+
+Test Case #14: Navigate to Model Z4.
+Navigate to URL
+Select "Models"
+Select "Z4"
+
+Test Case #15: Navigate to M Series.
+Navigate to URL
+Select "Models"
+Select "M Models"
+
+Test Case #16: Navigate to Model iX.
+Navigate to URL
+Select "Models"
+Select "iX"
+
+Test Case #17: Navigate to Model i4.
+Navigate to URL
+Select "Models"
+Select "i4"
+
+Test Case #18: Navigate to Model i7.
+Navigate to URL
+Select "Models"
+Select "i7"
