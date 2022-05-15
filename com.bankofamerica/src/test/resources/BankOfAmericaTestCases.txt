@@ -1,0 +1,161 @@
+Test Case #1: Test Making Clients Our Priority Video.
+Navigate to URL
+Select 'ContactUs'
+Select 'Share your feedback'
+Press 'play' to play video.
+
+Test Case #2: Test Request Connect With Merrill Advisor For 250k Investment Or Less.
+Navigate to URL
+Select 'Wealth Management'
+Scroll down to 'New to Merrill? Connect with a Merrill advisor'
+Enter first name
+Enter last name
+Enter email
+Confirm email
+Enter Phone Number
+Enter zipcode
+Select relevant drop down
+
+Test Case #3: Test Request Connect With Merrill Advisor For 250k To 1Mill Investment.
+Navigate to URL
+Select 'Wealth Management'
+Scroll down to 'New to Merrill? Connect with a Merrill advisor'
+Enter first name
+Enter last name
+Enter email
+Confirm email
+Enter Phone Number
+Enter zipcode
+Select relevant drop down
+
+Test Case #4: Test Request Connect With Merrill Advisor For 1Mill To 10Mill Investment.
+Navigate to URL
+Select 'Wealth Management'
+Scroll down to 'New to Merrill? Connect with a Merrill advisor'
+Enter first name
+Enter last name
+Enter email
+Confirm email
+Enter Phone Number
+Enter zipcode
+Select relevant drop down
+
+Test Case #5: Test Request Connect With Merrill Advisor For Over 10Mill Investment.
+Navigate to URL
+Select 'Wealth Management'
+Scroll down to 'New to Merrill? Connect with a Merrill advisor'
+Enter first name
+Enter last name
+Enter email
+Confirm email
+Enter Phone Number
+Enter zipcode
+Select relevant drop down
+
+Test Case #6: Test Request Connect With Merrill Advisor Speak To Someone First.
+Navigate to URL
+Select 'Wealth Management'
+Scroll down to 'New to Merrill? Connect with a Merrill advisor'
+Enter first name
+Enter last name
+Enter email
+Confirm email
+Enter Phone Number
+Enter zipcode
+Select relevant drop down
+
+Test Case #7: Test Finance Cash Flow.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Finance'
+Select 'Cash flow'
+
+Test Case #8: Test Finance Credit and funding.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Finance'
+Select 'Credit and funding'
+
+Test Case #9: Test Finance Taxes.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Finance'
+Select 'Taxes'
+
+Test Case #10: Test Finance Retirement.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Finance'
+Select 'Retirement'
+
+Test Case #11: Test Operations HR.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Operations'
+Select 'HR'
+
+Test Case #12: Test Operations Customer relations.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Operations'
+Select 'Customer relations'
+
+Test Case #13: Test Operations Business strategy.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Operations'
+Select 'Business strategy'
+
+Test Case #14: Test Insights News.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Insights'
+Select 'News'
+
+Test Case #15: Test Insights Industry trends.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Insights'
+Select 'Industry trends'
+
+Test Case #16: Test Stories Women Entrepreneurs.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Stories'
+Select 'Women Entrepreneurs'
+
+Test Case #17: Test Stories Small Business Spotlight.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Stories'
+Select 'Small Business Spotlight'
+
+Test Case #18: Test Stories Heartbeat of Main Street.
+Navigate to URL
+Select 'Small Business'
+Select 'Small Business Resources'
+Select 'Vew Small Business Resources'
+Select 'Stories'
+Select 'Heartbeat of Main Street'

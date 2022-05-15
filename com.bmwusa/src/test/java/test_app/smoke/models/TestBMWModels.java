@@ -12,7 +12,12 @@ public class TestBMWModels extends BaseTest {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("m series");
 
-        // figure out how to assert with random data
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(14));
+        String actualModel = String.valueOf(driver.getTitle());
+        System.out.println(actualModel);
+        System.out.println(expectedModel);
+
+        Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
     // region Navigate to random BMW Model / Body Type
