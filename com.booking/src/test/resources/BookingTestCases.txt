@@ -117,3 +117,14 @@ select location
 select dates
 select number of guests
 submit search query
+
+Test Case #16: Searching for Stays in Toronto
+Navigate to URL
+Enter destination
+Select destination from auto-suggestion list
+Select today's date
+Select random checkout date within 30 days
+Click add an adult
+Click add a room
+Click search button
+

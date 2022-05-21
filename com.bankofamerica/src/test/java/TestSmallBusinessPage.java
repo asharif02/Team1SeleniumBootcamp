@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 import pom.SmallBusinessPage;
 import shared.Homepage;
 
-
 public class TestSmallBusinessPage extends BasePage {
+
     @Test
     public void testFinanceCashFlow(){
         Homepage homepage = new Homepage();
@@ -20,7 +20,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testFinanceCreditFunding(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -34,7 +35,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(1));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testFinanceTaxes(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -48,7 +50,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(2));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testFinanceRetirement(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -62,7 +65,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(3));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testOperationsHR(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -76,7 +80,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(4));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testOperationsCustomerRelations(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -90,7 +95,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(5));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testOperationsBusinessStrategy(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -104,7 +110,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(6));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testInsightsNews(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -118,7 +125,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(7));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testInsightsIndustryTrends(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -132,7 +140,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(8));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testStoriesWomenEntrepreneurs(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -146,7 +155,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(9));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testStoriesSmallBusinessSpotlight(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();
@@ -160,7 +170,8 @@ public class TestSmallBusinessPage extends BasePage {
         Assert.assertEquals(getElementText(smallBusinessPage.smallBusinessResourceSelectionConfirmation),
                 excel.readStringList("SmallBusiness").get(10));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testStoriesHeartbeatOfMainStreet(){
         Homepage homepage = new Homepage();
         SmallBusinessPage smallBusinessPage = homepage.clickSmallBusiness();

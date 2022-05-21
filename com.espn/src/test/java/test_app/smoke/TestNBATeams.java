@@ -33,7 +33,7 @@ public class TestNBATeams extends BaseTest {
 //        Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToRandomNBATeam() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.selectRandomNBATeam();
@@ -69,7 +69,7 @@ public class TestNBATeams extends BaseTest {
     }
 
     // region 30 NBA Teams
-    @Test
+    @Test(enabled = false)
     public void testNavigateToAtlantaHawks() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Hawks");
@@ -80,7 +80,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToBostonCeltics() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Celtics");
@@ -94,7 +94,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToBrooklynNets() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Nets");
@@ -105,7 +105,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToCharlotteHornets() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Hornets");
@@ -116,7 +116,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToChicagoBulls() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Bulls");
@@ -127,7 +127,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToClevelandCavaliers() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Cavaliers");
@@ -138,7 +138,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToDallasMavericks() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Mavericks");
@@ -149,7 +149,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToDenverNuggets() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Nuggets");
@@ -160,7 +160,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToDetroitPistons() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Pistons");
@@ -171,7 +171,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToGoldenStateWarriors() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Warriors");
@@ -182,7 +182,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToHoustonRockets() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Rockets");
@@ -193,7 +193,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToIndianaPacers() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Pacers");
@@ -204,7 +204,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToLAClippers() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Clippers");
@@ -215,7 +215,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToLosAngelesLakers() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Lakers");
@@ -226,7 +226,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToMemphisGrizzlies() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Grizzlies");
@@ -237,7 +237,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToMiamiHeat() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Heat");
@@ -248,7 +248,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToMilwaukeeBucks() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Bucks");
@@ -259,7 +259,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToMinnesotaTimberwolves() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Timberwolves");
@@ -270,7 +270,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToNewOrleansPelicans() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Pelicans");
@@ -281,7 +281,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToNewYorkKnicks() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Knicks");
@@ -292,7 +292,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToOklahomaCityThunder() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Thunder");
@@ -303,7 +303,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToOrlandoMagic() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Magic");
@@ -314,7 +314,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToPhiladelphia76ers() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("76ers");
@@ -325,7 +325,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToPhoenixSuns() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Suns");
@@ -336,7 +336,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToPortlandTrailBlazers() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Trail Blazers");
@@ -347,7 +347,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToSacramentoKings() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Kings");
@@ -358,7 +358,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToSanAntonioSpurs() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Spurs");
@@ -369,7 +369,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToTorontoRaptors() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Raptors");
@@ -380,7 +380,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToUtahJazz() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Jazz");
@@ -391,7 +391,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertEquals(teamName, expectedResult);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToWashingtonWizards() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Wizards");

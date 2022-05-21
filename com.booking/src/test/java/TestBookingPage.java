@@ -3,7 +3,33 @@ import org.testng.annotations.Test;
 import pom.Homepage;
 
 public class TestBookingPage extends Homepage {
+
     @Test
+    public void testTorontoStay() {
+        Homepage homepage = new Homepage();
+        String destination = "Toronto";
+        homepage.typeInSearchBar(destination);
+        homepage.selectRandomAutoSuggestion();
+        homepage.selectTodaysDate();
+        homepage.selectRandomDayWithin30Days();
+        homepage.selectGuestsBar();
+        homepage.addAnAdult();
+        homepage.addARoom();
+        homepage.clickSubmit();
+        if(homepage.popUp.isDisplayed()){
+            homepage.closePopUp();
+        }
+
+        String actualLocation = homepage.locationText.getText();
+        System.out.println(actualLocation);
+        String expectedLocation = excel.readStringList("Locations").get(0);
+        System.out.println(expectedLocation);
+        Assert.assertTrue(actualLocation.contains(expectedLocation));
+
+//        Assert.assertEquals(getElementText(homepage.getLocationText()), excel.readStringList("Locations").get(0));
+    }
+
+    @Test(enabled = false)
     public void testNewYorkStay() {
         Homepage homepage = new Homepage();
         String destination = "New York";
@@ -20,7 +46,8 @@ public class TestBookingPage extends Homepage {
         }
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testCaliforniaStay() {
         Homepage homepage = new Homepage();
         String destination = "California";
@@ -38,7 +65,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testLondonStay() {
         Homepage homepage = new Homepage();
         String destination = "Greater London";
@@ -56,7 +84,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testParisStay() {
         Homepage homepage = new Homepage();
         String destination = "Paris";
@@ -74,7 +103,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testMadridStay() {
         Homepage homepage = new Homepage();
         String destination = "Madrid";
@@ -92,7 +122,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testMilanStay() {
         Homepage homepage = new Homepage();
         String destination = "Milan";
@@ -110,7 +141,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testBarcelonaStay() {
         Homepage homepage = new Homepage();
         String destination = "Barcelona";
@@ -128,7 +160,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testLisbonStay() {
         Homepage homepage = new Homepage();
         String destination = "Lisbon";
@@ -146,7 +179,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testRomeStay() {
         Homepage homepage = new Homepage();
         String destination = "Rome";
@@ -164,7 +198,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testManchesterStay() {
         Homepage homepage = new Homepage();
         String destination = "Manchester";
@@ -182,7 +217,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testNewcastleStay() {
         Homepage homepage = new Homepage();
         String destination = "Newcastle";
@@ -200,7 +236,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testSydneyStay() {
         Homepage homepage = new Homepage();
         String destination = "Sydney";
@@ -218,7 +255,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testPerthStay() {
         Homepage homepage = new Homepage();
         String destination = "Perth";
@@ -236,7 +274,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testLiverpoolStay() {
         Homepage homepage = new Homepage();
         String destination = "Liverpool";
@@ -254,7 +293,8 @@ public class TestBookingPage extends Homepage {
 
         Assert.assertEquals(getElementText(homepage.staysSearchConfirmation), excel.readStringList("Locations").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testBerlinStay() {
         Homepage homepage = new Homepage();
         String destination = "Berlin";

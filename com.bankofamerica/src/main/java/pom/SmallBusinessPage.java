@@ -9,10 +9,12 @@ import shared.Homepage;
 
 public class SmallBusinessPage extends Homepage {
 
-    @FindBy(xpath = "//a[@id='navSBResources']")
+//    @FindBy(xpath = "//a[@id='navSBResources']")
+    @FindBy(id = "navSBResources")
     public WebElement smallBusinessResources;
 
-    @FindBy(xpath = "//a[@id='btnSBResources']")
+//    @FindBy(xpath = "//a[@id='btnSBResources']")
+    @FindBy(id = "btnSBResources")
     public WebElement visitSmallBusinessResources;
 
     @FindBy(xpath = "//h1[@class='site-header__page-header site-header__page-header--centered']")

@@ -26,7 +26,7 @@ public class TestBookingVacation extends BaseTest {
 //        homepage.refreshPage();
 //    }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToNYC() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -60,7 +60,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToSouthAfrica() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -77,8 +77,8 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
-    public void testTripToIstabul() {
+    @Test(enabled = false)
+    public void testTripToIstanbul() {
         // Navigation
         Homepage homepage = new Homepage();
 
@@ -94,7 +94,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToIndonesia() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -111,7 +111,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToJapan() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -128,7 +128,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToThailand() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -145,7 +145,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToRome() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -162,7 +162,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToSpain() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -179,7 +179,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToLondon() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -196,7 +196,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToTurkey() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -213,7 +213,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToItaly() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -230,7 +230,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToPortugal() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -247,7 +247,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToMorocco() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -264,7 +264,7 @@ public class TestBookingVacation extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTripToFrance() {
         // Navigation
         Homepage homepage = new Homepage();
@@ -276,7 +276,9 @@ public class TestBookingVacation extends BaseTest {
 
         // Assertion
         String actualResult = homepage.mapHeaderText.getText();
+        System.out.println(actualResult);
         String expectedResult = excel.readStringList("myTrips").get(14);
+        System.out.println(expectedResult);
 
         Assert.assertTrue(actualResult.contains(expectedResult));
     }

@@ -24,7 +24,7 @@ public class TestBMWModels extends BaseTest {
     }
 
     // region Navigate to random BMW Model / Body Type
-    @Test
+    @Test(enabled = false)
     public void testNavigateToRandomBMWModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWModel();
@@ -37,7 +37,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToRandomSedanModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWSedan();
@@ -50,7 +50,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToRandomCoupeModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWCoupe();
@@ -63,7 +63,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToRandomConvertibleModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWConvertible();
@@ -76,7 +76,8 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test void testNavigateToRandomSAVModel() {
+    @Test(enabled = false)
+    public void testNavigateToRandomSAVModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWSportsActivityVehicle();
 
@@ -90,7 +91,7 @@ public class TestBMWModels extends BaseTest {
     // endregion
 
     // region BMW Models
-    @Test
+    @Test(enabled = false)
     public void testNavigateToX1() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("x1");
@@ -103,7 +104,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToX2() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("x2");
@@ -116,7 +117,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToX3() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("x3");
@@ -129,7 +130,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToX4() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("x4");
@@ -142,7 +143,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToX5() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("x5");
@@ -155,7 +156,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToX6() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("x6");
@@ -168,7 +169,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToX7() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("x7");
@@ -181,7 +182,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateTo2Series() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("2");
@@ -194,7 +195,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateTo3Series() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("3");
@@ -207,7 +208,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateTo4Series() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("4");
@@ -220,7 +221,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateTo5Series() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("5");
@@ -233,7 +234,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateTo7Series() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("7");
@@ -246,7 +247,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateTo8Series() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("8");
@@ -259,7 +260,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToZ4() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("z4");
@@ -272,7 +273,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToMSeries() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("m");
@@ -285,7 +286,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToiX() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("ix");
@@ -298,7 +299,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToi4() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("i4");
@@ -311,7 +312,7 @@ public class TestBMWModels extends BaseTest {
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateToi7() {
         Homepage homepage = new Homepage();
         homepage.chooseBMWModel("i7");

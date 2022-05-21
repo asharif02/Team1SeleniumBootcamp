@@ -54,8 +54,15 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//div[@class='map_full_overlay__close']")
     public WebElement popUp;
 
+    @FindBy(xpath = "//h1[@class='e1f827110f d3a14d00da']")
+    public WebElement locationText;
+
     public Homepage(){
         PageFactory.initElements(driver, this);
+    }
+
+    public void getLocationText() {
+        locationText.getText();
     }
 
     public void closePopUp(){

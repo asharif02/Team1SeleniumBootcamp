@@ -9,7 +9,7 @@ import utils.GenerateData;
 
 public class TestEndToEnd extends TestBasePage {
 
-    @Test
+    @Test(enabled = false)
     public void testEndToEndProcessVerifyOrder() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
@@ -49,6 +49,7 @@ public class TestEndToEnd extends TestBasePage {
 
         Assert.assertTrue(isElementVisible(catalog.orderRef));
     }
+
     @Test
     public void testEndToEndProcessViewWishlist() {
         Homepage homepage = new Homepage();
@@ -77,7 +78,8 @@ public class TestEndToEnd extends TestBasePage {
         Assert.assertTrue(isElementVisible(myAccount.wishlistConfirmation));
         Assert.assertEquals(getElementText(myAccount.wishlistConfirmation), excel.readStringList("EndToEnd").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testEndToEndProcessPersonalInfo() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
@@ -105,7 +107,8 @@ public class TestEndToEnd extends TestBasePage {
         Assert.assertTrue(isElementVisible(myAccount.personalInfoConfirmation));
         Assert.assertEquals(getElementText(myAccount.personalInfoConfirmation), excel.readStringList("EndToEnd").get(1));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testEndToEndProcessViewAddress() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
@@ -133,7 +136,8 @@ public class TestEndToEnd extends TestBasePage {
         Assert.assertTrue(isElementVisible(myAccount.addressConfirmation));
         Assert.assertEquals(getElementText(myAccount.addressConfirmation), excel.readStringList("EndToEnd").get(2));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testEndToEndProcessViewCreditSlips() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
@@ -161,7 +165,8 @@ public class TestEndToEnd extends TestBasePage {
         Assert.assertTrue(isElementVisible(myAccount.creditSlipConfirmation));
         Assert.assertEquals(getElementText(myAccount.creditSlipConfirmation), excel.readStringList("EndToEnd").get(3));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testEndToEndProcessViewItemsThatAreColorBlack() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
@@ -193,7 +198,8 @@ public class TestEndToEnd extends TestBasePage {
         Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
         Assert.assertEquals(getElementText(catalog.filterConfirmation), excel.readStringList("Filters").get(0));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testEndToEndProcessViewItemsThatAreSizeSmall() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
@@ -224,7 +230,8 @@ public class TestEndToEnd extends TestBasePage {
         Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
         Assert.assertEquals(getElementText(catalog.filterConfirmation), excel.readStringList("Filters").get(13));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testEndToEndProcessViewItemsThatAreStyleCasual() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
@@ -255,7 +262,8 @@ public class TestEndToEnd extends TestBasePage {
         Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
         Assert.assertEquals(getElementText(catalog.filterConfirmation), excel.readStringList("Filters").get(8));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testEndToEndProcessViewItemsThatAreComposedOfCotton() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
@@ -286,7 +294,8 @@ public class TestEndToEnd extends TestBasePage {
         Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
         Assert.assertEquals(getElementText(catalog.filterConfirmation), excel.readStringList("Filters").get(21));
     }
-    @Test
+
+    @Test(enabled = false)
     public void testEndToEndProcessViewItemsThatAreConditionNew() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
