@@ -24,46 +24,48 @@ public class ExcelData {
         this.filePath = filePath;
     }
 
-    public static void main(String[] args) throws IOException {
-        File src = new File(System.getProperty("user.dir") + File.separator + "src" + File.separator
-                + "test" + File.separator + "resources" + File.separator + "test_data.xlsx");
-
-        FileInputStream fis = new FileInputStream(src);
-        XSSFWorkbook wb = new XSSFWorkbook(fis);
-
-
-        Sheet sheet1 = wb.getSheetAt(0);
-        String data0 = sheet1.getRow(0).getCell(0).getStringCellValue();
-        String data1 = sheet1.getRow(0).getCell(0).getStringCellValue();
-        System.out.println(data0 + data1);
-
-    }
-
-    public List<String> readMultipleColumns(String sheetName) {
-        List<String> data;
-        File file = new File(this.filePath);
-
-        try {
-            FileInputStream fis = new FileInputStream(file);
-            workbook = new XSSFWorkbook(fis);
-        } catch (IOException e) {
-            System.out.println("Unable to load file - Check file path, or if the file actually exists in file path directory");
-            e.printStackTrace();
-        }
-
-        sheet = workbook.getSheet(sheetName);
-        numberOfRows = sheet.getLastRowNum();
-
-        data = new ArrayList<>();
-
-        for (int i = 1; i <= numberOfRows; i++) {
-            row = sheet.getRow(i);
-            cell = row.getCell(0);
-            String cellData = getCellValue(cell);
-            data.add(i-1, cellData);
-        }
-        return data;
-    }
+//    public static void main(String[] args) throws IOException {
+////        File src = new File(System.getProperty("user.dir") + File.separator + "src" + File.separator
+////                + "test" + File.separator + "resources" + File.separator + "test_data.xlsx");
+//
+//        File src = new File("C:\\Users\\ashar\\IdeaProjects\\SeleniumBootcampWinterWeekend2022\\com.espn\\src\\test\\resources\\test_data.xlsx");
+//
+//        FileInputStream fis = new FileInputStream(src);
+//        XSSFWorkbook wb = new XSSFWorkbook(fis);
+//
+//
+//        Sheet sheet1 = wb.getSheetAt(1);
+//        String data0 = sheet1.getRow(1).getCell(0).getStringCellValue();
+//        String data1 = sheet1.getRow(1).getCell(1).getStringCellValue();
+//        System.out.println(data0 + " " + data1);
+//
+//    }
+//
+//    public List<String> readMultipleColumns(String sheetName) {
+//        List<String> data;
+//        File file = new File(this.filePath);
+//
+//        try {
+//            FileInputStream fis = new FileInputStream(file);
+//            workbook = new XSSFWorkbook(fis);
+//        } catch (IOException e) {
+//            System.out.println("Unable to load file - Check file path, or if the file actually exists in file path directory");
+//            e.printStackTrace();
+//        }
+//
+//        sheet = workbook.getSheet(sheetName);
+//        numberOfRows = sheet.getLastRowNum();
+//
+//        data = new ArrayList<>();
+//
+//        for (int i = 1; i <= numberOfRows; i++) {
+//            row = sheet.getRow(i);
+//            cell = row.getCell(0);
+//            String cellData = getCellValue(cell);
+//            data.add(i-1, cellData);
+//        }
+//        return data;
+//    }
 
 
 

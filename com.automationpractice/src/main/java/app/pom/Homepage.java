@@ -28,6 +28,18 @@ public class Homepage extends SystemBar {
     @FindBy(xpath = "//button[@name='submitNewsletter']")
     public WebElement newsletterSubmitButton;
 
+    @FindBy(id = "search_query_top")
+    public WebElement searchBoxInputField;
+
+    @FindBy(name = "submit_search")
+    public WebElement searchSubmitButton;
+
+    @FindBy(css = ".lighter")
+    public WebElement actualSearchTerm;
+
+    @FindBy(css = ".alert.alert-warning")
+    public WebElement noResultsFoundAlertWarning;
+
     public Homepage() {
         PageFactory.initElements(driver, this);
     }
@@ -54,4 +66,22 @@ public class Homepage extends SystemBar {
     }
     public void newsletterEmailInput(String email){sendKeysToElement(newsletterRegistrationEmailInput, email);}
     public void clickNewsletterSubmitButton(){clickOnElement(newsletterSubmitButton);}
+
+    public Homepage searchForClothingItem(String clothingItem) {
+
+        inputSearchTerm(clothingItem);
+        clickSearchSubmitButton();
+
+        return new Homepage();
+
+    }
+
+    public String inputSearchTerm(String clothingItem) {
+        sendKeysToElement(searchBoxInputField, clothingItem);
+        return clothingItem;
+    }
+
+    public void clickSearchSubmitButton() {
+        safeClickOnElement(searchSubmitButton);
+    }
 }

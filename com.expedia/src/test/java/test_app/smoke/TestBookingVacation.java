@@ -3,6 +3,7 @@ package test_app.smoke;
 import app.pom.Homepage;
 import base_test.BaseTest;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,11 +19,11 @@ public class TestBookingVacation extends BaseTest {
 
     // region Travel to Any Place in the World
 
-    @BeforeMethod(alwaysRun = true)
-    public void refresh() {
-        Homepage homepage = new Homepage();
-        homepage.refreshPage();
-    }
+//    @BeforeMethod(alwaysRun = true)
+//    public void refresh() {
+//        Homepage homepage = new Homepage();
+//        homepage.refreshPage();
+//    }
 
     @Test
     public void testTripToNYC() {

@@ -87,3 +87,38 @@ Test Case #18: Navigate to Model i7.
 Navigate to URL
 Select "Models"
 Select "i7"
+
+Test Case #19: Navigate to any BMW model
+Navigate to URL
+Select "Models"
+Select a bmw model that the user gave
+Verify that the user got taken to the correct model
+
+Test Case #20: Random
+Navigate to URL
+Select "Models"
+Select a random bmw model
+
+Test Case #21: Sedan
+Navigate to URL
+Select "Models"
+Select "Sedans" tab
+Click random sedan model
+
+Test Case #22: Coupe
+Navigate to URL
+Select "Models"
+Select "Coupes" tab
+Click random coupe model
+
+Test Case #23: Convertible
+Navigate to URL
+Select "Models"
+Select "Convertibles" tab
+Click random convertibles model
+
+Test Case #24: SAV
+Navigate to URL
+Select "Models"
+Select "SAVs" tab
+Click random SAV model

@@ -44,7 +44,8 @@ public class Homepage extends BasePage {
 
 //    @FindBy(xpath = "//div[@data-stid='date-picker-month']//@data-day")
 //    @FindBy(xpath = "//div[@data-stid='date-picker-month']//button[@type='button']")
-    @FindBy(xpath = "//div[@data-stid='date-picker-month']//button")
+//    @FindBy(xpath = "//div[@data-stid='date-picker-month']//button")
+    @FindBy(xpath = "//div[@data-stid='date-picker-month']//button[@class='uitk-date-picker-day']")
     public List<WebElement> allAvailableTravelDays;
 
     @FindBy(xpath = "//div[@data-stid='date-picker-month']//h2[@class='uitk-date-picker-month-name uitk-type-medium']")
@@ -71,18 +72,17 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "(//button[@class='uitk-date-picker-day selected edge'])[1]")
     public WebElement firstSelectedDayButtonEdge;
 
+    @FindBy(xpath = "(//button[@data-stid='date-picker-paging'])[1]")
+    public WebElement leftPageButton;
+
+    @FindBy(xpath = "(//button[@data-stid='date-picker-paging'])[2]")
+    public WebElement rightPageButton;
+
     public Homepage() {
         PageFactory.initElements(driver, this);
     }
 
     public void selectRandomDestinationResultItem(String destination) {
-//        try {
-//            refreshPage();
-//        } catch (StaleElementReferenceException e) {
-//            e.printStackTrace();
-//        }
-//        refreshPage();
-
         clickGoingToLocationField();
         sendKeysToElement(destinationInputField, destination);
 
@@ -100,6 +100,8 @@ public class Homepage extends BasePage {
     public void selectCurrentCheckInDate() {
         clickCheckInButton();
         webDriverWait.until(ExpectedConditions.visibilityOf(datePickerMenu));
+        clickLeftPageButton();
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(rightPageButton));
 
         try {
             WebElement desiredCheckInDay = getVisibleElement(By.xpath
@@ -117,7 +119,7 @@ public class Homepage extends BasePage {
 
         ArrayList<WebElement> twoWeeks = new ArrayList<>();
 
-        int count = 0;
+        int count = 1;
         for(WebElement days : allAvailableTravelDays) {
             count++;
             if(count <= 14) {
@@ -133,7 +135,6 @@ public class Homepage extends BasePage {
         int randomDay = random.nextInt(maxVacation);
         safeClickOnElement(twoWeeks.get(randomDay));
 //        twoWeeks.get(randomDay).click();
-
     }
 
     public void applyChanges() {
@@ -178,6 +179,10 @@ public class Homepage extends BasePage {
     public void clickGoingToLocationField() {
 //        clickOnElement(destinationMenuField);
         destinationMenuField.click();
+    }
+
+    public void clickLeftPageButton() {
+        clickOnElement(leftPageButton);
     }
 
     public void clickCheckInButton() {

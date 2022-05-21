@@ -45,6 +45,23 @@ public class Homepage extends SystemBar {
         return new ListingPage();
     }
 
+    public ListingPage navigateToAnyUSHomeListingByState(String location) {
+        clickSearchBoxInputField();
+        enterLocationName(location);
+        webDriverWait.until(ExpectedConditions.visibilityOf(expandedResults));
+        clickSearchButton();
+
+        fluentWait.until(ExpectedConditions.visibilityOf(didYouMeanModalWindow));
+
+        boolean modalWindow = driver.findElement(By.xpath("//div[@data-rf-test-name='dialogGutsNode']//h3[@aria-label='Did You Mean']")).isDisplayed();
+
+        if (modalWindow) {
+            clickFirstItemInModalWindow();
+        }
+
+        return new ListingPage();
+    }
+
     public void clickSearchBoxInputField() {
         clickOnElement(searchBoxInputField);
     }

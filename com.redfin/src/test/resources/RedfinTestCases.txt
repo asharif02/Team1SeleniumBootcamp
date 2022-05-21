@@ -72,3 +72,13 @@ Test Case #15: Find Homes In Seattle.
 Navigate to URL.
 Enter 'Seattle' in search bar
 Press Enter
+
+Test Case #16: Find Home anywhere in US by City Name
+Navigate to URL
+Enter city name of your choosing in the search bar
+Click search button
+
+Test Case #17: Find Home anywhere in US by State name
+Navigate to URL
+Enter US state name of your choosing in the search bar
+Click search button

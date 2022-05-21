@@ -10,7 +10,7 @@ import test_base.TestBasePage;
 public class Authentication extends TestBasePage {
 
 
-    @Test (groups = {"BAT"}, dataProviderClass = data_providers.DataProviders.class, dataProvider = "DP1")
+    @Test (dataProviderClass = data_providers.DataProviders.class, dataProvider = "DP1")
     public void testInvalidLogin(String username, String password) {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();

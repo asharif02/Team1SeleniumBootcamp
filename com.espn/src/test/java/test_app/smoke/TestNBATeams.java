@@ -1,12 +1,37 @@
 package test_app.smoke;
 
 import app.pom.NBATeamPage;
+import app.shared.SystemBar;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import base_test.BaseTest;
+import test_app.system.EspnData;
+
+import java.util.Arrays;
 
 public class TestNBATeams extends BaseTest {
+
+//    @DataProvider(name = "nbaTeams")
+//    public Object[][] getNBATeam() {
+////        return new Object[][] {{"atlanta", "hawks"}, {"boston", "celtics"}};
+//        return excel.readStringArrays("nbaCityNameTeamName");
+//    }
+
+    @Test(dataProviderClass = test_app.system.EspnData.class, dataProvider = "NBA")
+    public void testNavigateToNBATeamUsingDataProvider(String city, String team) {
+        NBATeamPage nbaTeamPage = new NBATeamPage();
+        nbaTeamPage.navigateToNBATeam(city, team);
+
+//        String expectedResult = excel.readStringList("nbaPage").get(0);
+//        String actualResult = driver.findElement(By.xpath("//li[@class='Nav__Primary__Menu__Item flex items-center relative Nav__Primary__Menu__Item--active']//span")).getText();
+//
+//        Assert.assertTrue(actualResult.contains(expectedResult));
+    }
 
     @Test
     public void testNavigateToRandomNBATeam() {
@@ -22,9 +47,11 @@ public class TestNBATeams extends BaseTest {
     @Test
     public void testNavigateByTeamName() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
-        nbaTeamPage.navigateByNBATeamName("Bulls");
+        nbaTeamPage.navigateByNBATeamName("Knicks");
+        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//li[@class='Nav__Primary__Menu__Item flex items-center relative Nav__Primary__Menu__Item--active']//span")));
 
         String expectedResult = excel.readStringList("nbaPage").get(0);
+//        String actualResult = nbaTeamPage.getElementText(nbaTeamPage.nbaText);
         String actualResult = driver.findElement(By.xpath("//li[@class='Nav__Primary__Menu__Item flex items-center relative Nav__Primary__Menu__Item--active']//span")).getText();
 
         Assert.assertTrue(actualResult.contains(expectedResult));

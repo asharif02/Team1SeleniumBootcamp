@@ -245,3 +245,15 @@ Enter phone number in ‘Mobile phone’ field
 Click ‘Register’ button
 Click ‘Women’ option
 In the catalog field under the ‘Condition’ section select ‘New’
+
+Test Case #17: Search for valid clothing item
+Navigate to URL
+Search for valid clothing item
+Click search button
+
+Test Case #18: Search for invalid clothing item
+Navigate to URL
+Search for invalid clothing item
+Click search button
+Verify if user gets alert message
+

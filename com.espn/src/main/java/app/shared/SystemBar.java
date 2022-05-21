@@ -6,6 +6,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Random;
@@ -24,6 +25,9 @@ public class SystemBar extends BasePage {
     @FindBy(xpath = "//li[@class='teams nba sub']")
     public WebElement teamsButton;
 
+    @FindBy(xpath = "//li[@class='Nav__Primary__Menu__Item flex items-center relative Nav__Primary__Menu__Item--active']//span")
+    public WebElement nbaText;
+
     public SystemBar() {
         PageFactory.initElements(driver, this);
     }
@@ -41,6 +45,25 @@ public class SystemBar extends BasePage {
         int randomTeam = random.nextInt(maxTeams);
 
         nbaTeams.get(randomTeam).click();
+    }
+
+    public void navigateToNBATeam(String cityName, String teamName) {
+        NBATeamPage homepage = new NBATeamPage();
+        homepage.hoverOverNBASportsMenu();
+        homepage.clickTeamsButton();
+        homepage.hoverOverNBATeamsDropDown();
+
+        List<WebElement> nbaTeams = NBATeams;
+
+        try {
+            for (WebElement teams : nbaTeams) {
+                if (teams.getAttribute("innerHTML").contains(cityName + teamName)) {
+                    teams.click();
+                }
+            }
+        } catch (StaleElementReferenceException e) {
+            e.printStackTrace();
+        }
     }
 
     public void navigateByNBATeamName(String teamName) {

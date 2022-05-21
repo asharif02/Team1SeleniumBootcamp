@@ -2,8 +2,11 @@ package test_app.smoke.models;
 
 import app.pom.Homepage;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import base_test.BaseTest;
+
+import java.util.List;
 
 public class TestBMWModels extends BaseTest {
 
@@ -25,29 +28,64 @@ public class TestBMWModels extends BaseTest {
     public void testNavigateToRandomBMWModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWModel();
+
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(22));
+        String actualModel = String.valueOf(driver.getTitle());
+        System.out.println(actualModel);
+        System.out.println(expectedModel);
+
+        Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
     @Test
     public void testNavigateToRandomSedanModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWSedan();
+
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(18));
+        String actualModel = String.valueOf(driver.getTitle());
+        System.out.println(actualModel);
+        System.out.println(expectedModel);
+
+        Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
     @Test
     public void testNavigateToRandomCoupeModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWCoupe();
+
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(20));
+        String actualModel = String.valueOf(driver.getTitle());
+        System.out.println(actualModel);
+        System.out.println(expectedModel);
+
+        Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
     @Test
     public void testNavigateToRandomConvertibleModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWConvertible();
+
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(21));
+        String actualModel = String.valueOf(driver.getTitle());
+        System.out.println(actualModel);
+        System.out.println(expectedModel);
+
+        Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
 
     @Test void testNavigateToRandomSAVModel() {
         Homepage homepage = new Homepage();
         homepage.selectRandomBMWSportsActivityVehicle();
+
+        String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(19));
+        String actualModel = String.valueOf(driver.getTitle());
+        System.out.println(actualModel);
+        System.out.println(expectedModel);
+
+        Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
     // endregion
 
