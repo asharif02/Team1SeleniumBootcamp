@@ -122,3 +122,10 @@ Navigate to URL
 Select "Models"
 Select "SAVs" tab
 Click random SAV model
+
+Test Case #25: Build your own bmw vehicle
+Navigate to URL
+Click "Build Your Own"
+Select a random vehicle
+Select "Design" button
+Verify that user got taken to design studio
