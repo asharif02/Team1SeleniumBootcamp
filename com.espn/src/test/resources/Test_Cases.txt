@@ -1,0 +1,26 @@
+TEST CASE 1: As a user, I should be able to sign up
+1. user navigates to espn.com
+2. user clicks on subscribe now button
+3. user click on 'sign up' button
+4. Validate that the signup button will allow the user to create an account
+
+TEST CASE 2: as a user, I should be able to
+1. user navigates to espn.com
+2. user hovers over the 'Top Events' menu
+3. user clicks on 'Top Events' on the dropdown menu
+4. user clicks the right arrow button to scroll to the right
+5. Validate that the top events bar displays hidden topics when clicking on the right arrow
+
+
+TEST CASE 3: as a user,
+1. Navigate to espn.com
+2. find out the number of iframes in the home page
+3. How do I verify that?
+
+TEST CASE 4:
+1. user navigates to espn.com
+2. user clicks on the play video button
+3. user gets directed to selecting a chanel
+4. user clicks on the 'HULU' button
+5. user is required to log in with valid credentials
+6. Validate that login page is displayed when user is redirected

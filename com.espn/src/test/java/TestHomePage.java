@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pom.HomePage;
 
 import java.time.Duration;
+import java.util.List;
 
 public class TestHomePage extends BasePage {
 
@@ -23,7 +24,7 @@ public class TestHomePage extends BasePage {
         String s = (String) j.executeScript(("return document.body.innerHTML;"));
         System.out.println("Get HTML of page: " + s);
 
-        WebElement signUpLink = driver.findElement(By.id("//*[@id=\"did-ui-view\"]/div/section/section/form/section/div[4]/a"));
+        WebElement signUpLink = driver.findElement(By.xpath("//*[@id='did-ui-view']//div//section//section//form//section//div[5]//a"));
         String signUp = signUpLink.getAttribute("innerHTML");
         System.out.println("HTML code of element: " + signUp);
 
@@ -35,7 +36,8 @@ public class TestHomePage extends BasePage {
     @Test
     public void testCheckTopEventsSummaryPage() {
         HomePage homePage = new HomePage();
-        homePage.clickTopEventsDropdownMenu();
+        homePage.hoverOverElement(homePage.topEventsDropdownMenu);
+        homePage.clickTopEvents();
         homePage.clickTopEventsScrollToTheRightButton();
         for (int i = 0; i < 5; i++) {
             driver.findElement((By.xpath("//*[@id='global-scoreboard']//div/div/div[7]"))).click();
@@ -55,12 +57,19 @@ public class TestHomePage extends BasePage {
     @Test
     public void testFindTheNumberOfIframesInPage(){
         HomePage homePage = new HomePage();
-        //Dimension size = driver.findElement(By.tagName("iframe")).getSize();
+        driver.get("https://www.espn.com/");
+        List<WebElement> iframeElements = driver.findElements(By.tagName("iframeResult"));
+        System.out.println("Total number of iframes are: " + iframeElements.size());
+        JavascriptExecutor exe = (JavascriptExecutor) driver;
+        Integer noOfFrames = Integer.parseInt(exe.executeScript("return window.length").toString());
+        System.out.println("No. of iframe on the page are: " + noOfFrames);
+
+//        Dimension size = driver.findElement(By.tagName("iframe")).getSize();
 //        for(int i=0;
 //        driver.switchTo().frame("unidFrame"));
 //        int total = driver.findElement(By.xpath("html/body/a/img")).getSize();
 //        System.out.println(total);
-        driver.switchTo().defaultContent();
+//        driver.switchTo().defaultContent();
     }
 
     @Test

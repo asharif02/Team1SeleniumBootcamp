@@ -4,12 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pom.HomePage;
-import pom.ToysPage;
+import pom.Toys;
 
 
-import javax.sound.midi.ShortMessage;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class testBabyToys extends BasePage {
 
@@ -17,9 +15,14 @@ public class testBabyToys extends BasePage {
     public void testNavigateToToysPage() {
         HomePage homepage = new HomePage();
         homepage.clickToysButton();
-        homepage.clickBabyToysLink();
-        homepage.clickBlocksAndShapeSortersLink();
+        Toys toys = new Toys();
+        toys.clickBabyToysLink();
+        toys.clickBlocksAndShapeSortersLink();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
+
+        String expectedText = excel.readStringList("babyBlocksAndShapeSorters").get(0);
+        String actualText = String.valueOf(driver.findElement(By.xpath("//h1[@class='b-pageheader']")));
+        Assert.assertTrue(actualText.contains(expectedText));
 
     }
     @Test

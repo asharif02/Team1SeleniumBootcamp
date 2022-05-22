@@ -7,7 +7,7 @@ import shared.SystemBar;
 
 public class Homepage extends SystemBar {
 
-    @FindBy(id = "//*[@id='apptScheduler']")
+    @FindBy(id = "//*[@id='navCheckingOnlineBanking']")
     public WebElement scheduleAnAppointmentLink;
 
     @FindBy(id = "//a[@id='security']")

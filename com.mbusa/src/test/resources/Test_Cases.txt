@@ -1,0 +1,18 @@
+TEST CASE 1: As a user, I should be able to navigate to mbusa home page
+1. Navigate to mbusa.com
+2.
+
+TEST CASE 2: as a user, I should be able to
+1. Navigate to mbusa.com
+2.
+3.
+
+
+TEST CASE 3: as a user,
+1. Navigate to mbusa.com
+2.
+3.
+
+TEST CASE 4:
+
+TEST CASE 5:

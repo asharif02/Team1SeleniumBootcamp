@@ -1,23 +1,28 @@
-TEST CASE 1: As a user, I should be able to navigate to
-1.
-2.
-3.
-4.
-5.
+TEST CASE 1: As a user, I should be able to navigate into different pages
+1. user navigate to ebay.com
+2. user lands on the home page
+3. user clicks on 'toys' button
+4. user click on 'baby toys'
+5. user clicks on 'baby blocks & shape sorters'
+6. Validate baby blocks &  shape sorters is displayed (available)
 
-TEST CASE 2: as a user, I should be able to search for products
-1.
-2.
-3.
-4.
-5.
+TEST CASE 2: as a user, I should be able to get help from customer service
+1. user navigate to ebay.com
+2. user lands on the home page
+3. user clicks on 'help & Contact' button
+4. user lands on the customer service page
+5. Validate "how can we help you today?" message is available
 
-TEST CASE 3:
-1.
-2.
-3.
-4.
-5.
+TEST CASE 3: as a user, I should be able to return a purchased item
+1. user navigate to ebay.com
+2. user lands on the home page
+2. user searches for baby books
+3. user get the search result page back
+4. user selects an item to purchase
+5. user adds it to the cart
+6. user clicks checkout
+7. user enters payment information
+
 
 TEST CASE 4:
 1.

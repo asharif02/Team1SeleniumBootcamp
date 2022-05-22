@@ -4,8 +4,7 @@ import base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import pom.ToysPage;
+import pom.Toys;
 
 public class SystemBar extends BasePage {
 
@@ -22,8 +21,8 @@ public class SystemBar extends BasePage {
         clickOnElement(shopByCategoryDropdownButton);
     }
 
-    public ToysPage clickToysButton(){
-        return new ToysPage();
+    public Toys clickToysButton(){
+        return new Toys();
     }
 
     public SystemBar(){

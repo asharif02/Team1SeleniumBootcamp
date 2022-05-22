@@ -13,7 +13,7 @@ public class Personal extends SystemBar {
     @FindBy(xpath = "//a[@id='navChecking']")
     public WebElement checkingButton;
 
-    @FindBy(id = "//a[@id='navCheckingOnlineBanking']")
+    @FindBy(id = "//*[@id=\"navCheckingOnlineBanking\"]")
     public WebElement onlineBankingLink;
 
     public void clickPersonalButton(){

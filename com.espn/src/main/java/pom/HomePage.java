@@ -16,6 +16,9 @@ public class HomePage extends SystemBar {
     @FindBy(xpath = "//*[@ class='button button-filter sm dropdown-toggle current-league-name']")
     public WebElement topEventsDropdownMenu;
 
+    @FindBy(xpath = "//*[@id='global-scoreboard']//div[1]//div[2]//ul//li[1]//a")
+    public WebElement topEvents;
+
     @FindBy(xpath = "//*[@id='global-scoreboard']//div/div/div[7]")
     public WebElement topEventsScrollToTheRightButton;
 
@@ -25,7 +28,7 @@ public class HomePage extends SystemBar {
     @FindBy(xpath = "//*[@id=\"leagues\"]//li[11]//div[4]/div[1]/a[1]")
     public WebElement topEventsSummaryButton;
 
-    @FindBy(xpath = "//*[@data-popup-href='/video/clip?id=33901622']")
+    @FindBy(xpath = "//*[@id='news-feed']//section[1]//footer//ul//li[1]//div//a")
     public WebElement liveVideoPlayButton;
 
     @FindBy(xpath = "//*[@class='lightboxTitle']")
@@ -46,6 +49,9 @@ public class HomePage extends SystemBar {
             driver.findElement((By.xpath("//*[@id='global-scoreboard']//div/div/div[7]"))).click();
             driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
         }
+    }
+    public void clickTopEvents(){
+        clickOnElement(topEvents);
     }
     public void clickTopEventsScrollToTheRightButtonTwo(){
         clickOnElement(getTopEventsScrollToTheRightButtonTwo);

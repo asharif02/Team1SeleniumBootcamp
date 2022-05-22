@@ -1,0 +1,33 @@
+TEST CASE 1: As a registered user, I should be able to navigate to add items to cart
+1. user navigates to automationpractice.com
+2. user clicks on 'sign in'
+3. user enters a valid email address
+4. user enters valid password
+5. user clicks on submit sign in button
+6. user is navigated to the account home page
+7. user clicks in the search input field
+8. user enters a search term
+9. user clicks on the search button
+10. user clicks on dress (first item)
+11. user increases the quantity
+12. user selects the size
+13. user selects the color
+14. user click on 'Add to cart'
+15. validate that item was added to cart
+
+TEST CASE 2: as a registered user, I should be able to send a message to customer service
+1. user navigates to automationpractice.com
+2. user clicks on contact us button
+3. user selects a subject heading
+4. user enters email address
+5. user chooses a reference order number
+6. user attaches a file
+7. user click on chose file
+8. user enters desired message
+9. user clicks on 'send' button
+10. validate that message was successfully sent
+
+TEST CASE 3: as a registered user, I should be able to access cart from the home page
+1. user navigates to automationpractice.com
+2. user click on the 'cart' button
+3. Validate the cart page is displayed with the shopping-cart summary

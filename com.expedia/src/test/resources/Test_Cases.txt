@@ -1,0 +1,25 @@
+TEST CASE 1: As a user, I should be able to search for flights
+1. user navigates to expedia.com
+2. user clicks on flights button
+3. user clicks leaving from button
+4. user enters airport name in the leaving from input field
+5. user clicks on going to input field
+6. user enters airport destination
+7. user selects the departing day
+8. user clicks done
+9. user selects the returning date
+10. user clicks done
+11. user clicks search
+12. user should be navigated to the search result page
+13. validate that search result page is displayed
+
+TEST CASE 2: as a user, I should be able to make a hotel reservation
+1. user navigates to expedia.com
+2. user clicks on cars button
+3. user selects pick location
+4. user selects drop off location
+5. user selects pick up day
+6. user selects drop off date
+7. user should be able to select pick up time
+8. user should be able to select drop off time
+9. user clicks search button

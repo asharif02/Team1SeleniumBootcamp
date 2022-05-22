@@ -1,29 +1,29 @@
-TEST CASE 1: As a user, I should be able to navigate to ATT home page
-1. Navigate to att.com
-2. Validate either the ATT logo is present or not
+TEST CASE 1: As a user, I should be able to navigate to ATT home page by clicking the logo button
+1. User navigates to att.com
+2. User clicks on bundles
+3. User clicks on logo button
+4. Validate that clicking on the logo button will navigate you back to the home page
 
-TEST CASE 2: as a user, I should be able to search for products
-1. Navigate to att.com
-2. Click in the search field
-3. input search term "
+TEST CASE 2: as a user, I should be able to access any page from the dropdown menu and submenu
+1. User navigates to att.com
+2. User hovers over the main menu
+3. User clicks on the dropdown menu
+4. User clicks on the 'Internet' link
+5. User clicks on the 'Fiber' link
+6. validate User lands on the att fiber page when taking the dropdown menu path
 
+TEST CASE 3: as a user, I should be able to filter and sort products
+1. User navigates to att.com
+2. User clicks on 'Phones and Devices'
+3. User clicks on 'Smart Watches'
+4. User clicks on 'filter and sort'
+5. User filters products
+6. Validate that users is able to filter and sort products as needed
 
-TEST CASE 3: as a user, I should be able to navigate to phones and devices page
-1. Navigate to att.com
-2. Click in the search field
-3. inout search term "
-
-
-TEST CASE 4:
-
-TEST CASE 5:
-
-TEST CASE 6:
-
-TEST CASE 7:
-
-TEST CASE 8:
-
-TEST CASE 9:
-
-TEST CASE 10:
+TEST CASE 4: as a user, I should be able to search for products
+1. User navigates to att.com
+2. User clicks in the search field
+3. User enters the search term
+4. User clicks on the 'Search' button
+5. User should be landed on the result search page
+6. validate that search result page is displayed and includes a promo messag

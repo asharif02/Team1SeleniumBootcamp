@@ -7,7 +7,7 @@ import shared.SystemBar;
 
 public class ContactUsPage extends SystemBar {
 
-    @FindBy(xpath = "//div[@id='uniform-id_contact']")
+    @FindBy(xpath = "//*[@id='uniform-id_contact']//span")
     public WebElement subjectHeadingComboBox;
 
     @FindBy(xpath = "//input[@id='email']")

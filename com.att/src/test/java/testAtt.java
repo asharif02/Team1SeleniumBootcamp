@@ -1,5 +1,7 @@
+import Purchases.pom.Bundles;
 import Purchases.pom.Homepage;
 import Purchases.pom.PhonesAndDevices;
+import Purchases.pom.Smartwatches;
 import base.BasePage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -13,14 +15,18 @@ public class testAtt extends BasePage {
     @Test
     public void testVerifyAttLogo() {
         Homepage homepage = new Homepage();
-        homepage.clickAttLogo();
-        //Assert.assertTrue(attLogo.isDisplayed());
-        Assert.assertEquals(true, attLogo());
-        System.out.println("ATT logo is displayed - assert passed");
+        homepage.clickBundlesButton();
+        Bundles bundles = new Bundles();
+        bundles.clickAttLogo();
+
+        Assert.assertTrue(true, attLogo());
+
+//        Assert.assertEquals(true, attLogo());
+//        System.out.println("ATT logo is displayed - Assert passed");
     }
 
-    private boolean attLogo() {
-        return true;
+    private String attLogo() {
+        return String.valueOf(true);
     }
 
     @Test
@@ -28,9 +34,12 @@ public class testAtt extends BasePage {
         Homepage homepage = new Homepage();
         homepage.hoverOverElement(homepage.attMenuDropdown);
         homepage.clickAttMenuDropdown();
+        homepage.clickInternetLink();
+        homepage.clickFiberLink();
 
         Assert.assertEquals(true, attMenuDropdown());
-        System.out.println("Menu Dropdown is present - Assertion passed");
+        System.out.println("Dropdown menu and submenu are present - Assertion passed");
+        Assert. assertTrue(true, "Fiber page is displayed");
     }
 
     private boolean attMenuDropdown() {
@@ -55,9 +64,15 @@ public class testAtt extends BasePage {
         Homepage homepage = new Homepage();
         homepage.clickPhonesAndDevicesButton();
         homepage.clickSmartwatchesButton();
+        Smartwatches smartwatches = new Smartwatches();
+        smartwatches.clickFilterAndSortButton();
+        smartwatches.clickAppleButton();
+        smartwatches.clickNewButton();
+        smartwatches.clickApplyAndCloseButton();
 
         Assert.assertEquals(true, smartWatches());
         System.out.println("Smartwatches page displayed - Assertion passed");
+        Assert.assertTrue(true, "User is able to Filter and Sort products");
     }
 
     private boolean smartWatches() {

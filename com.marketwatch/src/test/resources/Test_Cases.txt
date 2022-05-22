@@ -1,0 +1,24 @@
+TEST CASE 1: As a user, I should be able to navigate to MarketWatch home page fast enough
+1. Navigate to marketwatch.com
+2. test the page load tme
+3. validate the time
+
+TEST CASE 2: as a user, I should be able to extract information from a table
+1. Navigate to marketwatch.com
+2. click on base table
+3. click on a cell in question
+4. extract data form cell
+5. Validate the data extracted matches data displayed
+
+TEST CASE 3: as a user, I should be able to get a row number and a column
+1. Navigate to marketwatch.com
+2. click on the row
+3. click on the column
+4. find list of elements
+
+TEST CASE 4: as a user, i should be able to play any video
+1. Navigate to marketwatch.com
+2. click on video under latest news
+3. user should be able to play the video
+4. validate video is playing
+

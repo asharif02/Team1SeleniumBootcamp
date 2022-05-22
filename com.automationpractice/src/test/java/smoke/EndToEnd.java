@@ -35,10 +35,10 @@ public class EndToEnd extends SystemBar {
 
         SearchResults searchResults = new SearchResults();
         WebElement dress = driver.findElement(By.xpath("//*[@id='center_column']//ul//li[1]//div[1]//a[1]//img"));
-        WebElement quantity = driver.findElement(By.id("//*[@id='center_column']//ul//li[1]//div[2]//h5"));
-        WebElement add = driver.findElement(By.id("//*[@id='add_to_cart']"));
+        //WebElement quantity = driver.findElement(By.xpath("//*[@id='quantity_wanted_p']//a[2]//span//i"));
+        WebElement add = driver.findElement(By.xpath("//*[@id='add_to_cart']/button"));
         jse.executeScript("arguments[0].click();", dress);
-        jse.executeScript("arguments[0].click();", quantity);
+        //jse.executeScript("arguments[0].click();", quantity);
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
         jse.executeScript("arguments[0].click();", add);
 

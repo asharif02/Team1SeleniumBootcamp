@@ -1,0 +1,21 @@
+TEST CASE 1: As a user, I should be able to navigate to redfin home page
+1. user navigates to redfin.com
+2. user clicks on rent but
+3. user should be able to look for rent with zip code
+4. validate that search page is open
+
+TEST CASE 2: as a user, I should be able to
+1. Navigate to redfin.com
+2.  user clicks on rent but
+3. user should be able to look for rent with zip code
+4. validate that search page is open
+
+
+TEST CASE 3: as a user,
+1.
+2.
+3.
+
+TEST CASE 4:
+
+TEST CASE 5:
