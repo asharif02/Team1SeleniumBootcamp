@@ -35,7 +35,7 @@ public class TestSearchForListing extends BaseTest {
     }
 
     // region Find Homes in 15 Different US Cities
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInAustin() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("austin");
@@ -48,7 +48,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInTampa() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("tampa");
@@ -61,7 +61,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInNewYork() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("new york");
@@ -74,7 +74,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInMcLeanVA() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("mclean");
@@ -86,7 +86,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInMinneapolis() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("minneapolis");
@@ -98,7 +98,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInCincinnati() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("cincinnati");
@@ -110,7 +110,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInSanFrancisco() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("san francisco");
@@ -122,7 +122,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInSacramento() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("sacramento");
@@ -134,7 +134,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInNashville() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("nashville");
@@ -146,7 +146,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInAtlanta() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("atlanta");
@@ -158,7 +158,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInBoston() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("boston");
@@ -170,7 +170,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInPortland() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("portland");
@@ -182,7 +182,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInHouston() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("houston");
@@ -194,7 +194,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInDallas() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("dallas");
@@ -206,7 +206,7 @@ public class TestSearchForListing extends BaseTest {
         Assert.assertTrue(actualLocation.contains(expectedLocation));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testFindHomeInSeattle() {
         Homepage homepage = new Homepage();
         homepage.navigateToAnyUSHomeListing("seattle");

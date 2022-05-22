@@ -9,9 +9,9 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://sofi.com"/>
 
-    <test name="Sofi - [...]">
+    <test name="Sofi - Media Player">
         <classes>
-            <class name="test_app.smoke"/>
+            <class name="test_app.smoke.media_player.TestMediaPlayer"/>
         </classes>
     </test>
 

@@ -16,21 +16,16 @@ import java.util.Arrays;
 
 public class TestNBATeams extends BaseTest {
 
-//    @DataProvider(name = "nbaTeams")
-//    public Object[][] getNBATeam() {
-////        return new Object[][] {{"atlanta", "hawks"}, {"boston", "celtics"}};
-//        return excel.readStringArrays("nbaCityNameTeamName");
-//    }
-
     @Test(dataProviderClass = test_app.system.EspnData.class, dataProvider = "NBA")
-    public void testNavigateToNBATeamUsingDataProvider(String city, String team) {
+    public void testNavigateToNBATeamUsingDataProvider(String city, String team) throws InterruptedException {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateToNBATeam(city, team);
+        Thread.sleep(2000);
 
-//        String expectedResult = excel.readStringList("nbaPage").get(0);
-//        String actualResult = driver.findElement(By.xpath("//li[@class='Nav__Primary__Menu__Item flex items-center relative Nav__Primary__Menu__Item--active']//span")).getText();
-//
-//        Assert.assertTrue(actualResult.contains(expectedResult));
+        String teamName = nbaTeamPage.nbaTeamName.getText().replace("\n", " ").toLowerCase();
+        String expectedResult = excel.readStringList("nbaTeams").get(0).toLowerCase();
+
+        Assert.assertEquals(teamName, expectedResult);
     }
 
     @Test(enabled = false)
@@ -44,7 +39,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateByTeamName() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBATeamName("Knicks");
@@ -57,7 +52,7 @@ public class TestNBATeams extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNavigateByCityName() {
         NBATeamPage nbaTeamPage = new NBATeamPage();
         nbaTeamPage.navigateByNBACityName("New York");

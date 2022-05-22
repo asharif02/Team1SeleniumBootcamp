@@ -57,7 +57,7 @@ public class SystemBar extends BasePage {
 
         try {
             for (WebElement teams : nbaTeams) {
-                if (teams.getAttribute("innerHTML").contains(cityName + teamName)) {
+                if (teams.getAttribute("innerHTML").contains(cityName + " " + teamName)) {
                     teams.click();
                 }
             }

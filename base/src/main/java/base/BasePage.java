@@ -37,7 +37,7 @@ public class BasePage {
     Map<Object, String> dbConfig = BaseConfig.databaseConfig();
     public static final String DATA_PATH = System.getProperty("user.dir") + File.separator + "src" + File.separator
             + "test" + File.separator + "resources" + File.separator + "test_data.xlsx";
-    public static ExcelData excel;
+    public static ExcelData excel = new ExcelData(DATA_PATH);
     public static Database db;
     public static WebDriver driver;
     public static WebDriverWait webDriverWait;
@@ -72,10 +72,10 @@ public class BasePage {
         db = new Database(host, user, password, className);
     }
 
-    @BeforeMethod(alwaysRun = true)
-    public void dataInit() {
-        excel = new ExcelData(DATA_PATH);
-    }
+//    @BeforeMethod(alwaysRun = true)
+//    public void dataInit() {
+//        excel
+//    }
 
     @Parameters({"driverConfigEnabled", "browser", "url"})
     @BeforeMethod

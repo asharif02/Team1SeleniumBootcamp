@@ -17,8 +17,6 @@ public class TestBMWModels extends BaseTest {
 
         String expectedModel = String.valueOf(excel.readStringList("bmwModels").get(14));
         String actualModel = String.valueOf(driver.getTitle());
-        System.out.println(actualModel);
-        System.out.println(expectedModel);
 
         Assert.assertTrue(actualModel.contains(expectedModel), "Actual Model does not match Expected Model");
     }
